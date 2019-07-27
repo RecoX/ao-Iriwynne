@@ -1,0 +1,21 @@
+[INIT]
+NumQuests=1
+ 
+[QUEST1]
+Nombre=Mata arañas
+Desc=Mata 5 arañas pequeñas
+
+// NIVEL REQUERIDO PARA ENTRAR EN QUEST
+RequiredLevel=1
+
+// CUANTOS NPCS EN TOTAL
+RequiredNPCs=1
+
+// ACA PIDE MATAR 3 VECES AL NPC NRO 10
+// Y TAMBIEN PIDE MATAR 1 VEZ AL NPC NRO 50
+RequiredNPC1=620-5
+
+// ORO, EXP Y PUNTOS GANADOS
+RewardGLD=100000
+RewardEXP=100000
+RewardPoints=0

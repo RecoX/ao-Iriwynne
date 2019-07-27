@@ -1,0 +1,22 @@
+Línea 42: la clase DevelopedAO.uAOButton del control cVolver no era una clase de control cargada.
+Línea 68: la clase DevelopedAO.uAOButton del control cAbandonar no era una clase de control cargada.
+Línea 48: el nombre de la propiedad _ExtentX de cVolver no es válido.
+Línea 49: el nombre de la propiedad _ExtentY de cVolver no es válido.
+Línea 50: el nombre de la propiedad TX de cVolver no es válido.
+Línea 51: el nombre de la propiedad ENAB de cVolver no es válido.
+Línea 52: el nombre de la propiedad FCOL de cVolver no es válido.
+Línea 53: el nombre de la propiedad OCOL de cVolver no es válido.
+Línea 54: el nombre de la propiedad PICE de cVolver no es válido.
+Línea 55: el nombre de la propiedad PICF de cVolver no es válido.
+Línea 56: el nombre de la propiedad PICH de cVolver no es válido.
+Línea 57: el nombre de la propiedad PICV de cVolver no es válido.
+Línea 74: el nombre de la propiedad _ExtentX de cAbandonar no es válido.
+Línea 75: el nombre de la propiedad _ExtentY de cAbandonar no es válido.
+Línea 76: el nombre de la propiedad TX de cAbandonar no es válido.
+Línea 77: el nombre de la propiedad ENAB de cAbandonar no es válido.
+Línea 78: el nombre de la propiedad FCOL de cAbandonar no es válido.
+Línea 79: el nombre de la propiedad OCOL de cAbandonar no es válido.
+Línea 80: el nombre de la propiedad PICE de cAbandonar no es válido.
+Línea 81: el nombre de la propiedad PICF de cAbandonar no es válido.
+Línea 82: el nombre de la propiedad PICH de cAbandonar no es válido.
+Línea 83: el nombre de la propiedad PICV de cAbandonar no es válido.

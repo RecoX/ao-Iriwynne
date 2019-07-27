@@ -1,0 +1,13 @@
+[Constantes]
+TileHeight=32
+TileWidth=32
+[Version]
+V=2
+[Rutas]
+Graficos=C:\Users\Alumno\Desktop\BETA\instalador\AOLD\Graficos
+SaveGraficos=C:\Users\Alumno\Desktop\BETA\instalador\AOLD\Graficos
+Inits=C:\Users\Alumno\Desktop\BETA\instalador\Index IriwynneAO\Init
+Dats=C:\Users\Alumno\Desktop\Eduardo\server\Dat
+SaveInit=C:\Users\Alumno\Desktop\BETA\instalador\Index IriwynneAO\INIT
+SaveDat=C:\Users\Alumno\Desktop\BETA\instalador\Index IriwynneAO\DatsGuardados
+WavPath=C:\Users\Alumno\Desktop\BETA\instalador\AOLD\WAV

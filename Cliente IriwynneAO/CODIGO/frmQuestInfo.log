@@ -1,0 +1,22 @@
+Línea 32: la clase DevelopedAO.uAOButton del control cRechazar no era una clase de control cargada.
+Línea 58: la clase DevelopedAO.uAOButton del control cAceptar no era una clase de control cargada.
+Línea 38: el nombre de la propiedad _ExtentX de cRechazar no es válido.
+Línea 39: el nombre de la propiedad _ExtentY de cRechazar no es válido.
+Línea 40: el nombre de la propiedad TX de cRechazar no es válido.
+Línea 41: el nombre de la propiedad ENAB de cRechazar no es válido.
+Línea 42: el nombre de la propiedad FCOL de cRechazar no es válido.
+Línea 43: el nombre de la propiedad OCOL de cRechazar no es válido.
+Línea 44: el nombre de la propiedad PICE de cRechazar no es válido.
+Línea 45: el nombre de la propiedad PICF de cRechazar no es válido.
+Línea 46: el nombre de la propiedad PICH de cRechazar no es válido.
+Línea 47: el nombre de la propiedad PICV de cRechazar no es válido.
+Línea 64: el nombre de la propiedad _ExtentX de cAceptar no es válido.
+Línea 65: el nombre de la propiedad _ExtentY de cAceptar no es válido.
+Línea 66: el nombre de la propiedad TX de cAceptar no es válido.
+Línea 67: el nombre de la propiedad ENAB de cAceptar no es válido.
+Línea 68: el nombre de la propiedad FCOL de cAceptar no es válido.
+Línea 69: el nombre de la propiedad OCOL de cAceptar no es válido.
+Línea 70: el nombre de la propiedad PICE de cAceptar no es válido.
+Línea 71: el nombre de la propiedad PICF de cAceptar no es válido.
+Línea 72: el nombre de la propiedad PICH de cAceptar no es válido.
+Línea 73: el nombre de la propiedad PICV de cAceptar no es válido.
