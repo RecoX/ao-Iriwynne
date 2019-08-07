@@ -178,7 +178,7 @@ Public Function GetCanje(ByVal uIndex As Integer, _
                         StrError = "No tienes los puntos suficientes."
                         Exit Function
                 ElseIf Not MeterItemEnInventario(uIndex, MiObj) Then
-                        StrError = "No puedes cargar más objetos."
+                        StrError = "No puedes cargar mï¿½s objetos."
                         Exit Function
 
                 End If

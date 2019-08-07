@@ -16,7 +16,7 @@ Attribute VB_Exposed = False
 ' Use it instead of GetVar when reading several values form the same file at once, otherwise it's not usefull.
 ' Based in the idea of AlejoLP and his clsLeerInis.
 '
-' Designed and implemented by Juan Martín Sotuyo Dodero (Maraxus)
+' Designed and implemented by Juan Martï¿½n Sotuyo Dodero (Maraxus)
 ' (juansotuyo@gmail.com)
 '**************************************************************
 
@@ -40,14 +40,14 @@ Attribute VB_Exposed = False
 'It's particularly usefull when you can keep a whole file in memory such as NPCs.dat'
 ' Based in the idea of AlejoLP and his clsLeerInis.
 '
-' @author Juan Martín Sotuyo Dodero (Maraxus) juansotuyo@gmail.com
+' @author Juan Martï¿½n Sotuyo Dodero (Maraxus) juansotuyo@gmail.com
 ' @version 1.1.0
 ' @date 20060501
 
-'01/05/2006 - Juan Martín Sotuyo Dodero (Maraxus) - (juansotuyo@gmail.com)
+'01/05/2006 - Juan Martï¿½n Sotuyo Dodero (Maraxus) - (juansotuyo@gmail.com)
 '   - First Release
 '
-'01/04/2008 - Juan Martín Sotuyo Dodero (Maraxus) - (juansotuyo@gmail.com)
+'01/04/2008 - Juan Martï¿½n Sotuyo Dodero (Maraxus) - (juansotuyo@gmail.com)
 '   - Add: KeyExists method allows to check for valid section keys.
 '
 '10/10/2010 - Torres Patricio(Pato)
@@ -104,7 +104,7 @@ Private MainNodes  As Long
 Private Sub Class_Initialize()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         '
         '**************************************************************
@@ -117,7 +117,7 @@ End Sub
 Private Sub Class_Terminate()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         '
         '**************************************************************
@@ -147,7 +147,7 @@ End Sub
 Public Sub Initialize(ByVal File As String)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 27/07/2006
         'Opens the requested file and loads it's data into memory
         '**************************************************************
@@ -247,7 +247,7 @@ Private Sub SortChildNodes(ByRef Node As MainNode, _
                            ByVal Last As Integer)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         'Sorts the list of values in a given MainNode using quicksort,
         'this allows the use of Binary Search for faster searches
@@ -302,7 +302,7 @@ End Sub
 Private Sub SortMainNodes(ByVal First As Integer, ByVal Last As Integer)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         'Sorts the MainNodes list using quicksort,
         'this allows the use of Binary Search for faster searches
@@ -355,7 +355,7 @@ End Sub
 Public Function GetValue(ByVal Main As String, ByVal key As String) As String
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         'Returns a value if the key and main node exist, or a nullstring otherwise
         '**************************************************************
@@ -423,7 +423,7 @@ End Sub
 Private Function FindKey(ByRef Node As MainNode, ByVal key As String) As Long
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         'Returns the index of the value which key matches the requested one,
         'or the negation of the position were it should be if not found
@@ -468,7 +468,7 @@ End Function
 Private Function FindMain(ByVal Name As String) As Long
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 5/01/2006
         'Returns the index of the MainNode which name matches the requested one,
         'or the negation of the position were it should be if not found
@@ -512,7 +512,7 @@ End Function
 
 Public Function KeyExists(ByVal Name As String) As Boolean
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 04/01/2008
         'Returns true of the key exists, false otherwise.
         '**************************************************************

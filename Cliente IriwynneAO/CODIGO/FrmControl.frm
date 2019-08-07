@@ -65,17 +65,17 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-'Esta función Api devuelve un valor  Boolean indicando si la ventana es una ventana visible
+'Esta funciï¿½n Api devuelve un valor  Boolean indicando si la ventana es una ventana visible
 Private Declare Function IsWindowVisible _
    Lib "user32" (ByVal hWnd As Long) As Long
 
-'Esta función retorna el número de caracteres del caption de la ventana
+'Esta funciï¿½n retorna el nï¿½mero de caracteres del caption de la ventana
 Private Declare Function GetWindowTextLength _
                 Lib "user32" _
                 Alias "GetWindowTextLengthA" (ByVal hWnd As Long) As Long
 
 'Esta devuelve el texto. Se le pasa el hwnd de la ventana, un buffer donde se
-'almacenará el texto devuelto, y el Lenght de la cadena en el último parámetro
+'almacenarï¿½ el texto devuelto, y el Lenght de la cadena en el ï¿½ltimo parï¿½metro
 'que obtuvimos con el Api GetWindowTextLength
 Private Declare Function GetWindowText _
                 Lib "user32" _
@@ -83,7 +83,7 @@ Private Declare Function GetWindowText _
                                         ByVal lpString As String, _
                                         ByVal cch As Long) As Long
 
-'Esta es la función Api que busca las ventanas y retorna su handle o Hwnd
+'Esta es la funciï¿½n Api que busca las ventanas y retorna su handle o Hwnd
 Private Declare Function GetWindow _
                 Lib "user32" (ByVal hWnd As Long, _
                               ByVal wFlag As Long) As Long
@@ -111,17 +111,17 @@ Public Function ListarCaptions(ByRef Cant As Integer) As String
                 'Tenemos que comprobar que la ventana es una de tipo visible
                 If IsWindowVisible(Handle) Then
                 
-                        'Obtenemos el número de caracteres de la ventana
+                        'Obtenemos el nï¿½mero de caracteres de la ventana
                         lenT = GetWindowTextLength(Handle)
 
-                        'si es el número anterior es mayor a 0
+                        'si es el nï¿½mero anterior es mayor a 0
                         If lenT > 0 Then
                         
-                                'Creamos un buffer. Este buffer tendrá el tamaño con la variable LenT
+                                'Creamos un buffer. Este buffer tendrï¿½ el tamaï¿½o con la variable LenT
                                 Titulo = String$(lenT, 0)
                                 
                                 'Ahora recuperamos el texto de la ventana en el buffer que le enviamos
-                                'y también debemos pasarle el Hwnd de dicha ventana
+                                'y tambiï¿½n debemos pasarle el Hwnd de dicha ventana
                                 Ret = GetWindowText(Handle, Titulo, lenT + 1)
                                 
                                 Titulo$ = Left$(Titulo, Ret)
@@ -135,7 +135,7 @@ Public Function ListarCaptions(ByRef Cant As Integer) As String
 
                 End If
 
-                'Buscamos con GetWindow la próxima ventana usando la constante GW_HWNDNEXT
+                'Buscamos con GetWindow la prï¿½xima ventana usando la constante GW_HWNDNEXT
                 Handle = GetWindow(Handle, GW_HWNDNEXT)
         Loop
 

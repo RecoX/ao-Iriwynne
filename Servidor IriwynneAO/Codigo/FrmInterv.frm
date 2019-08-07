@@ -326,7 +326,7 @@ Begin VB.Form FrmInterv
          Begin VB.Label Label12 
             AutoSize        =   -1  'True
             BackStyle       =   0  'Transparent
-            Caption         =   "Frío"
+            Caption         =   "Frï¿½o"
             BeginProperty Font 
                Name            =   "MS Sans Serif"
                Size            =   8.25
@@ -931,7 +931,7 @@ Begin VB.Form FrmInterv
          Begin VB.Label Label18 
             AutoSize        =   -1  'True
             BackStyle       =   0  'Transparent
-            Caption         =   "Invocación"
+            Caption         =   "Invocaciï¿½n"
             BeginProperty Font 
                Name            =   "MS Sans Serif"
                Size            =   8.25
@@ -1033,7 +1033,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -1055,16 +1055,16 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
 Public Sub AplicarIntervalos()
 
-        '¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿ Intervalos del main loop ¿?¿?¿?¿?¿?¿?¿?¿?¿
+        'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½ Intervalos del main loop ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
         SanaIntervaloSinDescansar = val(txtSanaIntervaloSinDescansar.Text)
         StaminaIntervaloSinDescansar = val(txtStaminaIntervaloSinDescansar.Text)
         SanaIntervaloDescansar = val(txtSanaIntervaloDescansar.Text)

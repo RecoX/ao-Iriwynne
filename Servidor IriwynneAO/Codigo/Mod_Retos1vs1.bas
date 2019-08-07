@@ -99,14 +99,14 @@ Public Function can_sendReto(ByVal send_index As Integer, _
         other_index = NameIndex(other_name)
     
         If (other_index = 0) Then
-                m_error = other_name & " no está online."
+                m_error = other_name & " no estï¿½ online."
 
                 Exit Function
 
         End If
     
         If m_gold < MIN_GOLD Then
-                m_error = "La apuesta mínima de oro es de " & CStr(MIN_GOLD) & " monedas de oro."
+                m_error = "La apuesta mï¿½nima de oro es de " & CStr(MIN_GOLD) & " monedas de oro."
 
                 Exit Function
 
@@ -123,7 +123,7 @@ Public Function can_sendReto(ByVal send_index As Integer, _
                 can_sendReto = (check_player(other_index, m_gold, m_error) = True)
         Else
                 m_error = Replace$(m_error, UserList(send_index).Name & " ", vbNullString)
-                m_error = Replace$(m_error, "está", "estás")
+                m_error = Replace$(m_error, "estï¿½", "estï¿½s")
                 m_error = Replace$(m_error, "tiene", "tienes")
 
         End If
@@ -141,14 +141,14 @@ Private Function check_player(ByVal player_Index As Integer, _
         With UserList(player_Index)
 
                 If (.flags.Muerto <> 0) Then
-                        f_error = .Name & " está muerto."
+                        f_error = .Name & " estï¿½ muerto."
 
                         Exit Function
 
                 End If
          
                 If (.Counters.Pena <> 0) Then
-                        f_error = .Name & " está en la cárcel."
+                        f_error = .Name & " estï¿½ en la cï¿½rcel."
 
                         Exit Function
 
@@ -162,14 +162,14 @@ Private Function check_player(ByVal player_Index As Integer, _
                 End If
          
                 If (.pos.Map <> eCiudad.cUllathorpe) Then
-                        f_error = .Name & " está fuera de su hogar."
+                        f_error = .Name & " estï¿½ fuera de su hogar."
 
                         Exit Function
 
                 End If
          
                 If (.mReto.reto_Index <> 0) Or (.sReto.reto_used = True) Then
-                        f_error = .Name & " ya está en reto."
+                        f_error = .Name & " ya estï¿½ en reto."
 
                         Exit Function
 
@@ -214,7 +214,7 @@ Public Sub send_Reto(ByVal send_index As Integer, _
                 UserList(other_index).mReto.request_name = UCase$(.Name)
          
                 Call Protocol.WriteConsoleMsg(send_index, "La solicitud ha sido enviada.", FontTypeNames.FONTTYPE_GUILD)
-                Call Protocol.WriteConsoleMsg(other_index, "Solicitud de reto modalidad 1vs1 : " & .Name & " te desafía en un reto " & gamble_str & " si aceptas tipea /RETAR " & UCase$(.Name) & "." & vbNewLine & "Tienes 60 segundos para aceptar el reto, de lo contrario se auto-cancelará.", FontTypeNames.FONTTYPE_GUILD)
+                Call Protocol.WriteConsoleMsg(other_index, "Solicitud de reto modalidad 1vs1 : " & .Name & " te desafï¿½a en un reto " & gamble_str & " si aceptas tipea /RETAR " & UCase$(.Name) & "." & vbNewLine & "Tienes 60 segundos para aceptar el reto, de lo contrario se auto-cancelarï¿½.", FontTypeNames.FONTTYPE_GUILD)
                 
                 If .mReto.temp_dropGamble Then
                 Call Protocol.WriteConsoleMsg(other_index, "Es por items!", FontTypeNames.FONTTYPE_FIGHT)
@@ -232,7 +232,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByRef other_name As String)
     If (Len(UserList(user_Index).mReto.request_name) = 0) Then Exit Sub
 
     If (UserList(user_Index).mReto.request_name <> other_name) Then
-        Call Protocol.WriteConsoleMsg(user_Index, other_name & " no te está retando.", FontTypeNames.FONTTYPE_GUILD)
+        Call Protocol.WriteConsoleMsg(user_Index, other_name & " no te estï¿½ retando.", FontTypeNames.FONTTYPE_GUILD)
 
         Exit Sub
 
@@ -243,7 +243,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByRef other_name As String)
     If (send_index <> 0) Then
 
         If can_AcceptReto(user_Index, send_index, tError) Then
-            Call Protocol.WriteConsoleMsg(send_index, UserList(user_Index).Name & " aceptó el reto.", FontTypeNames.FONTTYPE_GUILD)
+            Call Protocol.WriteConsoleMsg(send_index, UserList(user_Index).Name & " aceptï¿½ el reto.", FontTypeNames.FONTTYPE_GUILD)
 
             UserList(user_Index).mReto.acceptLimitCount = 0
             UserList(send_index).mReto.acceptLimitCount = 0
@@ -290,12 +290,12 @@ Private Function can_AcceptReto(ByVal userAccept As Integer, ByVal userSend As I
         End If
 
         If .mReto.reto_Index <> 0 Then
-            errorStr = "Ya estás en reto!"
+            errorStr = "Ya estï¿½s en reto!"
             Exit Function
         End If
 
         If .sReto.reto_used Then
-            errorStr = "Ya estás en reto!"
+            errorStr = "Ya estï¿½s en reto!"
             Exit Function
         End If
 
@@ -308,17 +308,17 @@ Private Function can_AcceptReto(ByVal userAccept As Integer, ByVal userSend As I
         gldAmount = .mReto.temp_goldGamble
 
         If (.pos.Map <> 1) Then
-            errorStr = "El oponente está fuera de su hogar."
+            errorStr = "El oponente estï¿½ fuera de su hogar."
             Exit Function
         End If
 
         If (.flags.Muerto <> 0) Then
-            errorStr = "Está muerto."
+            errorStr = "Estï¿½ muerto."
             Exit Function
         End If
 
         If (.flags.Comerciando <> 0) Then
-            errorStr = "El oponente está comerciando."
+            errorStr = "El oponente estï¿½ comerciando."
             Exit Function
         End If
 
@@ -328,12 +328,12 @@ Private Function can_AcceptReto(ByVal userAccept As Integer, ByVal userSend As I
         End If
 
         If (.mReto.reto_Index <> 0) Then
-            errorStr = "El oponente ya está en reto!"
+            errorStr = "El oponente ya estï¿½ en reto!"
             Exit Function
         End If
 
         If (.sReto.reto_used) Then
-            errorStr = "El oponente ya está en reto!"
+            errorStr = "El oponente ya estï¿½ en reto!"
             Exit Function
         End If
         
@@ -358,8 +358,8 @@ Private Sub init_reto(ByVal send_index As Integer, _
         reto_Index = get_reto_slot()
     
         If (reto_Index = 0) Then
-                Call Protocol.WriteConsoleMsg(send_index, "El reto no ha podido iniciarse porque todas las salas están siendo ocupadas.", FontTypeNames.FONTTYPE_GUILD)
-                Call Protocol.WriteConsoleMsg(other_index, "El reto no ha podido iniciarse porque todas las salas están siendo ocupadas.", FontTypeNames.FONTTYPE_GUILD)
+                Call Protocol.WriteConsoleMsg(send_index, "El reto no ha podido iniciarse porque todas las salas estï¿½n siendo ocupadas.", FontTypeNames.FONTTYPE_GUILD)
+                Call Protocol.WriteConsoleMsg(other_index, "El reto no ha podido iniciarse porque todas las salas estï¿½n siendo ocupadas.", FontTypeNames.FONTTYPE_GUILD)
         Else
         
                 With retoList(reto_Index)
@@ -493,7 +493,7 @@ Private Sub respawn_reto(ByVal reto_Index As Integer, ByVal winner_index As Byte
         
                 For i = 0 To 1
                         Call Protocol.WriteConsoleMsg(.player_List(i).player_Index, T, FontTypeNames.FONTTYPE_GUILD)
-                        Call Protocol.WriteConsoleMsg(.player_List(i).player_Index, "El siguiente round iniciará en 5 segundos.", FontTypeNames.FONTTYPE_GUILD)
+                        Call Protocol.WriteConsoleMsg(.player_List(i).player_Index, "El siguiente round iniciarï¿½ en 5 segundos.", FontTypeNames.FONTTYPE_GUILD)
                 Next i
          
                 .nextRoundCounter = 6
@@ -524,7 +524,7 @@ Private Sub end_reto(ByVal reto_Index As Integer, _
                 winner_index = .player_List(winner).player_Index
                 looser_index = .player_List(IIf(winner = 0, 1, 0)).player_Index
                 
-                Call SendData(SendTarget.ToAll, 0, Protocol.PrepareMessageConsoleMsg("Retos> " & UserList(winner_index).Name & " venció en un reto a " & UserList(looser_index).Name & IIf(disconnected = True, " (Por desconexión)", "."), FontTypeNames.FONTTYPE_GUILD))
+                Call SendData(SendTarget.ToAll, 0, Protocol.PrepareMessageConsoleMsg("Retos> " & UserList(winner_index).Name & " venciï¿½ en un reto a " & UserList(looser_index).Name & IIf(disconnected = True, " (Por desconexiï¿½n)", "."), FontTypeNames.FONTTYPE_GUILD))
          
                 If (.drop_gamble) Then
                         Call TirarTodosLosItems(looser_index)
@@ -558,7 +558,7 @@ Private Sub end_reto(ByVal reto_Index As Integer, _
                 If (.drop_gamble) Then
                         UserList(winner_index).mReto.return_home = 10
              
-                        Call Protocol.WriteConsoleMsg(winner_index, "Has ganado el reto, en 10 segundos volverás a la ciudad.", FontTypeNames.FONTTYPE_GUILD)
+                        Call Protocol.WriteConsoleMsg(winner_index, "Has ganado el reto, en 10 segundos volverï¿½s a la ciudad.", FontTypeNames.FONTTYPE_GUILD)
                 Else
                         'ullathorpe_p = Ullathorpe
             
@@ -744,7 +744,7 @@ Private Sub reto_loop(ByVal reto_Index As Integer)
                         .count_Down = .count_Down - 1
              
                         If (.count_Down = 0) Then
-                                T = "¡YA!"
+                                T = "ï¿½YA!"
                         Else
                                 T = CStr(.count_Down) & "..."
 
@@ -786,7 +786,7 @@ Public Sub loop_userReto(ByVal user_Index As Integer)
                                 temp_index = NameIndex(.send_to_index)
                  
                                 If (temp_index <> 0) Then
-                                        Call Protocol.WriteConsoleMsg(temp_index, "La solicitud de reto de " & UserList(user_Index).Name & " ha sido cancelada porque acabó el tiempo límite para aceptar.", FontTypeNames.FONTTYPE_GUILD)
+                                        Call Protocol.WriteConsoleMsg(temp_index, "La solicitud de reto de " & UserList(user_Index).Name & " ha sido cancelada porque acabï¿½ el tiempo lï¿½mite para aceptar.", FontTypeNames.FONTTYPE_GUILD)
                      
                                         UserList(temp_index).mReto.request_name = vbNullString
 

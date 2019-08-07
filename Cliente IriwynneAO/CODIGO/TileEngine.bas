@@ -64,7 +64,7 @@ Public Type WorldPos
 
 End Type
 
-'Contiene info acerca de donde se puede encontrar un grh tamaño y animacion
+'Contiene info acerca de donde se puede encontrar un grh tamaï¿½o y animacion
 Public Type GrhData
 
         sX As Integer
@@ -245,7 +245,7 @@ Public FramesPerSecCounter     As Long
 
 Private fpsLastCheck           As Long
 
-'Tamaño del la vista en Tiles
+'Tamaï¿½o del la vista en Tiles
 Private WindowTileWidth        As Integer
 
 Private WindowTileHeight       As Integer
@@ -260,7 +260,7 @@ Private MainViewTop            As Integer
 Private MainViewLeft           As Integer
 
 'Cuantos tiles el engine mete en el BUFFER cuando
-'dibuja el mapa. Ojo un tamaño muy grande puede
+'dibuja el mapa. Ojo un tamaï¿½o muy grande puede
 'volver el engine muy lento
 Public TileBufferSize          As Integer
 
@@ -268,7 +268,7 @@ Private TileBufferPixelOffsetX As Integer
 
 Private TileBufferPixelOffsetY As Integer
 
-'Tamaño de los tiles en pixels
+'Tamaï¿½o de los tiles en pixels
 Public TilePixelHeight         As Integer
 
 Public TilePixelWidth          As Integer
@@ -308,7 +308,7 @@ Public MainViewWidth          As Integer
 
 Public MainViewHeight         As Integer
 
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿Graficos¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?
+'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½Graficosï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?
 Public GrhData()               As GrhData 'Guarda todos los grh
 
 Public BodyData()              As BodyData
@@ -322,15 +322,15 @@ Public WeaponAnimData()        As WeaponAnimData
 Public ShieldAnimData()        As ShieldAnimData
 
 Public CascoAnimData()         As HeadData
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?
+'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?
 
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿Mapa?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?
+'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½Mapa?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?
 Public MapData()               As MapBlock ' Mapa
 
 Public MapInfo                 As MapInfo ' Info acerca del mapa en uso
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?
+'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?
 
-Public bRain                   As Boolean 'está raineando?
+Public bRain                   As Boolean 'estï¿½ raineando?
 
 Public bTecho                  As Boolean 'hay techo?
 
@@ -366,7 +366,7 @@ End Enum
 '[END]'
 '
 '       [END]
-'¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?
+'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?
 
 'Very percise counter 64bit system counter
 Private Declare Function QueryPerformanceFrequency _
@@ -1340,7 +1340,7 @@ Function LegalPos(ByVal X As Integer, ByVal Y As Integer) As Boolean
 
         End If
     
-        '¿Hay un personaje?
+        'ï¿½Hay un personaje?
         If MapData(X, Y).CharIndex > 0 Then
                 Exit Function
 
@@ -1380,7 +1380,7 @@ Function MoveToLegalPos(ByVal X As Integer, ByVal Y As Integer) As Boolean
     
         CharIndex = MapData(X, Y).CharIndex
 
-        '¿Hay un personaje?
+        'ï¿½Hay un personaje?
         If CharIndex > 0 Then
     
                 If MapData(UserPos.X, UserPos.Y).Blocked = 1 Then
@@ -1637,7 +1637,7 @@ Sub DDrawTransGrhtoSurfaceAlpha(ByRef Grh As Grh, ByVal X As Integer, ByVal Y As
         Modo = 0
     ElseIf ddsdDest.ddpfPixelFormat.lGBitMask = &H7E0& And ddsdSrc.ddpfPixelFormat.lGBitMask = &H7E0& Then
         Modo = 1
-        'TODO : Revisar las máscaras de 24!! Quizás mirando el campo lRGBBitCount para diferenciar 24 de 32...
+        'TODO : Revisar las mï¿½scaras de 24!! Quizï¿½s mirando el campo lRGBBitCount para diferenciar 24 de 32...
     ElseIf ddsdDest.ddpfPixelFormat.lGBitMask = &H7E0& And ddsdSrc.ddpfPixelFormat.lGBitMask = &H7E0& Then
         Modo = 3
     ElseIf ddsdDest.ddpfPixelFormat.lGBitMask = &HFF00& And ddsdSrc.ddpfPixelFormat.lGBitMask = &HFF00& Then
@@ -1766,7 +1766,7 @@ error:
                 Grh.FrameCounter = 1
                 Resume
         Else
-                MsgBox "Ocurrió un error inesperado, por favor comuniquelo a los administradores del juego." & vbCrLf & "Descripción del error: " & _
+                MsgBox "Ocurriï¿½ un error inesperado, por favor comuniquelo a los administradores del juego." & vbCrLf & "Descripciï¿½n del error: " & _
                    vbCrLf & Err.Description, vbExclamation, "[ " & Err.number & " ] Error"
                 End
 
@@ -1856,7 +1856,7 @@ Sub RenderScreen(ByVal tilex As Integer, _
 '**************************************************************
 'Author: Aaron Perkins
 'Last Modify Date: 8/14/2007
-'Last modified by: Juan Martín Sotuyo Dodero (Maraxus)
+'Last modified by: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 'Renders everything to the viewport
 '**************************************************************
     Dim Y      As Long     'Keeps track of where on map we are
@@ -2128,7 +2128,7 @@ End Sub
 Public Function RenderSounds()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/30/2008
         'Actualiza todos los sonidos del mapa.
         '**************************************************************
@@ -2182,7 +2182,7 @@ End Function
 
 Sub LoadGraphics()
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero - complete rewrite
+        'Author: Juan Martï¿½n Sotuyo Dodero - complete rewrite
         'Last Modify Date: 11/03/2006
         'Initializes the SurfaceDB and sets up the rain rects
         '**************************************************************
@@ -2217,7 +2217,7 @@ Public Function InitTileEngine(ByVal setDisplayFormhWnd As Long, _
         '***************************************************
         'Author: Aaron Perkins
         'Last Modification: 08/14/07
-        'Last modified by: Juan Martín Sotuyo Dodero (Maraxus)
+        'Last modified by: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Creates all DX objects and configures the engine to start running.
         '***************************************************
         Dim SurfaceDesc As DDSURFACEDESC2
@@ -2379,7 +2379,7 @@ End Function
 Public Sub DeinitTileEngine()
 
         '***************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modification: 08/14/07
         'Destroys all DX objects
         '***************************************************
@@ -2401,7 +2401,7 @@ Sub ShowNextFrame(ByVal DisplayFormTop As Integer, _
         '***************************************************
         'Author: Arron Perkins
         'Last Modification: 08/14/07
-        'Last modified by: Juan Martín Sotuyo Dodero (Maraxus)
+        'Last modified by: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Updates the game's model and renders everything.
         '***************************************************
         Static OffsetCounterX As Single
@@ -2467,7 +2467,7 @@ Sub ShowNextFrame(ByVal DisplayFormTop As Integer, _
                         Sleep 5
                 Wend
         
-                'Si está activado el FragShooter y está esperando para sacar una foto, lo hacemos:
+                'Si estï¿½ activado el FragShooter y estï¿½ esperando para sacar una foto, lo hacemos:
                 If ClientSetup.bActive Then
                         If FragShooterCapturePending Then
                                 DoEvents
@@ -2579,7 +2579,7 @@ Private Sub CharRender(ByVal CharIndex As Long, _
                        ByVal PixelOffsetY As Integer)
 
 '***************************************************
-'Author: Juan Martín Sotuyo Dodero (Maraxus)
+'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 'Last Modify Date: 25/05/2011 (Amraphen)
 'Draw char's to screen without offcentering them
 '16/09/2010: ZaMa - Ya no se dibujan los bodies cuando estan invisibles.
@@ -2841,7 +2841,7 @@ Public Sub SetCharacterFx(ByVal CharIndex As Integer, _
                           ByVal Loops As Integer)
 
         '***************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 12/03/04
         'Sets an FX to the character.
         '***************************************************
@@ -2862,7 +2862,7 @@ End Sub
 Private Sub CleanViewPort()
 
         '***************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 12/03/04
         'Fills the viewport with black.
         '***************************************************

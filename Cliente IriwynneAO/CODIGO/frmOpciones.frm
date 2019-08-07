@@ -161,10 +161,10 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.11.6
 '
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 'Copyright (C) 2002 Otto Perez
 'Copyright (C) 2002 Aaron Perkins
-'Copyright (C) 2002 Matías Fernando Pequeño
+'Copyright (C) 2002 Matï¿½as Fernando Pequeï¿½o
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -186,10 +186,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -428,9 +428,9 @@ Private Sub LoadButtons()
            GrhPath & "boton Mensajes 1.jpg", _
            GrhPath & "boton Mensajes 1.jpg", Me)
                                     
-        Call cBotonCambiarPasswd.Initialize(imgCambiarPasswd, GrhPath & "boton Cambiar contraseña.jpg", _
-           GrhPath & "boton Cambiar contraseña 1.jpg", _
-           GrhPath & "boton Cambiar contraseña 1.jpg", Me)
+        Call cBotonCambiarPasswd.Initialize(imgCambiarPasswd, GrhPath & "boton Cambiar contraseï¿½a.jpg", _
+           GrhPath & "boton Cambiar contraseï¿½a 1.jpg", _
+           GrhPath & "boton Cambiar contraseï¿½a 1.jpg", Me)
                                                                         
         Call cBotonSalir.Initialize(imgSalir, GrhPath & "Boton Salir.bmp", _
            GrhPath & "Boton Salir 1.bmp", _

@@ -1050,7 +1050,7 @@ Private Sub imgApunialar_MouseMove(Button As Integer, _
                                    X As Single, _
                                    Y As Single)
                                    
-        Call ShowHelp(eSkill.Apuñalar)
+        Call ShowHelp(eSkill.Apuï¿½alar)
 
 End Sub
 
@@ -1358,7 +1358,7 @@ End Sub
 Private Sub LoadHelp()
     
         vsHelp(eSkill.Magia) = "Magia:" & vbCrLf & _
-           "- Representa la habilidad de un personaje de las áreas mágica." & vbCrLf & _
+           "- Representa la habilidad de un personaje de las ï¿½reas mï¿½gica." & vbCrLf & _
            "- Indica la variedad de hechizos que es capaz de dominar el personaje."
 
         If Not bPuedeMagia Then
@@ -1369,19 +1369,19 @@ Private Sub LoadHelp()
     
         vsHelp(eSkill.Robar) = "Robar:" & vbCrLf & _
            "- Habilidades de hurto. Nunca por medio de la violencia." & vbCrLf & _
-           "- Indica la probabilidad de éxito del personaje al intentar apoderarse de oro de otro, en caso de ser Ladrón, tambien podrá apoderarse de items."
+           "- Indica la probabilidad de ï¿½xito del personaje al intentar apoderarse de oro de otro, en caso de ser Ladrï¿½n, tambien podrï¿½ apoderarse de items."
     
-        vsHelp(eSkill.Tacticas) = "Evasión en Combate:" & vbCrLf & _
+        vsHelp(eSkill.Tacticas) = "Evasiï¿½n en Combate:" & vbCrLf & _
            "- Representa la habilidad general para moverse en combate entre golpes enemigos sin morir o tropezar en el intento." & vbCrLf & _
-           "- Indica la posibilidad de evadir un golpe físico del personaje."
+           "- Indica la posibilidad de evadir un golpe fï¿½sico del personaje."
     
         vsHelp(eSkill.Armas) = "Combate con Armas:" & vbCrLf & _
            "- Representa la habilidad del personaje para manejar armas de combate cuerpo a cuerpo." & vbCrLf & _
            "- Indica la probabilidad de impactar al oponente con armas cuerpo a cuerpo."
     
         vsHelp(eSkill.Meditar) = "Meditar:" & vbCrLf & _
-           "- Representa la capacidad del personaje de concentrarse para abstrarse dentro de su mente, y así revitalizar su fuerza espiritual." & vbCrLf & _
-           "- Indica la velocidad a la que el personaje recupera maná (Clases mágicas)."
+           "- Representa la capacidad del personaje de concentrarse para abstrarse dentro de su mente, y asï¿½ revitalizar su fuerza espiritual." & vbCrLf & _
+           "- Indica la velocidad a la que el personaje recupera manï¿½ (Clases mï¿½gicas)."
     
         If Not bPuedeMeditar Then
                 vsHelp(eSkill.Meditar) = vsHelp(eSkill.Meditar) & vbCrLf & _
@@ -1389,28 +1389,28 @@ Private Sub LoadHelp()
 
         End If
 
-        vsHelp(eSkill.Apuñalar) = "Apuñalar:" & vbCrLf & _
-           "- Representa la destreza para inflingir daño grave con armas cortas." & vbCrLf & _
-           "- Indica la posibilidad de apuñalar al enemigo en un ataque. El Asesino es la única clase que no necesitará 10 skills para comenzar a entrenar esta habilidad."
+        vsHelp(eSkill.Apuï¿½alar) = "Apuï¿½alar:" & vbCrLf & _
+           "- Representa la destreza para inflingir daï¿½o grave con armas cortas." & vbCrLf & _
+           "- Indica la posibilidad de apuï¿½alar al enemigo en un ataque. El Asesino es la ï¿½nica clase que no necesitarï¿½ 10 skills para comenzar a entrenar esta habilidad."
 
         vsHelp(eSkill.Ocultarse) = "Ocultarse:" & vbCrLf & _
            "- La habilidad propia de un personaje para mimetizarse con el medio y evitar se perciba su presencia." & vbCrLf & _
-           "- Indica la facilidad con la que uno puede desaparecer de la vista de los demás y por cuanto tiempo."
+           "- Indica la facilidad con la que uno puede desaparecer de la vista de los demï¿½s y por cuanto tiempo."
     
         vsHelp(eSkill.Supervivencia) = "Superivencia:" & vbCrLf & _
            "- Es el conjunto de habilidades necesarias para sobrevivir fuera de una ciudad en base a lo que la naturaleza ofrece." & vbCrLf & _
-           "- Permite conocer la salud de las criaturas guiándose exclusivamente por su aspecto, así como encender fogatas junto a las que descansar."
+           "- Permite conocer la salud de las criaturas guiï¿½ndose exclusivamente por su aspecto, asï¿½ como encender fogatas junto a las que descansar."
     
         vsHelp(eSkill.Talar) = "Talar:" & vbCrLf & _
-           "- Es la habilidad en el uso del hacha para evitar desperdiciar leña y maximizar la efectividad de cada golpe dado." & vbCrLf & _
-           "- Indica la probabilidad de obtener leña por golpe."
+           "- Es la habilidad en el uso del hacha para evitar desperdiciar leï¿½a y maximizar la efectividad de cada golpe dado." & vbCrLf & _
+           "- Indica la probabilidad de obtener leï¿½a por golpe."
     
         vsHelp(eSkill.Comerciar) = "Comercio:" & vbCrLf & _
            "- Es la habilidad para regatear los precios exigidos en la compra y evitar ser regateado al vender." & vbCrLf & _
            "- Indica que tan caro se compra en el comercio con NPCs."
     
         vsHelp(eSkill.Defensa) = "Defensa con Escudos:" & vbCrLf & _
-           "- Es la habilidad de interponer correctamente el escudo ante cada embate enemigo para evitar ser impactado sin perder el equilibrio y poder responder rápidamente con la otra mano." & vbCrLf & _
+           "- Es la habilidad de interponer correctamente el escudo ante cada embate enemigo para evitar ser impactado sin perder el equilibrio y poder responder rï¿½pidamente con la otra mano." & vbCrLf & _
            "- Indica las probabilidades de bloquear un impacto con el escudo."
     
         If Not bPuedeEscudo Then
@@ -1420,20 +1420,20 @@ Private Sub LoadHelp()
         End If
 
         vsHelp(eSkill.Pesca) = "Pesca:" & vbCrLf & _
-           "- Es el conjunto de conocimientos básicos para poder armar un señuelo, poner la carnada en el anzuelo y saber dónde buscar peces." & vbCrLf & _
-           "- Indica la probabilidad de tener éxito en cada intento de pescar."
+           "- Es el conjunto de conocimientos bï¿½sicos para poder armar un seï¿½uelo, poner la carnada en el anzuelo y saber dï¿½nde buscar peces." & vbCrLf & _
+           "- Indica la probabilidad de tener ï¿½xito en cada intento de pescar."
     
-        vsHelp(eSkill.Mineria) = "Minería:" & vbCrLf & _
-           "- Es el conjunto de conocimientos sobre los distintos minerales, el dónde se obtienen, cómo deben ser extraídos y trabajados." & vbCrLf & _
-           "- Indica la probabilidad de tener éxito en cada intento de minar y la capacidad, o no de convertir estos minerales en lingotes."
+        vsHelp(eSkill.Mineria) = "Minerï¿½a:" & vbCrLf & _
+           "- Es el conjunto de conocimientos sobre los distintos minerales, el dï¿½nde se obtienen, cï¿½mo deben ser extraï¿½dos y trabajados." & vbCrLf & _
+           "- Indica la probabilidad de tener ï¿½xito en cada intento de minar y la capacidad, o no de convertir estos minerales en lingotes."
     
-        vsHelp(eSkill.Carpinteria) = "Carpintería:" & vbCrLf & _
-           "- Es el conjunto de conocimientos para saber serruchar, lijar, encolar y clavar madera con un buen nivel de terminación." & vbCrLf & _
+        vsHelp(eSkill.Carpinteria) = "Carpinterï¿½a:" & vbCrLf & _
+           "- Es el conjunto de conocimientos para saber serruchar, lijar, encolar y clavar madera con un buen nivel de terminaciï¿½n." & vbCrLf & _
            "- Indica la habilidad en el manejo de estas herramientas, el que tan bueno se es en el oficio de carpintero."
     
-        vsHelp(eSkill.Herreria) = "Herrería:" & vbCrLf & _
+        vsHelp(eSkill.Herreria) = "Herrerï¿½a:" & vbCrLf & _
            "- Es el conjunto de conocimientos para saber procesar cada tipo de mineral para fundirlo, forjarlo y crear aleaciones." & vbCrLf & _
-           "- Indica la habilidad en el manejo de estas técnicas, el que tan bueno se es en el oficio de herrero."
+           "- Indica la habilidad en el manejo de estas tï¿½cnicas, el que tan bueno se es en el oficio de herrero."
     
         vsHelp(eSkill.Liderazgo) = "Liderazgo:" & vbCrLf & _
            "- Es la habilidad propia del personaje para convencer a otros a seguirlo en batalla." & vbCrLf & _
@@ -1441,11 +1441,11 @@ Private Sub LoadHelp()
     
         vsHelp(eSkill.Domar) = "Domar Animales:" & vbCrLf & _
            "- Es la habilidad en el trato con animales para que estos te sigan y ayuden en combate." & vbCrLf & _
-           "- Indica la posibilidad de lograr domar a una criatura y qué clases de criaturas se puede domar."
+           "- Indica la posibilidad de lograr domar a una criatura y quï¿½ clases de criaturas se puede domar."
     
         vsHelp(eSkill.Proyectiles) = "Combate a distancia:" & vbCrLf & _
            "- Es el manejo de las armas de largo alcance." & vbCrLf & _
-           "- Indica la probabilidad de éxito para impactar a un enemigo con este tipo de armas."
+           "- Indica la probabilidad de ï¿½xito para impactar a un enemigo con este tipo de armas."
     
         If Not bPuedeCombateDistancia Then
                 vsHelp(eSkill.Proyectiles) = vsHelp(eSkill.Proyectiles) & vbCrLf & _
@@ -1455,9 +1455,9 @@ Private Sub LoadHelp()
 
         vsHelp(eSkill.Wrestling) = "Combate sin armas:" & vbCrLf & _
            "- Es la habilidad del personaje para entrar en combate sin arma alguna salvo sus propios brazos." & vbCrLf & _
-           "- Indica la probabilidad de éxito para impactar a un enemigo estando desarmado. El Bandido y Ladrón tienen habilidades extras asociadas a esta habilidad."
+           "- Indica la probabilidad de ï¿½xito para impactar a un enemigo estando desarmado. El Bandido y Ladrï¿½n tienen habilidades extras asociadas a esta habilidad."
     
-        vsHelp(eSkill.Navegacion) = "Navegación:" & vbCrLf & _
+        vsHelp(eSkill.Navegacion) = "Navegaciï¿½n:" & vbCrLf & _
            "- Es la habilidad para controlar barcos en el mar sin naufragar." & vbCrLf & _
            "- Indica que clase de barcos se pueden utilizar."
     

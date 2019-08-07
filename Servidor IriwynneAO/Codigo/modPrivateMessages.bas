@@ -30,7 +30,7 @@ Public Sub AgregarMensaje(ByVal UserIndex As Integer, _
 
                 End With
         
-                Call WriteConsoleMsg(UserIndex, "¡Has recibido un mensaje privado de un Game Master!", FontTypeNames.FONTTYPE_GM)
+                Call WriteConsoleMsg(UserIndex, "ï¿½Has recibido un mensaje privado de un Game Master!", FontTypeNames.FONTTYPE_GM)
 
         End With
 

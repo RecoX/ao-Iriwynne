@@ -31,7 +31,7 @@ Begin VB.Form frmMapa
    Begin VB.Label lblMapa 
       Alignment       =   2  'Center
       BackStyle       =   0  'Transparent
-      Caption         =   "Pasa por el mouse para obtener información acerca del mapa."
+      Caption         =   "Pasa por el mouse para obtener informaciï¿½n acerca del mapa."
       ForeColor       =   &H00FFFFFF&
       Height          =   255
       Left            =   0
@@ -437,7 +437,7 @@ Private picMaps(1) As Picture
 
 Private CurrentMap As eMaps
 Private Const lblMapaCaption As String = "Nombre del mapa: "
-Private Const lblMapaInfoCaption As String = "Información del mapa: "
+Private Const lblMapaInfoCaption As String = "Informaciï¿½n del mapa: "
 
 
 Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
@@ -521,19 +521,19 @@ Private Sub imgMap_MouseMove(Index As Integer, Button As Integer, Shift As Integ
 Select Case Index
 
 Case 1
-lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad principal. Ningún bando ríge sobre éstas tierras."
+lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad principal. Ningï¿½n bando rï¿½ge sobre ï¿½stas tierras."
 lblMapa.Caption = lblMapaCaption & "Ullathorpe"
 Case 2
-lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura regída por la Armada Real"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura regï¿½da por la Armada Real"
 lblMapa.Caption = lblMapaCaption & "Nix"
 Case 3
-lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura regída por la Armada Real"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura regï¿½da por la Armada Real"
 lblMapa.Caption = lblMapaCaption & "Banderbille"
 Case 4
-lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad insegura regída por los Criminales"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad insegura regï¿½da por los Criminales"
 lblMapa.Caption = lblMapaCaption & "Arkhein"
 Case 6
-lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura. Regída por la Armada Real"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Ciudad segura. Regï¿½da por la Armada Real"
 lblMapa.Caption = lblMapaCaption & "Lindos"
 Case 9
 lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, hay yacimientos de: Hierro"
@@ -545,10 +545,10 @@ Case 16
 lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: Dragon Rojo"
 lblMapa.Caption = lblMapaCaption & "Dungeon Dragon"
 Case 32
-lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: Liche, Zombie, Orco, Araña Gigante, Demonio"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: Liche, Zombie, Orco, Araï¿½a Gigante, Demonio"
 lblMapa.Caption = lblMapaCaption & "Dungeon Marabel"
 Case 34
-lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: NPCs acuáticos"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: NPCs acuï¿½ticos"
 lblMapa.Caption = lblMapaCaption & "Dungeon Aqua"
 Case 24
 lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, hay yacimientos de: Oro"
@@ -557,11 +557,11 @@ Case 39
 lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay: NPCs de fuego"
 lblMapa.Caption = lblMapaCaption & "Dungeon Infierno"
 Case 43
-lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, ideal para clases no mágicas."
-lblMapa.Caption = lblMapaCaption & "Montaña enana"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, ideal para clases no mï¿½gicas."
+lblMapa.Caption = lblMapaCaption & "Montaï¿½a enana"
 Case 46
-lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, hay árboles élficos."
-lblMapa.Caption = lblMapaCaption & "Bosque élfico"
+lblMapaInfo.Caption = lblMapaInfoCaption & "Mapa inseguro, hay ï¿½rboles ï¿½lficos."
+lblMapa.Caption = lblMapaCaption & "Bosque ï¿½lfico"
 Case 42
 lblMapaInfo.Caption = lblMapaInfoCaption & "Dungeon inseguro, hay NPCs que dan mucha experiencia. (Medusas)"
 lblMapa.Caption = lblMapaCaption & "Dungeon Veriil"

@@ -892,7 +892,7 @@ Public Function RevisarElecciones() As Boolean
 
                         If CantGanadores > 1 Then
                                 'empate en la votacion
-                                Call SetGuildNews("*Empate en la votación. " & Ganador & " con " & CantGanadores & " votos ganaron las elecciones del clan.")
+                                Call SetGuildNews("*Empate en la votaciï¿½n. " & Ganador & " con " & CantGanadores & " votos ganaron las elecciones del clan.")
                         ElseIf CantGanadores = 1 Then
                                 List = Me.GetMemberList()
                 
@@ -902,16 +902,16 @@ Public Function RevisarElecciones() As Boolean
                                 Next i
                 
                                 If i <= UBound(List()) Then
-                                        Call SetGuildNews("*" & Ganador & " ganó la elección del clan*")
+                                        Call SetGuildNews("*" & Ganador & " ganï¿½ la elecciï¿½n del clan*")
                                         Call Me.SetLeader(Ganador)
                                         RevisarElecciones = True
                                 Else
-                                        Call SetGuildNews("*" & Ganador & " ganó la elección del clan pero abandonó las filas por lo que la votación queda desierta*")
+                                        Call SetGuildNews("*" & Ganador & " ganï¿½ la elecciï¿½n del clan pero abandonï¿½ las filas por lo que la votaciï¿½n queda desierta*")
 
                                 End If
 
                         Else
-                                Call SetGuildNews("*El período de votación se cerró sin votos*")
+                                Call SetGuildNews("*El perï¿½odo de votaciï¿½n se cerrï¿½ sin votos*")
 
                         End If
             
@@ -1203,8 +1203,8 @@ Private Sub ReplaceInvalidChars(ByRef s As String)
 
         End If
 
-        If InStrB(s, "¬") <> 0 Then
-                s = Replace(s, "¬", vbNullString)   'morgo usaba esto como "separador"
+        If InStrB(s, "ï¿½") <> 0 Then
+                s = Replace(s, "ï¿½", vbNullString)   'morgo usaba esto como "separador"
 
         End If
 

@@ -38,7 +38,7 @@ On Error GoTo errhandleR
                 Exit Sub
 End If
                       If UserList(tIndex).flags.Muerto = 1 Then 'cambiado userindex por targetindex mankeada de HEKAMIAH
-                                Call WriteConsoleMsg(Userindex, "¡El usuario está muerto!", FontTypeNames.FONTTYPE_INFO)
+                                Call WriteConsoleMsg(Userindex, "ï¿½El usuario estï¿½ muerto!", FontTypeNames.FONTTYPE_INFO)
 Exit Sub
         End If
         
@@ -178,7 +178,7 @@ Public Sub DragToNPC(ByVal Userindex As Integer, _
 13        If Npclist(tNpc).NPCtype = eNPCType.Banquero Then
 14                Call UserDejaObj(Userindex, Slot, Amount)
                 
-                'No tiene más el mismo amount que antes? entonces depositó.
+                'No tiene mï¿½s el mismo amount que antes? entonces depositï¿½.
 
 15                If TeniaObj <> UserList(Userindex).Invent.Object(Slot).Amount Then
 16                        WriteConsoleMsg Userindex, "Has depositado " & Amount & " - " & ObjData(tmpIndex).Name & ".", FontTypeNames.FONTTYPE_INFOBOLD
@@ -194,7 +194,7 @@ Public Sub DragToNPC(ByVal Userindex As Integer, _
                         
 21                        Call Comercio(eModoComercio.Venta, Userindex, tNpc, Slot, Amount)
                         
-                        'Ganó oro? si es así es porque lo vendió.
+                        'Ganï¿½ oro? si es asï¿½ es porque lo vendiï¿½.
 
 22                        If TeniaOro <> UserList(Userindex).Stats.GLD Then
 23                                WriteConsoleMsg Userindex, "Le has vendido al " & Npclist(tNpc).Name & " " & Amount & " - " & ObjData(tmpIndex).Name & ".", FontTypeNames.FONTTYPE_INFOBOLD
@@ -202,7 +202,7 @@ Public Sub DragToNPC(ByVal Userindex As Integer, _
 24                        End If
 
 25                Else
-26                        WriteConsoleMsg Userindex, "El npc no está interesado en comprar este tipo de objetos.", FontTypeNames.FONTTYPE_INFOBOLD
+26                        WriteConsoleMsg Userindex, "El npc no estï¿½ interesado en comprar este tipo de objetos.", FontTypeNames.FONTTYPE_INFOBOLD
 
                 End If
 
@@ -221,7 +221,7 @@ Public Sub DragToPos(ByVal Userindex As Integer, _
                      ByVal Slot As Byte, _
                      ByVal Amount As Integer)
 
-        '            Drag un slot a una posición.
+        '            Drag un slot a una posiciï¿½n.
  
  On Error GoTo errhandleR
  
@@ -270,7 +270,7 @@ Public Sub DragToPos(ByVal Userindex As Integer, _
 
         End If
  
-        'Agrego el objeto a la posición.
+        'Agrego el objeto a la posiciï¿½n.
         MakeObj tObj, UserList(Userindex).pos.Map, CInt(X), CInt(Y)
  
         'Quito el objeto.
@@ -302,14 +302,14 @@ Private Function CanDragToPos(ByVal Map As Integer, _
                               ByVal Y As Byte, _
                               ByRef Error As String) As Boolean
  
-        '            Devuelve si se puede dragear un item a x posición.
+        '            Devuelve si se puede dragear un item a x posiciï¿½n.
  
         CanDragToPos = False
  
         'Zona segura?
 
         If Not MapInfo(Map).Pk Then
-                Error = "No está permitido arrojar objetos al suelo en zonas seguras."
+                Error = "No estï¿½ permitido arrojar objetos al suelo en zonas seguras."
 
                 Exit Function
 
@@ -318,7 +318,7 @@ Private Function CanDragToPos(ByVal Map As Integer, _
         'Ya hay objeto?
 
         If Not MapData(Map, X, Y).ObjInfo.objIndex = 0 Then
-                Error = "Hay un objeto en esa posición!"
+                Error = "Hay un objeto en esa posiciï¿½n!"
 
                 Exit Function
 
@@ -329,7 +329,7 @@ Private Function CanDragToPos(ByVal Map As Integer, _
         
 
         If Not MapData(Map, X, Y).Blocked = 0 Then
-                Error = "No puedes arrojar objetos en esa posición"
+                Error = "No puedes arrojar objetos en esa posiciï¿½n"
 
                 Exit Function
 
@@ -373,10 +373,10 @@ Private Function CanDragObj(ByVal objIndex As Integer, _
                 Exit Function
         End If
         
-        'Está navgeando?
+        'Estï¿½ navgeando?
 
         If Navegando Then
-                Error = "No puedes arrojar un barco si estás navegando!"
+                Error = "No puedes arrojar un barco si estï¿½s navegando!"
 
                 Exit Function
 

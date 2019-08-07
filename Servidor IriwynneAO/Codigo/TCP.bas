@@ -314,7 +314,7 @@ Sub ConnectNewUser(ByVal UserIndex As Integer, _
         With UserList(UserIndex)
 
                 If Not AsciiValidos(Name) Or LenB(Name) = 0 Then
-                        Call WriteErrorMsg(UserIndex, "Nombre inválido.")
+                        Call WriteErrorMsg(UserIndex, "Nombre invï¿½lido.")
                         Exit Sub
 
                 End If
@@ -335,14 +335,14 @@ Sub ConnectNewUser(ByVal UserIndex As Integer, _
                     Exit Sub
                 End If
                 
-                '¿Existe el personaje?
+                'ï¿½Existe el personaje?
                 If FileExist(CharPath & UCase$(Name) & ".chr", vbNormal) = True Then
                         Call WriteErrorMsg(UserIndex, "Ya existe el personaje.")
                         Exit Sub
 
                 End If
     
-                'Tiró los dados antes de llegar acá??
+                'Tirï¿½ los dados antes de llegar acï¿½??
                 'If .Stats.UserAtributos(eAtributos.Fuerza) = 0 Then
                 '        Call WriteErrorMsg(UserIndex, "Debe tirar los dados antes de poder crear un personaje.")
                 '        Exit Sub
@@ -352,7 +352,7 @@ Sub ConnectNewUser(ByVal UserIndex As Integer, _
                 If Not ValidarCabeza(UserRaza, UserSexo, Head) Then
                         Call LogCheating("El usuario " & Name & " ha seleccionado la cabeza " & Head & " desde la IP " & .Ip)
         
-                        Call WriteErrorMsg(UserIndex, "Cabeza inválida, elija una cabeza seleccionable.")
+                        Call WriteErrorMsg(UserIndex, "Cabeza invï¿½lida, elija una cabeza seleccionable.")
                         Exit Sub
 
                 End If
@@ -459,7 +459,7 @@ Sub ConnectNewUser(ByVal UserIndex As Integer, _
                 .Stats.ELU = 300
                 .Stats.ELV = 1
     
-                '???????????????? INVENTARIO ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+                '???????????????? INVENTARIO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 Dim Slot      As Byte
 
                 Dim IsPaladin As Boolean
@@ -620,8 +620,8 @@ Sub CloseSocket(ByVal UserIndex As Integer)
 160         Call m_JuegosDelHambre.DesconectaUserJDH(UserIndex)
 170     End If
         
-                'Es el mismo user al que está revisando el centinela??
-                'IMPORTANTE!!! hacerlo antes de resetear así todavía sabemos el nombre del user
+                'Es el mismo user al que estï¿½ revisando el centinela??
+                'IMPORTANTE!!! hacerlo antes de resetear asï¿½ todavï¿½a sabemos el nombre del user
                 ' y lo podemos loguear
                 Dim CentinelaIndex As Byte
 
@@ -687,7 +687,7 @@ errhandler:
         
         Call FreeSlot(UserIndex)
     
-        Call LogError("CloseSocket - Error = " & Err.Number & " - Descripción = " & Err.description & " - UserIndex = " & UserIndex)
+        Call LogError("CloseSocket - Error = " & Err.Number & " - Descripciï¿½n = " & Err.description & " - UserIndex = " & UserIndex)
 
 End Sub
 
@@ -843,7 +843,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
         '12/06/2009: ZaMa - Agrego chequeo de nivel al loguear
         '14/09/2009: ZaMa - Ahora el usuario esta protegido del ataque de npcs al loguear
         '11/27/2009: Budi - Se envian los InvStats del personaje y su Fuerza y Agilidad
-        '03/12/2009: Budi - Optimización del código
+        '03/12/2009: Budi - Optimizaciï¿½n del cï¿½digo
         '24/07/2010: ZaMa - La posicion de comienzo es namehuak, como se habia definido inicialmente.
         '***************************************************
         
@@ -878,7 +878,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
     
                 'Controlamos no pasar el maximo de usuarios
                 If NumUsers >= MaxUsers Then
-                        Call WriteErrorMsg(UserIndex, "El servidor ha alcanzado el máximo de usuarios soportado, por favor vuelva a intertarlo más tarde.")
+                        Call WriteErrorMsg(UserIndex, "El servidor ha alcanzado el mï¿½ximo de usuarios soportado, por favor vuelva a intertarlo mï¿½s tarde.")
                         Call FlushBuffer(UserIndex)
                         Call CloseSocket(UserIndex)
                         Exit Sub
@@ -891,10 +891,10 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                     Exit Sub
                 End If
                 
-                '¿Este IP ya esta conectado?
+                'ï¿½Este IP ya esta conectado?
                 If AllowMultiLogins = 0 Then
                         If CheckForSameIP(UserIndex, .Ip) = True Then
-                                Call WriteErrorMsg(UserIndex, "No es posible usar más de un personaje al mismo tiempo.")
+                                Call WriteErrorMsg(UserIndex, "No es posible usar mï¿½s de un personaje al mismo tiempo.")
                                 Call FlushBuffer(UserIndex)
                                 Call CloseSocket(UserIndex)
                                 Exit Sub
@@ -903,7 +903,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
 
                 End If
     
-                '¿Existe el personaje?
+                'ï¿½Existe el personaje?
                 If Not FileExist(CharPath & UCase$(Name) & ".chr", vbNormal) Then
                         Call WriteErrorMsg(UserIndex, "El personaje no existe.")
                         Call FlushBuffer(UserIndex)
@@ -912,7 +912,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
 
                 End If
     
-                '¿Es el passwd valido?
+                'ï¿½Es el passwd valido?
                 If UCase$(Password) <> UCase$(GetVar(CharPath & UCase$(Name) & ".chr", "INIT", "Password")) Then
                         Call WriteErrorMsg(UserIndex, "Password incorrecto.")
                         Call FlushBuffer(UserIndex)
@@ -921,12 +921,12 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
 
                 End If
     
-                '¿Ya esta conectado el personaje?
+                'ï¿½Ya esta conectado el personaje?
                 If CheckForSameName(Name) Then
                         If UserList(NameIndex(Name)).Counters.Saliendo Then
-                                Call WriteErrorMsg(UserIndex, "El usuario está saliendo.")
+                                Call WriteErrorMsg(UserIndex, "El usuario estï¿½ saliendo.")
                         Else
-                                Call WriteErrorMsg(UserIndex, "Perdón, un usuario con el mismo nombre se ha logueado.")
+                                Call WriteErrorMsg(UserIndex, "Perdï¿½n, un usuario con el mismo nombre se ha logueado.")
 
                         End If
 
@@ -1047,7 +1047,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                 Else
     
                         If Not MapaValido(Mapa) Then
-                                Call WriteErrorMsg(UserIndex, "El PJ se encuenta en un mapa inválido.")
+                                Call WriteErrorMsg(UserIndex, "El PJ se encuenta en un mapa invï¿½lido.")
                                 Call CloseSocket(UserIndex)
                                 Exit Sub
 
@@ -1070,7 +1070,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                 End If
     
                 'Tratamos de evitar en lo posible el "Telefrag". Solo 1 intento de loguear en pos adjacentes.
-                'Codigo por Pablo (ToxicWaste) y revisado por Nacho (Integer), corregido para que realmetne ande y no tire el server por Juan Martín Sotuyo Dodero (Maraxus)
+                'Codigo por Pablo (ToxicWaste) y revisado por Nacho (Integer), corregido para que realmetne ande y no tire el server por Juan Martï¿½n Sotuyo Dodero (Maraxus)
                 If MapData(Mapa, .Pos.X, .Pos.Y).UserIndex <> 0 Or MapData(Mapa, .Pos.X, .Pos.Y).NpcIndex <> 0 Then
 
                         Dim FoundPlace As Boolean
@@ -1135,7 +1135,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                                                 'Lo sacamos.
                                                 If UserList(MapData(Mapa, .Pos.X, .Pos.Y).UserIndex).flags.UserLogged Then
                                                         Call FinComerciarUsu(MapData(Mapa, .Pos.X, .Pos.Y).UserIndex)
-                                                        Call WriteErrorMsg(MapData(Mapa, .Pos.X, .Pos.Y).UserIndex, "Alguien se ha conectado donde te encontrabas, por favor reconéctate...")
+                                                        Call WriteErrorMsg(MapData(Mapa, .Pos.X, .Pos.Y).UserIndex, "Alguien se ha conectado donde te encontrabas, por favor reconï¿½ctate...")
                                                         Call FlushBuffer(MapData(Mapa, .Pos.X, .Pos.Y).UserIndex)
 
                                                 End If
@@ -1229,13 +1229,13 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
     
                 If haciendoBK Then
                         Call WritePauseToggle(UserIndex)
-                        Call WriteConsoleMsg(UserIndex, "Servidor> Por favor espera algunos segundos, el WorldSave está ejecutándose.", FontTypeNames.FONTTYPE_SERVER)
+                        Call WriteConsoleMsg(UserIndex, "Servidor> Por favor espera algunos segundos, el WorldSave estï¿½ ejecutï¿½ndose.", FontTypeNames.FONTTYPE_SERVER)
 
                 End If
     
                 If EnPausa Then
                         Call WritePauseToggle(UserIndex)
-                        Call WriteConsoleMsg(UserIndex, "Servidor> Lo sentimos mucho pero el servidor se encuentra actualmente detenido. Intenta ingresar más tarde.", FontTypeNames.FONTTYPE_SERVER)
+                        Call WriteConsoleMsg(UserIndex, "Servidor> Lo sentimos mucho pero el servidor se encuentra actualmente detenido. Intenta ingresar mï¿½s tarde.", FontTypeNames.FONTTYPE_SERVER)
 
                 End If
     
@@ -1248,7 +1248,7 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                 End If
     
                 If TieneMensajesNuevos(UserIndex) Then
-                        Call WriteConsoleMsg(UserIndex, "¡Tienes mensajes privados sin leer!", FontTypeNames.FONTTYPE_FIGHT)
+                        Call WriteConsoleMsg(UserIndex, "ï¿½Tienes mensajes privados sin leer!", FontTypeNames.FONTTYPE_FIGHT)
 
                 End If
     
@@ -1384,10 +1384,10 @@ Sub ConnectUser(ByVal UserIndex As Integer, _
                         WarpUserChar UserIndex, .Pos.Map, .Pos.X, .Pos.Y, False, False
                     Else
                         If DateDiff("d", Date, DiasVIP) = 0 Then
-                        WriteConsoleMsgNew UserIndex, "VIP>", "Es tu último dia de VIP.", FontTypeNames.FONTTYPE_AMARILLO, FontTypeNames.FONTTYPE_BLANCO
+                        WriteConsoleMsgNew UserIndex, "VIP>", "Es tu ï¿½ltimo dia de VIP.", FontTypeNames.FONTTYPE_AMARILLO, FontTypeNames.FONTTYPE_BLANCO
                         
                         Else
-                        WriteConsoleMsgNew UserIndex, "VIP>", "Te quedan " & DateDiff("d", Date, DiasVIP) & " días VIP.", FontTypeNames.FONTTYPE_AMARILLO, FontTypeNames.FONTTYPE_BLANCO
+                        WriteConsoleMsgNew UserIndex, "VIP>", "Te quedan " & DateDiff("d", Date, DiasVIP) & " dï¿½as VIP.", FontTypeNames.FONTTYPE_AMARILLO, FontTypeNames.FONTTYPE_BLANCO
                         End If
                     End If
                     
@@ -1468,7 +1468,7 @@ Sub ResetFacciones(ByVal UserIndex As Integer)
                 .CiudadanosMatados = 0
                 .CriminalesMatados = 0
                 .FuerzasCaos = 0
-                .FechaIngreso = "No ingresó a ninguna Facción"
+                .FechaIngreso = "No ingresï¿½ a ninguna Facciï¿½n"
                 .RecibioArmaduraCaos = 0
                 .RecibioArmaduraReal = 0
                 .RecibioExpInicialCaos = 0
@@ -1673,7 +1673,7 @@ Sub ResetUserFlags(ByVal UserIndex As Integer)
         'Last modified: 06/28/2008
         'Resetea todos los valores generales y las stats
         '03/15/2006 Maraxus - Uso de With para mayor performance y claridad.
-        '03/29/2006 Maraxus - Reseteo el CentinelaOK también.
+        '03/29/2006 Maraxus - Reseteo el CentinelaOK tambiï¿½n.
         '06/28/2008 NicoNZ - Agrego el flag Inmovilizado
         '*************************************************
         With UserList(UserIndex).flags
@@ -2022,7 +2022,7 @@ Sub CloseUser(ByVal UserIndex As Integer)
         Exit Sub
 
 errhandler:
-        Call LogError("Error en CloseUser. Número " & Err.Number & " Descripción: " & Err.description)
+        Call LogError("Error en CloseUser. Nï¿½mero " & Err.Number & " Descripciï¿½n: " & Err.description)
 
 End Sub
 

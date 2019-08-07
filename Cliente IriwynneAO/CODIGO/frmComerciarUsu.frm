@@ -305,7 +305,7 @@ Private Sub imgAgregar_Click()
    
         ' No tiene seleccionado ningun item
         If InvComUsu.SelectedItem = 0 Then
-                Call PrintCommerceMsg("¡No tienes ningún item seleccionado!", FontTypeNames.FONTTYPE_FIGHT)
+                Call PrintCommerceMsg("ï¿½No tienes ningï¿½n item seleccionado!", FontTypeNames.FONTTYPE_FIGHT)
                 Exit Sub
 
         End If
@@ -325,7 +325,7 @@ Private Sub imgAgregar_Click()
 
                 If .SelectedItem = FLAGORO Then
                         If Val(txtAgregar.Text) > InvOroComUsu(0).Amount(1) Then
-                                Call PrintCommerceMsg("¡No tienes esa cantidad!", FontTypeNames.FONTTYPE_FIGHT)
+                                Call PrintCommerceMsg("ï¿½No tienes esa cantidad!", FontTypeNames.FONTTYPE_FIGHT)
                                 Exit Sub
 
                         End If
@@ -339,12 +339,12 @@ Private Sub imgAgregar_Click()
                         Call InvOroComUsu(0).ChangeSlotItemAmount(1, InvOroComUsu(0).Amount(1) - Val(txtAgregar.Text))
                         Call InvOroComUsu(1).ChangeSlotItemAmount(1, Amount)
             
-                        Call PrintCommerceMsg("¡Agregaste " & Val(txtAgregar.Text) & " moneda" & IIf(Val(txtAgregar.Text) = 1, "", "s") & " de oro a tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
+                        Call PrintCommerceMsg("ï¿½Agregaste " & Val(txtAgregar.Text) & " moneda" & IIf(Val(txtAgregar.Text) = 1, "", "s") & " de oro a tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
             
                 ElseIf .SelectedItem > 0 Then
 
                         If Val(txtAgregar.Text) > .Amount(.SelectedItem) Then
-                                Call PrintCommerceMsg("¡No tienes esa cantidad!", FontTypeNames.FONTTYPE_FIGHT)
+                                Call PrintCommerceMsg("ï¿½No tienes esa cantidad!", FontTypeNames.FONTTYPE_FIGHT)
                                 Exit Sub
 
                         End If
@@ -354,7 +354,7 @@ Private Sub imgAgregar_Click()
                         ' Hay espacio o lugar donde sumarlo?
                         If OfferSlot > 0 Then
             
-                                Call PrintCommerceMsg("¡Agregaste " & Val(txtAgregar.Text) & " " & .ItemName(.SelectedItem) & " a tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
+                                Call PrintCommerceMsg("ï¿½Agregaste " & Val(txtAgregar.Text) & " " & .ItemName(.SelectedItem) & " a tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
                 
                                 ' Le aviso al otro de mi cambio de oferta
                                 Call WriteUserCommerceOffer(.SelectedItem, Val(txtAgregar.Text), OfferSlot)
@@ -400,7 +400,7 @@ Private Sub imgConfirmar_Click()
         imgQuitar.Visible = False
         txtAgregar.Enabled = False
     
-        Call PrintCommerceMsg("¡Has confirmado tu oferta! Ya no puedes cambiarla.", FontTypeNames.FONTTYPE_CONSE)
+        Call PrintCommerceMsg("ï¿½Has confirmado tu oferta! Ya no puedes cambiarla.", FontTypeNames.FONTTYPE_CONSE)
         Call WriteUserCommerceConfirm
 
 End Sub
@@ -413,7 +413,7 @@ Private Sub imgQuitar_Click()
 
         ' No tiene seleccionado ningun item
         If InvOfferComUsu(0).SelectedItem = 0 Then
-                Call PrintCommerceMsg("¡No tienes ningún ítem seleccionado!", FontTypeNames.FONTTYPE_FIGHT)
+                Call PrintCommerceMsg("ï¿½No tienes ningï¿½n ï¿½tem seleccionado!", FontTypeNames.FONTTYPE_FIGHT)
                 Exit Sub
 
         End If
@@ -436,7 +436,7 @@ Private Sub imgQuitar_Click()
                         Call InvOroComUsu(0).ChangeSlotItemAmount(1, InvOroComUsu(0).Amount(1) - Amount)
                         Call InvOroComUsu(1).ChangeSlotItemAmount(1, InvOroComUsu(1).Amount(1) + Amount)
         
-                        Call PrintCommerceMsg("¡¡Quitaste " & Amount * (-1) & " moneda" & IIf(Val(txtAgregar.Text) = 1, "", "s") & " de oro de tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
+                        Call PrintCommerceMsg("ï¿½ï¿½Quitaste " & Amount * (-1) & " moneda" & IIf(Val(txtAgregar.Text) = 1, "", "s") & " de oro de tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
 
                 End If
 
@@ -451,7 +451,7 @@ Private Sub imgQuitar_Click()
 
                         With InvOfferComUsu(0)
                 
-                                Call PrintCommerceMsg("¡¡Quitaste " & Amount * (-1) & " " & .ItemName(.SelectedItem) & " de tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
+                                Call PrintCommerceMsg("ï¿½ï¿½Quitaste " & Amount * (-1) & " " & .ItemName(.SelectedItem) & " de tu oferta!!", FontTypeNames.FONTTYPE_GUILD)
     
                                 ' Le aviso al otro de mi cambio de oferta
                                 Call WriteUserCommerceOffer(0, Amount, .SelectedItem)
@@ -498,10 +498,10 @@ Private Sub Form_Load()
     
         LoadButtons
     
-        Call PrintCommerceMsg("> Una vez termines de formar tu oferta, debes presionar en ""Confirmar"", tras lo cual ya no podrás modificarla.", FontTypeNames.FONTTYPE_GUILDMSG)
-        Call PrintCommerceMsg("> Luego que el otro usuario confirme su oferta, podrás aceptarla o rechazarla. Si la rechazas, se terminará el comercio.", FontTypeNames.FONTTYPE_GUILDMSG)
-        Call PrintCommerceMsg("> Cuando ambos acepten la oferta del otro, se realizará el intercambio.", FontTypeNames.FONTTYPE_GUILDMSG)
-        Call PrintCommerceMsg("> Si se intercambian más ítems de los que pueden entrar en tu inventario, es probable que caigan al suelo, así que presta mucha atención a esto.", FontTypeNames.FONTTYPE_GUILDMSG)
+        Call PrintCommerceMsg("> Una vez termines de formar tu oferta, debes presionar en ""Confirmar"", tras lo cual ya no podrï¿½s modificarla.", FontTypeNames.FONTTYPE_GUILDMSG)
+        Call PrintCommerceMsg("> Luego que el otro usuario confirme su oferta, podrï¿½s aceptarla o rechazarla. Si la rechazas, se terminarï¿½ el comercio.", FontTypeNames.FONTTYPE_GUILDMSG)
+        Call PrintCommerceMsg("> Cuando ambos acepten la oferta del otro, se realizarï¿½ el intercambio.", FontTypeNames.FONTTYPE_GUILDMSG)
+        Call PrintCommerceMsg("> Si se intercambian mï¿½s ï¿½tems de los que pueden entrar en tu inventario, es probable que caigan al suelo, asï¿½ que presta mucha atenciï¿½n a esto.", FontTypeNames.FONTTYPE_GUILDMSG)
     
 End Sub
 

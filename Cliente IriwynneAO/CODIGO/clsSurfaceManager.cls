@@ -15,7 +15,7 @@ Attribute VB_Exposed = False
 ' clsSurfaceManager.cls - Interface for surface managfers regardless of wether
 ' they use dinamic loading or not.
 '
-' Developed by Maraxus (Juan Martín Sotuyo Dodero - juansotuyo@hotmail.com)
+' Developed by Maraxus (Juan Martï¿½n Sotuyo Dodero - juansotuyo@hotmail.com)
 ' Last Modify Date: 3/06/2006
 '**************************************************************
 
@@ -48,7 +48,7 @@ Option Explicit
 Public Property Get Surface(ByVal fileIndex As Long) As DirectDrawSurface7
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Used to return a texture
         '**************************************************************
@@ -60,7 +60,7 @@ Public Sub Initialize(ByRef DD As DirectDraw7, _
                       Optional ByVal maxMemoryUsageInMb As Long = -1)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Initializes the object (the DD object is needed to load surfaces)
         '**************************************************************

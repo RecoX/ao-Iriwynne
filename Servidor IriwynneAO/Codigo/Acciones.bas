@@ -28,13 +28,13 @@ Sub Accion(ByVal UserIndex As Integer, _
     
         On Error Resume Next
 
-        '¿Rango Visión? (ToxicWaste)
+        'ï¿½Rango Visiï¿½n? (ToxicWaste)
         If (Abs(UserList(UserIndex).Pos.Y - Y) > RANGO_VISION_Y) Or (Abs(UserList(UserIndex).Pos.X - X) > RANGO_VISION_X) Then
                 Exit Sub
 
         End If
     
-        '¿Posicion valida?
+        'ï¿½Posicion valida?
         If InMapBounds(Map, X, Y) Then
 
                 With UserList(UserIndex)
@@ -47,9 +47,9 @@ Sub Accion(ByVal UserIndex As Integer, _
                 
                                 If Npclist(tempIndex).Comercia = 1 Then
 
-                                        '¿Esta el user muerto? Si es asi no puede comerciar
+                                        'ï¿½Esta el user muerto? Si es asi no puede comerciar
                                         If .flags.Muerto = 1 Then
-                                                Call WriteConsoleMsg(UserIndex, "¡¡Estás muerto!!", FontTypeNames.FONTTYPE_INFO)
+                                                Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Estï¿½s muerto!!", FontTypeNames.FONTTYPE_INFO)
                                                 Exit Sub
 
                                         End If
@@ -61,7 +61,7 @@ Sub Accion(ByVal UserIndex As Integer, _
                                         End If
                     
                                         If Distancia(Npclist(tempIndex).Pos, .Pos) > 3 Then
-                                                Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos del vendedor.", FontTypeNames.FONTTYPE_INFO)
+                                                Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos del vendedor.", FontTypeNames.FONTTYPE_INFO)
                                                 Exit Sub
 
                                         End If
@@ -71,9 +71,9 @@ Sub Accion(ByVal UserIndex As Integer, _
                 
                                 ElseIf Npclist(tempIndex).NPCtype = eNPCType.Banquero Then
 
-                                        '¿Esta el user muerto? Si es asi no puede comerciar
+                                        'ï¿½Esta el user muerto? Si es asi no puede comerciar
                                         If .flags.Muerto = 1 Then
-                                                Call WriteConsoleMsg(UserIndex, "¡¡Estás muerto!!", FontTypeNames.FONTTYPE_INFO)
+                                                Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Estï¿½s muerto!!", FontTypeNames.FONTTYPE_INFO)
                                                 Exit Sub
 
                                         End If
@@ -85,7 +85,7 @@ Sub Accion(ByVal UserIndex As Integer, _
                                         End If
                     
                                         If Distancia(Npclist(tempIndex).Pos, .Pos) > 3 Then
-                                                Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos del vendedor.", FontTypeNames.FONTTYPE_INFO)
+                                                Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos del vendedor.", FontTypeNames.FONTTYPE_INFO)
                                                 Exit Sub
 
                                         End If
@@ -96,7 +96,7 @@ Sub Accion(ByVal UserIndex As Integer, _
                                 ElseIf Npclist(tempIndex).NPCtype = eNPCType.Revividor Or Npclist(tempIndex).NPCtype = eNPCType.ResucitadorNewbie Then
 
                                         If Distancia(.Pos, Npclist(tempIndex).Pos) > 10 Then
-                                                Call WriteConsoleMsg(UserIndex, "El sacerdote no puede curarte debido a que estás demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
+                                                Call WriteConsoleMsg(UserIndex, "El sacerdote no puede curarte debido a que estï¿½s demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
                                                 Exit Sub
 
                                         End If
@@ -116,7 +116,7 @@ Sub Accion(ByVal UserIndex As Integer, _
 
                                 End If
                 
-                                '¿Es un obj?
+                                'ï¿½Es un obj?
                         ElseIf MapData(Map, X, Y).ObjInfo.objIndex > 0 Then
                                 tempIndex = MapData(Map, X, Y).ObjInfo.objIndex
                 
@@ -133,7 +133,7 @@ Sub Accion(ByVal UserIndex As Integer, _
                                         Case eOBJType.otForos 'Foro
                                                 Call AccionParaForo(Map, X, Y, UserIndex)
 
-                                        Case eOBJType.otLeña    'Leña
+                                        Case eOBJType.otLeï¿½a    'Leï¿½a
 
                                                 If tempIndex = FOGATA_APAG And .flags.Muerto = 0 Then
                                                         Call AccionParaRamita(Map, X, Y, UserIndex)
@@ -272,12 +272,12 @@ Sub AccionParaPuerta(ByVal Map As Integer, _
         
                         UserList(UserIndex).flags.TargetObj = MapData(Map, X, Y).ObjInfo.objIndex
                 Else
-                        Call WriteConsoleMsg(UserIndex, "La puerta está cerrada con llave.", FontTypeNames.FONTTYPE_INFO)
+                        Call WriteConsoleMsg(UserIndex, "La puerta estï¿½ cerrada con llave.", FontTypeNames.FONTTYPE_INFO)
 
                 End If
 
         Else
-                Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
 
         End If
 
@@ -335,7 +335,7 @@ Sub AccionParaRamita(ByVal Map As Integer, _
         With UserList(UserIndex)
 
                 If Distancia(Pos, .Pos) > 2 Then
-                        Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
+                        Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos.", FontTypeNames.FONTTYPE_INFO)
                         Exit Sub
 
                 End If

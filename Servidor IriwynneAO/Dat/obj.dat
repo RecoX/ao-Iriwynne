@@ -1,3 +1,63 @@
+##############################################
+#########TIPOS  DE OBJETOS (ObjType)##########
+##############################################
+
+' 1: Comida
+' 2: Armas
+' 3: Armaduras
+' 4: Arboles
+' 5: Dinero
+' 6: Puertas
+' 7: Objetos contenedores (x ej. bolsas y cofres)
+' 8: Carteles
+' 9: Llaves
+' 10: Foros
+' 11: Pociones
+' 12: Libros
+' 13: Bebida
+' 14: Leña
+' 15: Fogata
+' 16: escudos
+' 17: cascos
+' 18: Anillos
+' 19: telep
+' 20: Muebles
+' 21: joyas
+' 22: yacimiento
+' 23: metales
+' 24: pergaminos
+' 25: aura
+' 26: Instrumentos Musicales
+' 27: Yunque
+' 28: Fragua
+' 29: Gemas
+' 30: Flores
+' 31: barcos
+' 32: flechas
+' 33: botellas vacias
+' 34: botellas llenas
+' 35: manchas
+
+
+##############################################
+#############TIPOS  DE POCIONES###############
+##############################################
+
+'1 Modifica la Agilidad
+'2 Modifica la Fuerza
+'3 Repone HP
+'4 Repone Mana
+'5 Cura Envenenamiento
+
+
+##############################################
+#############NRO DE OBJS LIBRES###############
+##############################################
+
+'cuando se pueda hay que utilizarlos, intentando
+usar primero los nros más bajos.
+
+907.
 
 
 ##############################################
@@ -8,7 +68,7 @@
 [INIT]
 'aca va el numero de OBJ mas alto, NO la cantidad de OBJs.
 'esto sirve para que los GMS puedan ver la lista completa de items para crear en una ventanita.
-NumOBJs=1208
+NumOBJs=1176
 
 
 [OBJ1]
@@ -61,7 +121,6 @@ LingH=2
 LingP=0
 LingO=0
 SkHerreria=15
-NoSeCae=1
 
 [OBJ4]
 Name=Árbol
@@ -184,7 +243,6 @@ LingP=0
 LingO=0
 Upgrade=165
 SkHerreria=10
-NoSeCae=1
 
 [OBJ16] 'CASA RUINAS
 Name=Puerta de madera abierta 2
@@ -1334,7 +1392,6 @@ LingH=43
 LingP=0
 LingO=0
 SkHerreria=55
-NoSeCae=1
 
 [OBJ125]
 Name=Sable
@@ -1401,7 +1458,6 @@ LingH=5
 LingP=0
 LingO=0
 SkHerreria=12
-NoSeCae=1
 
 [OBJ128]
 Name=Escudo de Hierro
@@ -1514,7 +1570,6 @@ LingP=0
 LingO=0
 Upgrade=131
 SkHerreria=45
-NoSeCae=1
 
 [OBJ133]
 Name=Escudo Imperial
@@ -1557,7 +1612,6 @@ MaxDef=5
 MinDef=2
 Valor=600
 Crucial=1
-NoSeCae=1
 
 [OBJ136]
 Name=Ramitas
@@ -1583,11 +1637,10 @@ Anim=20
 RazaEnanaAnim=76
 MinHit=1
 MaxHit=1
-Valor=10000
+Valor= 200
 Crucial=1
 Madera=70
 SkCarpinteria=12
-NoSeCae=1
 
 [OBJ139]
 Name=Pescado
@@ -1759,7 +1812,8 @@ CP2=DRUIDA
 CP3=LADRON
 CP4=BARDO
 CP5=PIRATA
-CP6=ASESINO
+CP6=CLERIGO
+CP7=ASESINO
 LingH=67
 LingP=0
 LingO=0
@@ -1838,7 +1892,6 @@ LingP=0
 LingO=0
 Upgrade=365
 SkHerreria=15
-NoSeCae=1
 
 [OBJ166] 
 Name=Poción Violeta
@@ -2081,7 +2134,6 @@ LingH=3
 LingP=0
 LingO=0
 SkHerreria=12
-NoSeCae=1
 
 [OBJ188]
 Name=Yacimiento de Hierro
@@ -2175,7 +2227,6 @@ MaxDef=12
 MinDef=8
 Valor=3200
 Crucial=1
-NoSeCae=1
 
 [OBJ197]
 Name=Flecha Mágica
@@ -2201,7 +2252,6 @@ LingH=2
 LingP=0
 LingO=0
 SkHerreria=12
-NoSeCae=1
 
 [OBJ199]
 Name=Dardo Mágico
@@ -2533,7 +2583,6 @@ MaxDef=10
 MinDef=5
 Valor=2700
 Crucial=1
-NoSeCae=1
 
 [OBJ239]
 Name=Túnica Roja
@@ -2545,7 +2594,6 @@ MaxDef=10
 MinDef=5
 Valor=2700
 Crucial=1
-NoSeCae=1
 
 [OBJ240]
 Name=Ropa de Enano (E/G)
@@ -3924,7 +3972,6 @@ MaxDef=20
 MinDef=15
 Valor=10500
 Crucial=1
-NoSeCae=1
 
 [OBJ358]
 Name=Teleport a Banderbill
@@ -4029,7 +4076,6 @@ LingP=0
 LingO=0
 Upgrade=366
 SkHerreria=35
-NoSeCae=1
 
 [OBJ366]
 Name=Daga +3
@@ -4106,7 +4152,6 @@ LingH=43
 LingP=0
 LingO=0
 SkHerreria=35
-NoSeCae=1
 
 [OBJ370]
 Name=Capucha de Cazador
@@ -4159,7 +4204,6 @@ CP6=BANDIDO
 CP7=MAGO
 CP8=LADRON
 CP9=TRABAJADOR
-NoSeCae=1
 
 
 '<<<<<<<<<<<<<<<Puerta Isla Beleta>>>>>>>>>>>>>>>>>
@@ -4242,7 +4286,6 @@ LingH=43
 LingP=0
 LingO=0
 SkHerreria=35
-NoSeCae=1
 
 [OBJ380]
 Name=Invocación de Ultratumba
@@ -4263,7 +4306,6 @@ MaxDef=15
 MinDef=6
 Valor=3400
 Crucial=1
-NoSeCae=1
 
 [OBJ382]
 Name=Vestido Azul (H/E/EO-M)
@@ -4353,7 +4395,6 @@ LingH=2
 LingP=0
 LingO=0
 SkHerreria=20
-NoSeCae=1
 
 [OBJ390]
 Name=Armadura de Placas Completa +1
@@ -4526,10 +4567,10 @@ ObjType=2
 Agarrable=0
 Anim=6
 RazaEnanaAnim=58
-MinHit=2
-MaxHit=12
+MinHit=4
+MaxHit=14
 StaffPower=2
-StaffDamageBonus=36
+StaffDamageBonus=38
 Valor=85500
 Crucial=0
 CP1=PIRATA
@@ -4576,11 +4617,10 @@ Agarrable=0
 Anim=15
 RazaEnanaAnim=65
 MinHit=100
-NoSeCae=1
 MaxHit=100
-Valor=5000000
-Copas=1
+Valor=25000
 Crucial=0
+CP1=PIRATA
 LingH=500
 LingP=400
 LingO=300
@@ -4632,7 +4672,6 @@ LingH=5
 LingP=0
 LingO=0
 SkHerreria=20
-NoSeCae=1
 
 [OBJ405]
 Name=Casco de Plata
@@ -4695,9 +4734,7 @@ MinHIT=25
 MaxHIT=45
 MINDEF=10
 MAXDEF=20
-Nosecae=1
-Robable=1
-Shop=1
+NoSeCae=
 
 [OBJ411]
 Name=Gema Roja
@@ -4718,9 +4755,7 @@ MinHIT=25
 MaxHIT=45
 MINDEF=10
 MAXDEF=20
-Nosecae=1
-Robable=1
-Shop=1
+NoSeCae=1
 
 [OBJ413]
 Name=Gema Violeta
@@ -5361,7 +5396,7 @@ Agarrable=1
 Name=Flor
 GrhIndex=731
 ObjType=30
-Agarrable=1
+Agarrable=0
 Crucial=0
 
 [OBJ474]
@@ -5439,7 +5474,6 @@ CP2=DRUIDA
 Madera=42
 Upgrade=663
 SkCarpinteria=20
-NoSeCae=1
 
 [OBJ479]
 Name=Arco Compuesto
@@ -5492,6 +5526,7 @@ CP3=LADRON
 CP4=BARDO
 CP5=PIRATA
 CP6=ASESINO
+CP7=TRABAJADOR
 LingH=1000
 LingP=1000
 LingO=1000
@@ -5514,6 +5549,7 @@ CP3=LADRON
 CP4=BARDO
 CP5=PIRATA
 CP6=ASESINO
+CP7=TRABAJADOR
 LingH=1000
 LingP=1000
 LingO=1000
@@ -5536,6 +5572,7 @@ CP3=LADRON
 CP4=BARDO
 CP5=PIRATA
 CP6=ASESINO
+CP7=TRABAJADOR
 LingH=1000
 LingP=1000
 LingO=1000
@@ -5707,7 +5744,6 @@ LingH=43
 LingP=0
 LingO=0
 SkHerreria=35
-NoSeCae=1
 
 [OBJ493]
 Name=Armadura de Placas Rojas (H/E/EO-M)
@@ -5787,10 +5823,11 @@ CP1=MAGO
 CP2=DRUIDA
 CP3=LADRON
 CP4=BARDO
-CP5=PIRATA
-CP6=ASESINO
-CP7=CAZADOR
-CP8=TRABAJADOR
+CP5=CLERIGO
+CP6=PIRATA
+CP7=ASESINO
+CP8=CAZADOR
+CP9=TRABAJADOR
 LingH=650
 LingP=200
 LingO=0
@@ -6007,7 +6044,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ510]
 Name=Vestido Indulgente (H/E/EO-M)
@@ -6108,7 +6144,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ517]
 Name=Túnica de Mago del Imperio
@@ -6132,7 +6167,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ518]
 Name=Túnica de Mago Oscuro
@@ -6156,7 +6190,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ519]
 Name=Túnica Legendaria
@@ -6165,11 +6198,11 @@ ObjType=3
 NumRopaje=130
 Agarrable=0
 MaxDef=35
-MinDef=25
+MinDef=30
 Valor=20000
-Crucial=2
+Crucial=1
 CP1=GUERRERO
-CP2=PALADIN
+CP2=MAGO
 
 [OBJ520]
 Name=Armadura de Gran Sacerdotisa Imperial (H/E/EO-M)
@@ -6196,7 +6229,6 @@ LingH=132
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ521]
 Name=Armadura Real
@@ -6217,7 +6249,6 @@ LingH=43
 LingP=0
 LingO=0
 SkHerreria=35
-NoSeCae=1
 
 [OBJ522]
 Name=Hipocrás
@@ -6249,7 +6280,6 @@ CP6=BANDIDO
 CP7=MAGO
 CP8=LADRON
 CP9=TRABAJADOR
-NoSeCae=1
 
 [OBJ524]
 Name=Túnica Roja Especial (E/G)
@@ -6270,8 +6300,8 @@ ObjType=3
 NumRopaje=136
 Agarrable=0
 RazaEnana=1
-MaxDef=35
-MinDef=25
+MaxDef=25
+MinDef=20
 Valor=17000
 Crucial=1
 
@@ -6312,7 +6342,6 @@ MinDef=5
 Valor=3000
 Crucial=1
 CP1=GUERRERO
-NoSeCae=1
 
 [OBJ529]
 Name=Armadura de Cuero (H/E/EO-M)
@@ -6457,19 +6486,8 @@ Name=Red de Pesca
 GrhIndex=844
 ObjType=2
 Agarrable=0
-Valor=1000000
+Valor=5000
 Crucial=0
-CP1=PIRATA
-CP2=CAZADOR
-CP3=PALADIN
-CP4=CLERIGO
-CP5=ASESINO
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=MAGO
 
 [OBJ544]
 Name=Pez Dorado
@@ -6540,7 +6558,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ550]
 Name=Porrón de cerveza
@@ -6639,7 +6656,6 @@ Name=Espada Mata Dragones NatOs
 GrhIndex=716
 ObjType=2
 Agarrable=0
-NoSeCae=1
 Anim=15
 RazaEnanaAnim=65
 MinHit=1000
@@ -6647,7 +6663,6 @@ MaxHit=1000
 Valor=188000
 Crucial=0
 LingH=500
-Shop=0
 LingP=400
 LingO=300
 SkHerreria=1000
@@ -6686,7 +6701,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ559]
 Name=Daga de Plata
@@ -6694,8 +6708,8 @@ GrhIndex=5595
 ObjType=2
 Agarrable=0
 Anim=77
-MinHit=8
-MaxHit=10
+MinHit=6
+MaxHit=8
 Apuñala=1
 Valor=4060
 Crucial=0
@@ -6704,16 +6718,6 @@ LingP=0
 LingO=0
 SkHerreria=69
 CP1=PIRATA
-CP2=MAGO
-CP3=PALADIN
-CP4=CLERIGO
-CP5=CAZADOR
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=TRABAJADOR
 
 [OBJ560]
 Name=Gema Sagrada Recuperada por Shadow VX
@@ -7496,7 +7500,6 @@ LingH=169
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ630] '2da Jerarq
 Name=Túnica Celestial
@@ -7604,7 +7607,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ635]
 Name=Armadura Lóbrega (H/E/EO-M)
@@ -7626,7 +7628,6 @@ LingH=169
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ636] '2da jerarq
 Name=Túnica de Líder del Caos (E/G)
@@ -7727,7 +7728,6 @@ CP8=GUERRERO
 CP9=BARDO
 CP10=DRUIDA
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ641]
 Name=Ropa de Pordiosero
@@ -7895,7 +7895,7 @@ RazaEnanaAnim=60
 MinHit=1
 MaxHit=1
 StaffPower=1
-StaffDamageBonus=20
+StaffDamageBonus=22
 Valor=800
 Crucial=1
 CP1=PIRATA
@@ -7909,7 +7909,6 @@ CP8=GUERRERO
 CP9=BARDO
 CP10=DRUIDA
 CP11=TRABAJADOR
-NoseCae=1
 
 [OBJ659]
 Name=Bastón Nudoso
@@ -7921,7 +7920,7 @@ RazaEnanaAnim=61
 MinHit=1
 MaxHit=1
 StaffPower=2
-StaffDamageBonus=28
+StaffDamageBonus=30
 Valor=2500
 Crucial=1
 CP1=PIRATA
@@ -7947,7 +7946,7 @@ RazaEnanaAnim=62
 MinHit=1
 MaxHit=1
 StaffPower=2
-StaffDamageBonus=32
+StaffDamageBonus=34
 Valor=13000
 Crucial=0
 CP1=PIRATA
@@ -8160,7 +8159,6 @@ MaxDef=12
 MinDef=8
 Valor=3200
 Crucial=1
-NoSeCae=1
 
 [OBJ671]
 Name=Túnica de Monje (E/G)
@@ -8173,7 +8171,6 @@ MaxDef=15
 MinDef=6
 Valor=3400
 Crucial=1
-NoSeCae=1
 
 [OBJ672]
 Name=Armadura de Elite (E/G)
@@ -8220,7 +8217,6 @@ MaxDef=3
 MinDef=1
 Valor=175
 Crucial=1
-NoSeCae=1
 
 [OBJ676]
 Name=Vestimenta Imperial (E/G)
@@ -8234,7 +8230,6 @@ MaxDef=3
 MinDef=1
 Valor=175
 Crucial=1
-NoSeCae=1
 
 [OBJ677]
 Name=Vestimenta Legionaria
@@ -8247,7 +8242,6 @@ MaxDef=3
 MinDef=1
 Valor=175
 Crucial=1
-NoSeCae=1
 
 [OBJ678]
 Name=Vestimenta Legionaria (E/G)
@@ -8261,7 +8255,6 @@ MaxDef=3
 MinDef=1
 Valor=175
 Crucial=1
-NoSeCae=1
 
 [OBJ679]
 Name=Túnica Conspicua de Mago Imperial
@@ -8285,7 +8278,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ680]
 Name=Armadura de Gran Sacerdote Imperial
@@ -8311,7 +8303,6 @@ LingH=132
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ681]
 Name=Armadura Nobilísima (E/G)
@@ -8330,7 +8321,6 @@ LingH=169
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ682]
 Name=Túnica Conspicua de Mago Imperial (E/G)
@@ -8355,7 +8345,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ683]
 Name=Armadura Lóbrega
@@ -8375,7 +8364,6 @@ LingH=169
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ684]
 Name=Armadura de Gran Sacerdote Demoníaco
@@ -8401,7 +8389,6 @@ LingH=132
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ685]
 Name=Armadura Lóbrega (E/G)
@@ -8419,7 +8406,6 @@ LingH=169
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ686]
 Name=Túnica Egregia de Mago Oscuro (E/G)
@@ -8444,7 +8430,6 @@ CP8=BANDIDO
 CP9=BARDO
 CP10=LADRON
 CP11=TRABAJADOR
-NoSeCae=1
 
 [OBJ687]
 Name=Túnica Palatina
@@ -8458,7 +8443,6 @@ MinDef=30
 Valor=18000
 Crucial=1
 CP1=MAGO
-NoSeCae=1
 
 [OBJ688]
 Name=Pequeña Túnica Palatina (E/G)
@@ -8473,7 +8457,6 @@ MinDef=30
 Valor=18000
 Crucial=1
 CP1=MAGO
-NoSeCae=1
 
 [OBJ689]
 Name=Túnica Avernal
@@ -8487,7 +8470,6 @@ MinDef=30
 Valor=18000
 Crucial=1
 CP1=MAGO
-NoSeCae=1
 
 [OBJ690]
 Name=Pequeña Túnica Avernal (E/G)
@@ -8502,7 +8484,6 @@ MinDef=30
 Valor=18000
 Crucial=1
 CP1=MAGO
-NoSeCae=1
 
 [OBJ691]
 Name=Armadura de Ilustre Caballero
@@ -8810,9 +8791,7 @@ Name=Copa de Oro
 GrhIndex=54
 ObjType=21
 Agarrable=0
-Valor=10000000
-NoSeCae=1
-Log=1
+Valor=4000
 
 [OBJ711]
 Name=Tumba de Valkira
@@ -9199,28 +9178,28 @@ Agarrable=1
 Name=Margarita
 GrhIndex=729
 ObjType=30
-Agarrable=1
+Agarrable=0
 Crucial=0
 
 [OBJ768]
 Name=Hongo
 GrhIndex=730
 ObjType=30
-Agarrable=1
+Agarrable=0
 Crucial=0
 
 [OBJ769]
 Name=Hongos
 GrhIndex=732
 ObjType=30
-Agarrable=1
+Agarrable=0
 Crucial=0
 
 [OBJ770]
 Name=Algas
 GrhIndex=733
 ObjType=30
-Agarrable=1
+Agarrable=0
 Crucial=0
 
 [OBJ771]
@@ -9727,7 +9706,7 @@ ObjType=20
 Agarrable=1
 
 [OBJ850]
-Name=Arco de Flores
+Name=Arco de es
 GrhIndex=95
 ObjType=30
 Agarrable=1
@@ -9739,16 +9718,13 @@ ObjType=17
 NumRopaje=2
 Agarrable=0
 Anim=5
-DefensaMagicaMax=12
-DefensaMagicaMin=10
-MaxDef=10
-MinDef=10
-Valor=0
-Copas=30
-Log=1
+DefensaMagicaMax=5
+DefensaMagicaMin=5
+MaxDef=7
+MinDef=5
+Valor=10000
 Crucial=0
-Nosecae=1
-Robable=1
+NoSeCae=1
 
 [OBJ852]
 Name=Tonel
@@ -10071,16 +10047,14 @@ Caos=1
 NoSeCae=1
 
 [OBJ876]
-Name=Vestimenta TEN
+Name=Vestimenta de Game Master
 GrhIndex=1470
 ObjType=3
 NumRopaje=255
 Agarrable=0
-MaxDef=30
-MinDef=30
-Valor=0
-Nosecae=1
-Robable=1
+MaxDef=0
+MinDef=0
+NoSeCae=1
 
 [OBJ877] 'enano
 Name=Túnica de Gran Hechicero (E/G)
@@ -10093,7 +10067,6 @@ MaxDef=20
 Valor=10500
 Crucial=1
 RazaEnana=1
-NoSeCae=1
 
 [OBJ878] 'enano mujer
 Name=Túnica de Gran Hechicera (E/G-M)
@@ -10150,10 +10123,11 @@ CP1=MAGO
 CP2=DRUIDA
 CP3=LADRON
 CP4=BARDO
-CP5=PIRATA
-CP6=ASESINO
-CP7=CAZADOR
-CP8=TRABAJADOR
+CP5=CLERIGO
+CP6=PIRATA
+CP7=ASESINO
+CP8=CAZADOR
+CP9=TRABAJADOR
 LingH=650
 LingP=200
 LingO=0
@@ -11157,7 +11131,6 @@ MaxDef=23
 Valor=13500
 Crucial=1
 RazaEnana=1
-NoSeCae=1
 
 [OBJ940] 'gnomo
 Name=Cota de Mallas Enteriza (E/G)
@@ -11603,7 +11576,6 @@ MaxDef=18
 Valor=10000
 Crucial=1
 RazaEnana=1
-NoSeCae=1
 
 [OBJ970] 'enano
 Name=Armadura de Placas Livianas Thor (E/G)
@@ -12123,7 +12095,6 @@ LingH=15
 LingP=0
 LingO=0
 SkHerreria=30
-NoSeCae=1
 
 [OBJ1006]
 Name=Leña Elfica
@@ -12433,7 +12404,6 @@ LingH=5
 LingP=0
 LingO=0
 SkHerreria=20
-NoSeCae=1
 
 [OBJ1038]
 Name=Escudo Real
@@ -12455,7 +12425,6 @@ LingH=5
 LingP=0
 LingO=0
 SkHerreria=20
-NoSeCae=1
 
 [OBJ1039]
 Name=Manto de Sacerdote del Imperio (E/G)
@@ -12478,7 +12447,6 @@ CP6=BANDIDO
 CP7=MAGO
 CP8=LADRON
 CP9=TRABAJADOR
-NoSeCae=1b
 
 [OBJ1040]
 Name=Armadura de Gran Sacerdote Imperial (E/G)
@@ -12505,7 +12473,6 @@ LingH=132
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ1041]
 Name=Manto de Sacerdote Demoníaco (E/G)
@@ -12528,7 +12495,6 @@ CP6=BANDIDO
 CP7=MAGO
 CP8=LADRON
 CP9=TRABAJADOR
-NoSeCae=1
 
 [OBJ1042]
 Name=Armadura de Gran Sacerdote Demoníaco (E/G)
@@ -12555,7 +12521,6 @@ LingH=132
 LingP=0
 LingO=0
 SkHerreria=70
-NoSeCae=1
 
 [OBJ1043]
 Name=No ves nada interesante.
@@ -12790,81 +12755,70 @@ Agarrable=0
 Anim=17
 MaxDef=25
 MinDef=20
-Valor=0
-Copas=30
-Log=1
+Valor=26100
 Crucial=0
-Nosecae=1
-Robable=1
-Shop=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=LADRON
+CP4=BARDO
+CP5=PIRATA
 
 [OBJ1063]
-Name=Casco de la Milicia Real
+Name=Casco de la Milicia
 GrhIndex=23894
 ObjType=17
 NumRopaje=2
 Agarrable=0
-Real=1
 Anim=18
-MaxDef=10
-MinDef=5
+MaxDef=8
+MinDef=3
 Valor=700
 Crucial=0
 CP1=MAGO
 CP2=DRUIDA
 CP3=PIRATA
-NoSeCae=1
 
 [OBJ1064]
-Name=Casco de la Milicia caotica
+Name=Casco de la Milicia
 GrhIndex=23900
 ObjType=17
 NumRopaje=2
 Agarrable=0
-Caos=1
 Anim=19
-MaxDef=10
-MinDef=5
+MaxDef=8
+MinDef=3
 Valor=700
 Crucial=0
 CP1=MAGO
 CP2=DRUIDA
 CP3=PIRATA
-NoSeCae=1
 
 [OBJ1065]
-Name=Casco Iriwynne
+Name=Casco de mArkk 
 GrhIndex=23888
 ObjType=17
 NumRopaje=2
 Agarrable=0
 Anim=22
-DefensaMagicaMax=12
-DefensaMagicaMin=5
-MaxDef=10
-MinDef=10
-Valor=0
-Log=1
-Copas=25
+MaxDef=8
+MinDef=3
+Valor=700
 Crucial=0
-Nosecae=1
-Robable=1
-Shop=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=PIRATA
 
 [OBJ1066]
-Name=Corona del rey
+Name=Corona de torneo
 GrhIndex=24174
 ObjType=17
 NumRopaje=2
 Agarrable=0
 Anim=20
-DefensaMagicaMax=10
-DefensaMagicaMin=8
-MaxDef=10
-MinDef=10
+MaxDef=8
+MinDef=3
 Valor=700
-Nosecae=1
-Robable=1
+Crucial=0
 
 [OBJ1067]
 Name=Casco de Cuervo
@@ -13117,43 +13071,39 @@ IndexAbierta=1082
 IndexCerrada=1083
 IndexCerradaLlave=8
 
-[OBJ1086] Tunica Invernal
-Name=Tunica Invernal
+[OBJ1086] Manto de Ermitaño
+Name=Manto de Ermitaño
 GrhIndex=24672
 ObjType=3
 NumRopaje=580
 Agarrable=0
-MaxDef=20
-MinDef=10
+MaxDef=40
+MinDef=35
 Valor= 25000
 Crucial=1
 
-[OBJ1087] Tunica Ivernal
-Name=Tunica invernal (E/G)
+[OBJ1087] Manto de Ermitaño
+Name=Manto de Ermitaño (E/G)
 GrhIndex=24673
 ObjType=3
 NumRopaje=579
 Agarrable=0
-MaxDef=20
-MinDef=10
+MaxDef=40
+MinDef=35
 Valor= 25000
 Crucial=1
-RazaEnana=1
 
 [OBJ1088]
 Name=Cofre de Bronce
 GrhIndex=24787
 ObjType=40
-NROITEMS=9
-Drop1=12-25000-50
-Drop2=129-1-25
-Drop3=660-1-25 
-Drop4=402-1-1
+NROITEMS=5
+Drop1=12-100000-50
+Drop2=129-3-24
+Drop3=660-2-20 
+Drop4=402-1-5
 Drop5=400-1-12
-Drop6=1049-1-25
-Drop7=1050-1-25
-Drop8=559-1-25
-Drop9=665-1-25
+NoSeCae=1
 SeLimpia=1
 NoCreable=1
 
@@ -13161,13 +13111,13 @@ NoCreable=1
 Name=Cofre de Plata
 GrhIndex=24785
 ObjType=40
-NROITEMS=6
-Drop1=12-50000-50
-Drop2=405-1-25
-Drop3=403-1-5
-Drop4=400-1-5
-Drop5=699-1-5
-Drop6=402-1-3
+NROITEMS=5
+Drop1=12-250000-50
+Drop2=699-1-10
+Drop3=405-3-20
+Drop4=400-2-10
+Drop5=402-3-6
+NoSeCae=1
 SeLimpia=1
 NoCreable=1
 
@@ -13176,11 +13126,12 @@ Name=Cofre de Oro
 GrhIndex=24786
 ObjType=40
 NROITEMS=5
-Drop1=12-125000-50
-Drop2=400-1-15
-Drop3=699-1-15
-Drop4=402-1-5
-Drop5=906-1-3
+Drop1=12-250000-50
+Drop2=402-5-6
+Drop3=906-1-10
+Drop4=400-2-13
+Drop5=699-3-8
+NoSeCae=1
 SeLimpia=1
 NoCreable=1
 
@@ -13194,24 +13145,20 @@ MaxDef=0
 MinDef=0
 Valor=50
 Crucial=1
-NoSeCae=1
-Robable=1
 
 [OBJ1093]
-Name=Vestimenta Real mediana
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20536
 ObjType=3
 NumRopaje=488
 Agarrable=0
-MaxDef=36
-MinDef=32
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13224,21 +13171,19 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1094]
-Name=Vestimenta Real mediana (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20563
 ObjType=3
 NumRopaje=489
 Agarrable=0
-MaxDef=36
-MinDef=32
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13251,116 +13196,118 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1095]
-Name=Vestimenta Real semi mediana
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20590
 ObjType=3
 NumRopaje=490
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=GUERRERO
-CP2=CAZADOR
-CP3=BANDIDO
-CP4=LADRON
-CP5=PIRATA
-CP6=TRABAJADOR
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1096]
-Name=Vestimenta Real semi mediana (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20617
 ObjType=3
 NumRopaje=491
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=GUERRERO
-CP2=CAZADOR
-CP3=BANDIDO
-CP4=LADRON
-CP5=PIRATA
-CP6=TRABAJADOR
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1097]
-Name=Vestimenta Real semi pesada
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20644
 ObjType=3
 NumRopaje=492
 Agarrable=0
-MaxDef=38
-MinDef=38
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=CAZADOR
-CP4=BANDIDO
-CP5=PIRATA
-CP6=LADRON
-CP7=TRABAJADOR
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1098]
-Name=Vestimenta Real semi pesada (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20671
 ObjType=3
 NumRopaje=493
 Agarrable=0
-MaxDef=38
-MinDef=38
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=CAZADOR
-CP4=BANDIDO
-CP5=PIRATA
-CP6=LADRON
-CP7=TRABAJADOR
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1099]
-Name=Vestimenta Real de gala
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20698
 ObjType=3
 NumRopaje=494
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13373,21 +13320,19 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1100]
-Name=Vestimenta Real de gala (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20725
 ObjType=3
 NumRopaje=495
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13400,174 +13345,208 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1101]
-Name=Vestimenta Real sagrada
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20752
 ObjType=3
 NumRopaje=496
 Agarrable=0
-MaxDef=39
-MinDef=37
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=ASESINO
-CP4=PIRATA
-CP5=TRABAJADOR
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1102]
-Name=Vestimenta Real sagrada (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20779
 ObjType=3
 NumRopaje=497
 Agarrable=0
-MaxDef=39
-MinDef=37
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=ASESINO
-CP4=PIRATA
-CP5=TRABAJADOR
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1103]
-Name=Vestimenta Real liviana
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20806
 ObjType=3
 NumRopaje=498
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1104]
-Name=Vestimenta Real liviana (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20833
 ObjType=3
 NumRopaje=499
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1105]
-Name=Vestimenta Real ligera
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20860
 ObjType=3
 NumRopaje=500
 Agarrable=0
-MaxDef=37
-MinDef=34
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1106]
-Name=Vestimenta Real ligera (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20887
 ObjType=3
 NumRopaje=501
 Agarrable=0
-MaxDef=37
-MinDef=34
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1107]
-Name=Vestimenta Real formal
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20914
 ObjType=3
 NumRopaje=502
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1108]
-Name=Vestimenta Real formal (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20941
 ObjType=3
 NumRopaje=503
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1109]
-Name=Vestimenta hechicero Real
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=20968
 ObjType=3
 NumRopaje=504
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=BARDO
 CP2=CLERIGO
@@ -13581,21 +13560,19 @@ CP9=PIRATA
 CP10=TRABAJADOR
 
 [OBJ1110]
-Name=Vestimenta hecicero Real (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=20995
 ObjType=3
 NumRopaje=505
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=BARDO
 CP2=CLERIGO
@@ -13609,20 +13586,18 @@ CP9=PIRATA
 CP10=TRABAJADOR
 
 [OBJ1111]
-Name=Vestimenta Real pesada
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=21022
 ObjType=3
 NumRopaje=506
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13633,21 +13608,19 @@ CP6=PIRATA
 CP7=TRABAJADOR
 
 [OBJ1112]
-Name=Vestimenta Real pesada (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=21049
 ObjType=3
 NumRopaje=507
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13658,20 +13631,18 @@ CP6=PIRATA
 CP7=TRABAJADOR
 
 [OBJ1113]
-Name=Vestimenta de pirata Real
+Name=Vestimenta Real de 2da Jerarquía (H/E/EO)
 GrhIndex=21076
 ObjType=3
 NumRopaje=508
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=CLERIGO
@@ -13686,21 +13657,19 @@ CP10=CAZADOR
 CP11=TRABAJADOR
 
 [OBJ1114]
-Name=Vestimenta de pirata Real (E/G)
+Name=Vestimenta Real de 2da Jerarquía (E/G)
 GrhIndex=21103
 ObjType=3
 NumRopaje=509
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Real=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=CLERIGO
@@ -13715,163 +13684,163 @@ CP10=CAZADOR
 CP11=TRABAJADOR
 
 [OBJ1115]
-Name=Vestimenta Caótica mediana
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21130
 ObjType=3
 NumRopaje=510
 Agarrable=0
-MaxDef=36
-MinDef=32
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
 CP3=BARDO
-CP4=ASESINO
-CP5=PIRATA
-CP6=TRABAJADOR
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1116]
-Name=Vestimenta Caótica mediana (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21157
 ObjType=3
 NumRopaje=511
 Agarrable=0
-MaxDef=36
-MinDef=32
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
 CP3=BARDO
-CP4=ASESINO
-CP5=PIRATA
-CP6=TRABAJADOR
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1117]
-Name=Vestimenta semi mediana
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21184
 ObjType=3
 NumRopaje=512
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=GUERRERO
-CP2=CAZADOR
-CP3=BANDIDO
-CP4=LADRON
-CP5=PIRATA
-CP6=TRABAJADOR
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1118]
-Name=Vestimenta Caótica semi mediana (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21211
 ObjType=3
 NumRopaje=513
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=GUERRERO
-CP2=CAZADOR
-CP3=BANDIDO
-CP4=LADRON
-CP5=PIRATA
-CP6=TRABAJADOR
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1119]
-Name=Vestimenta Caótica semi pesada
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21238
 ObjType=3
 NumRopaje=514
 Agarrable=0
-MaxDef=38
-MinDef=38
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=MAGO
-CP2=DRUIDA
-CP3=CAZADOR
-CP4=BANDIDO
-CP5=PIRATA
-CP6=LADRON
-CP7=TRABAJADOR
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1120]
-Name=Vestimenta Caótica semi pesada (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21265
 ObjType=3
 NumRopaje=515
 Agarrable=0
-MaxDef=38
-MinDef=38
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
-CP1=MAGO
-CP2=DRUIDA
-CP3=CAZADOR
-CP4=BANDIDO
-CP5=PIRATA
-CP6=LADRON
-CP7=TRABAJADOR
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1121]
-Name=Vestimenta Caótica de gala
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21292
 ObjType=3
 NumRopaje=516
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13884,21 +13853,19 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1122]
-Name=Vestimenta Caótica de gala (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21319
 ObjType=3
 NumRopaje=517
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -13911,200 +13878,238 @@ CP8=LADRON
 CP9=TRABAJADOR
 
 [OBJ1123]
-Name=Vestimenta Caótica brillante
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21346
 ObjType=3
 NumRopaje=518
 Agarrable=0
-MaxDef=39
-MinDef=37
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=ASESINO
-CP4=PIRATA
-CP5=TRABAJADOR
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1124]
-Name=Vestimenta Caótica brillante (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21373
 ObjType=3
 NumRopaje=519
 Agarrable=0
-MaxDef=39
-MinDef=37
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
-CP3=ASESINO
-CP4=PIRATA
-CP5=TRABAJADOR
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1125]
-Name=Vestimenta Caótica liviana
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21400
 ObjType=3
 NumRopaje=520
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1126]
-Name=Vestimenta Caótica liviana (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21427
 ObjType=3
 NumRopaje=521
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=BARDO
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1127]
-Name=Vestimenta Caótica ligera
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21454
 ObjType=3
 NumRopaje=522
 Agarrable=0
-MaxDef=37
-MinDef=34
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1128]
-Name=Vestimenta Caótica ligera (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21481
 ObjType=3
 NumRopaje=523
 Agarrable=0
-MaxDef=37
-MinDef=34
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
+CP3=BARDO
+CP4=CLERIGO
+CP5=ASESINO
+CP6=PIRATA
+CP7=TRABAJADOR
 
 [OBJ1129]
-Name=Vestimenta Caótica formal
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21508
 ObjType=3
 NumRopaje=524
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1130]
-Name=Vestimenta Caótica formal (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21535
 ObjType=3
 NumRopaje=525
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
+CP1=MAGO
+CP2=DRUIDA
+CP3=PALADIN
+CP4=GUERRERO
+CP5=CAZADOR
+CP6=BANDIDO
+CP7=PIRATA
+CP8=LADRON
+CP9=TRABAJADOR
 
 [OBJ1131]
-Name=Vestimenta hechicero Caótico
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21562
 ObjType=3
 NumRopaje=526
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=BARDO
-CP2=ASESINO
-CP3=GUERRERO
-CP4=CAZADOR
-CP5=BANDIDO
-CP6=LADRON
-CP7=PIRATA
-CP8=TRABAJADOR
+CP2=CLERIGO
+CP3=ASESINO
+CP4=PALADIN
+CP5=GUERRERO
+CP6=CAZADOR
+CP7=BANDIDO
+CP8=LADRON
+CP9=PIRATA
+CP10=TRABAJADOR
 
 [OBJ1132]
-Name=Vestimenta hechicero Caótico (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21589
 ObjType=3
 NumRopaje=527
 Agarrable=0
-MaxDef=35
-MinDef=30
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=BARDO
 CP2=CLERIGO
@@ -14118,20 +14123,18 @@ CP9=PIRATA
 CP10=TRABAJADOR
 
 [OBJ1133]
-Name=Vestimenta Caótica pesada
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21616
 ObjType=3
 NumRopaje=528
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -14142,21 +14145,19 @@ CP6=PIRATA
 CP7=TRABAJADOR
 
 [OBJ1134]
-Name=Vestimenta Caótica pesada (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21643
 ObjType=3
 NumRopaje=529
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=DRUIDA
@@ -14167,20 +14168,18 @@ CP6=PIRATA
 CP7=TRABAJADOR
 
 [OBJ1135]
-Name=Vestimenta pirata Caotico
+Name=Vestimenta Caótica de 2da Jerarquia (H/E/EO)
 GrhIndex=21670
 ObjType=3
 NumRopaje=530
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=CLERIGO
@@ -14195,21 +14194,19 @@ CP10=CAZADOR
 CP11=TRABAJADOR
 
 [OBJ1136]
-Name=Vestimenta pirata Caotico (E/G)
+Name=Vestimenta Caótica de 2da Jerarquia (E/G)
 GrhIndex=21697
 ObjType=3
 NumRopaje=531
 Agarrable=0
-MaxDef=40
-MinDef=40
+MaxDef=20
+MinDef=15
 Valor=0
-Copas=25
 Crucial=1
 Caos=1
 RazaEnana=1
 Limpieza=0
 NoSeCae=1
-Shop=1
 Robable=1
 CP1=MAGO
 CP2=CLERIGO
@@ -14279,9 +14276,7 @@ Agarrable=0
 StaffPower=2
 MinHit=2
 MaxHit=5
-Valor=0
-Log=1
-Copas=25
+Valor=1
 Crucial=0
 CP1=PIRATA
 CP2=CAZADOR
@@ -14306,9 +14301,7 @@ Agarrable=0
 StaffPower=2
 MinHit=2
 MaxHit=5
-Valor=0
-Log=1
-Copas=25
+Valor=1
 Crucial=0
 CP1=PIRATA
 CP2=CAZADOR
@@ -14337,9 +14330,7 @@ Municiones=1
 Refuerzo=12
 MinHit=6
 MaxHit=12
-Valor=0
-Log=1
-Copas=25
+Valor=1
 Crucial=0
 CP1=PIRATA
 CP2=MAGO
@@ -14366,10 +14357,8 @@ RazaEnanaAnim=58
 MinHit=5
 MaxHit=15
 StaffPower=2
-StaffDamageBonus=36
-Valor=0
-Log=1
-Copas=40
+StaffDamageBonus=40
+Valor=1
 Crucial=0
 CP1=PIRATA
 CP2=CAZADOR
@@ -14393,9 +14382,7 @@ ObjType=18
 Agarrable=0
 DefensaMagicaMax=22
 DefensaMagicaMin=18
-Valor=0
-Log=1
-Copas=38
+Valor=1
 Crucial=0
 CP1=MAGO
 CP2=DRUIDA
@@ -14419,9 +14406,8 @@ Anim=24
 RazaEnanaAnim=81
 MinHit=8
 MaxHit=20
-Valor=0
-Log=1
-Copas=25
+Valor=1
+Crucial=0
 CP1=MAGO
 CP2=DRUIDA
 CP3=LADRON
@@ -14441,11 +14427,9 @@ ObjType=2
 Agarrable=0
 Anim=13
 RazaEnanaAnim=63
-MinHit=13
+MinHit=15
 MaxHit=20
-Valor=0
-Log=1
-Copas=38
+Valor=1
 Crucial=0
 CP1=MAGO
 CP2=CLERIGO
@@ -14466,26 +14450,14 @@ Name=Daga de Plata[Shop]
 GrhIndex=5595
 ObjType=2
 Agarrable=0
-Anim=77
+Anim=52
 RazaEnanaAnim=53
-MinHit=8
+MinHit=7
 MaxHit=10
 Apuñala=1
-Valor=0
-Log=1
-Copas=25
+Valor=1
 Crucial=0
 CP1=PIRATA
-CP2=MAGO
-CP3=PALADIN
-CP4=CLERIGO
-CP5=CAZADOR
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=TRABAJADOR
 Nosecae=1
 Robable=1
 Shop=1
@@ -14501,10 +14473,8 @@ RazaEnanaAnim=62
 MinHit=3
 MaxHit=7
 StaffPower=2
-StaffDamageBonus=32
-Valor=0
-Log=1
-Copas=25
+StaffDamageBonus=40
+Valor=1
 Crucial=0
 CP1=PIRATA
 CP2=CAZADOR
@@ -14637,7 +14607,7 @@ CP12=MAGO
 Name=Cueva
 GrhIndex=24904
 ObjType=29
-Agarrable=1
+Agarrable=0
 
 [OBJ1161]
 Name=Mesa de Taberna
@@ -14743,7 +14713,7 @@ Agarrable=1
 Name=Fuego
 GrhIndex=24929
 ObjType=19
-Agarrable=1
+Agarrable=0
 
 [OBJ1172]
 Name=Decoración Dungeon Magma
@@ -14774,569 +14744,3 @@ Name=Entrada
 GrhIndex=24934
 ObjType=19
 Agarrable=0
-
-[OBJ1177]
-Name=Manto celestial
-GrhIndex=24680
-ObjType=3
-NumRopaje=581
-Agarrable=0
-MaxDef=50
-MinDef=50
-Valor=0
-Log=1
-Copas=40
-Crucial=1
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1178]
-Name=Manto celestial(E/G)
-GrhIndex=24708
-ObjType=3
-NumRopaje=582
-Agarrable=0
-MinDef=50
-MaxDef=50
-Valor=0
-Log=1
-Copas=40
-Crucial=1
-RazaEnana=1
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1179]
-Name=Manto Alado del Mal
-GrhIndex=24936
-ObjType=3
-Agarrable=0
-MinDef=50
-MaxDef=50
-Valor=0
-Log=1
-Copas=50
-Crucial=1
-NumRopaje=590
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1180]
-Name=Manto Alado del Bien
-GrhIndex=24963
-ObjType=3
-Agarrable=0
-MinDef=50
-MaxDef=50
-Crucial=1
-Valor=0
-Log=1
-Copas=50
-NumRopaje=591
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1181]
-Name=Manto Alado del Mal (E/G)
-GrhIndex=24936
-ObjType=3
-NumRopaje=590
-Crucial=1
-Agarrable=0
-MinDef=50
-MaxDef=50
-Valor=0
-Log=1
-Copas=50
-RazaEnana=1
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1182]
-Name=Manto Alado del Bien (E/G)
-GrhIndex=24963
-Agarrable=0
-MinDef=50
-MaxDef=50
-Valor=0
-Log=1
-Copas=50
-ObjType=3
-NumRopaje=591
-Crucial=1
-RazaEnana=1
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1183]
-Name=Casco del olimpo
-GrhIndex=24674
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=23
-MaxDef=30
-MinDef=25
-Valor=0
-Log=1
-Copas=30
-Crucial=0
-CP1=MAGO
-CP2=DRUIDA
-CP3=LADRON
-CP4=BARDO
-CP5=PIRATA
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1184]
-Name=Bolso de druida
-GrhIndex=388
-ObjType=2
-Agarrable=0
-Anim=17
-RazaEnanaAnim=17
-MinHit=1
-MaxHit=1
-StaffPower=1
-StaffDamageBonus=12
-Valor=800
-Crucial=1
-CP1=PIRATA
-CP2=CAZADOR
-CP3=PALADIN
-CP4=CLERIGO
-CP5=ASESINO
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=MAGO
-CP11=TRABAJADOR
-NoSeCae=1
-
-[OBJ1185]
-Name=Casco Ten
-GrhIndex=24674
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=10
-MaxDef=30
-MinDef=25
-Valor=0
-Log=1
-Crucial=0
-Nosecae=1
-Robable=1
-
-[OBJ1186]
-Name=Anillo Iriwynne
-GrhIndex=23959
-ObjType=18
-Agarrable=0
-DefensaMagicaMax=25
-DefensaMagicaMin=25
-Valor=0
-Log=1
-Copas=40
-Crucial=0
-CP1=MAGO
-CP2=LADRON
-CP3=GUERRERO
-CP4=PIRATA
-CP5=CAZADOR
-CP6=TRABAJADOR
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1187]
-Name=Manto oscuro
-GrhIndex=14223
-ObjType=3
-NumRopaje=262
-Agarrable=0
-MaxDef=50
-MinDef=45
-Valor=25000
-Crucial=1
-NoSeCae=1
-
-[OBJ1188]
-Name=Tunica zeruel
-GrhIndex=14052
-ObjType=3
-NumRopaje=256
-Agarrable=0
-MaxDef=38
-MinDef=30
-Valor= 25000
-Crucial=1
-CP1=GUERRERO
-CP2=MAGO
-
-[OBJ1189]
-Name=Espada Mata Dragones[Shop] 
-GrhIndex=716
-ObjType=2
-NoSeCae=1
-Agarrable=0
-Anim=15
-RazaEnanaAnim=65
-MinHit=99
-MaxHit=99
-Valor=25000
-Crucial=0
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1190]
-Name=Espada Cuicui testeo
-GrhIndex=716
-ObjType=2
-Agarrable=0
-Anim=15
-RazaEnanaAnim=65
-MinHit=1
-MaxHit=1
-Valor=0
-Log=1
-Copas=100
-Crucial=0
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1191]
-Name=Tunica Oscura
-GrhIndex=24057
-ObjType=3
-NumRopaje=563
-Agarrable=0
-MaxDef=40
-MinDef=40
-Valor= 0
-Crucial=1
-NoSeCae=1
-
-[OBJ1192]
-Name=Cofre Cerrado
-GrhIndex=503
-ObjType=7
-Agarrable=1
-Abierta=0
-Llave=0
-CantItems=0
-NroItems=0
-
-[OBJ1193]
-Name=Farol moderno
-GrhIndex=24589
-ObjType=20
-Agarrable=1
-
-[OBJ1194]
-Name=Corona calavera
-GrhIndex=25841
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=25
-DefensaMagicaMax=8
-DefensaMagicaMin=5
-MaxDef=20
-MinDef=10
-Valor=0
-Copas=30
-Log=1
-Crucial=0
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1195]
-Name=Galera
-GrhIndex=25940
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=26
-MaxDef=9
-MinDef=2
-Valor=0
-Log=1
-Copas=0
-Crucial=0
-Nosecae=1
-Robable=1
-
-[OBJ1196]
-Name=Sombrero de Brujo
-GrhIndex=25969
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=27
-MaxDef=1
-MinDef=1
-DefensaMagicaMin=12
-DefensaMagicaMax=18
-Valor=0
-Copas=30
-Crucial=1
-CP1=PIRATA
-CP2=CAZADOR
-CP3=PALADIN
-CP4=CLERIGO
-CP5=ASESINO
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=TRABAJADOR
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1197]
-Name=Casco oscuro
-GrhIndex=25980
-ObjType=17
-NumRopaje=2
-Agarrable=0
-Anim=28
-MaxDef=30
-MinDef=30
-Valor=0
-Log=1
-Copas=0
-Crucial=0
-Nosecae=1
-Robable=1
-
-[OBJ1198]
-Name=Escudo Oscuro
-GrhIndex=25981
-ObjType=16
-NumRopaje=2
-Agarrable=0
-Anim=14
-MaxDef=7
-MinDef=5
-Valor=13000
-Crucial=0
-CP1=MAGO
-CP2=DRUIDA
-CP3=LADRON
-CP4=BARDO
-CP5=PIRATA
-CP6=ASESINO
-CP7=TRABAJADOR
-Nosecae=1
-Robable=1
-
-[OBJ1199]
-Name=Arco de Cazador Milenario
-GrhIndex=25879
-ObjType=2
-Agarrable=0
-Anim=79
-RazaEnanaAnim=79
-Proyectil=1
-Municiones=1
-Refuerzo=12
-MinHit=8
-MaxHit=15
-Valor=3000
-Crucial=0
-CP1=PIRATA
-CP2=MAGO
-CP3=PALADIN
-CP4=CLERIGO
-CP5=ASESINO
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-Nosecae=1
-Robable=1
-
-[OBJ1200]
-Name=Vara Antigua
-GrhIndex=26037
-ObjType=2
-Agarrable=0
-Anim=82
-RazaEnanaAnim=
-MinHit=2
-MaxHit=12
-StaffPower=2
-StaffDamageBonus=40
-Valor=0
-Copas=50
-Crucial=0
-CP1=PIRATA
-CP2=CAZADOR
-CP3=PALADIN
-CP4=CLERIGO
-CP5=ASESINO
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=TRABAJADOR
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1201]
-Name=Daga Ruby
-GrhIndex=26009
-ObjType=2
-Agarrable=0
-Anim=81
-MinHit=10
-MaxHit=12
-Apuñala=1
-Valor=4060
-Crucial=0
-CP1=PIRATA
-CP2=MAGO
-CP3=PALADIN
-CP4=CLERIGO
-CP5=CAZADOR
-CP6=LADRON
-CP7=BANDIDO
-CP8=GUERRERO
-CP9=BARDO
-CP10=DRUIDA
-CP11=TRABAJADOR
-Nosecae=1
-Robable=1
-
-[OBJ1202]
-Name=Espada celestial
-GrhIndex=25934
-ObjType=2
-Agarrable=0
-Anim=80
-RazaEnanaAnim=80
-MinHit=13
-MaxHit=20
-Valor=36200
-Crucial=0
-CP1=MAGO
-CP2=DRUIDA
-CP3=LADRON
-CP4=BARDO
-CP5=PIRATA
-CP6=CAZADOR
-CP7=ASESINO
-CP8=BANDIDO
-CP9=TRABAJADOR
-Nosecae=1
-Robable=1
-
-[OBJ1203]
-Name=Espada del caos
-GrhIndex=25842
-ObjType=2
-Agarrable=0
-Anim=78
-RazaEnanaAnim=78
-MinHit=15
-MaxHit=22
-Valor=0
-Copas=50
-Crucial=0
-CP1=MAGO
-CP2=CLERIGO
-CP3=DRUIDA
-CP4=LADRON
-CP5=BARDO
-CP6=PIRATA
-CP7=CAZADOR
-CP8=ASESINO
-CP9=BANDIDO
-CP10=TRABAJADOR
-Nosecae=1
-Robable=1
-Shop=1
-
-[OBJ1204] 
-Name=Tunica Apocalytica
-GrhIndex=26121
-ObjType=3
-NumRopaje=596
-Agarrable=0
-MaxDef=40
-MinDef=35
-Valor= 25000
-Crucial=1
-Nosecae=1
-Robable=1
-
-[OBJ1205]
-Name=Tunica Apocalytica (E/G)
-GrhIndex=26149
-ObjType=3
-NumRopaje=597
-Agarrable=0
-MaxDef=40
-MinDef=35
-Valor= 25000
-Crucial=1
-RazaEnana=1
-Nosecae=1
-Robable=1
-
-[OBJ1206] 
-Name=Armadura Oscura
-GrhIndex=25941
-ObjType=3
-NumRopaje=593
-Agarrable=0
-MaxDef=50
-MinDef=45
-Valor= 25000
-Crucial=1
-Nosecae=1
-Robable=1
-
-[OBJ1207] 
-Name=Chupines negros
-GrhIndex=26065
-ObjType=3
-NumRopaje=594
-Agarrable=0
-MaxDef=20
-MinDef=10
-Valor= 25000
-Crucial=1
-Nosecae=1
-Robable=1
-
-[OBJ1208] 
-Name=Chupines blancos
-GrhIndex=26093
-ObjType=3
-NumRopaje=595
-Agarrable=0
-MaxDef=20
-MinDef=10
-Valor= 25000
-Crucial=1
-Nosecae=1
-Robable=1

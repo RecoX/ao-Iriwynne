@@ -3,7 +3,7 @@ Attribute VB_Name = "ModAreas"
 ' ModAreas.bas - Module to allow the usage of areas instead of maps.
 ' Saves a lot of bandwidth.
 '
-' Original Idea by Juan Martín Sotuyo Dodero (Maraxus)
+' Original Idea by Juan Martï¿½n Sotuyo Dodero (Maraxus)
 ' (juansotuyo@gmail.com)
 ' Implemented by Lucio N. Tourrilhes (DuNga)
 '**************************************************************
@@ -22,7 +22,7 @@ Attribute VB_Name = "ModAreas"
 'along with this program; if not, you can find it at http://www.affero.org/oagpl.html
 '**************************************************************************
 
-' Modulo de envio por areas compatible con la versión 9.10.x ... By DuNga
+' Modulo de envio por areas compatible con la versiï¿½n 9.10.x ... By DuNga
 
 Option Explicit
 
@@ -53,7 +53,7 @@ End Type
 Public Const USER_NUEVO               As Byte = 255
 
 'Cuidado:
-' ¡¡¡LAS AREAS ESTÁN HARDCODEADAS!!!
+' ï¿½ï¿½ï¿½LAS AREAS ESTï¿½N HARDCODEADAS!!!
 Private CurDay                        As Byte
 
 Private CurHour                       As Byte
@@ -88,7 +88,7 @@ Public Sub InitAreas()
     
         For LoopC = 1 To 100
                 For LoopX = 1 To 100
-                        'Usamos 121 IDs de area para saber si pasasamos de area "más rápido"
+                        'Usamos 121 IDs de area para saber si pasasamos de area "mï¿½s rï¿½pido"
                         AreasInfo(LoopC, LoopX) = (LoopC \ 9 + 1) * (LoopX \ 9 + 1)
                 Next LoopX
         Next LoopC
@@ -113,7 +113,7 @@ Public Sub AreasOptimizacion()
         '**************************************************************
         'Author: Lucio N. Tourrilhes (DuNga)
         'Last Modify Date: Unknow
-        'Es la función de autooptimizacion.... la idea es no mandar redimensionando arrays grandes todo el tiempo
+        'Es la funciï¿½n de autooptimizacion.... la idea es no mandar redimensionando arrays grandes todo el tiempo
         '**************************************************************
         Dim LoopC      As Long
 
@@ -152,7 +152,7 @@ Public Sub CheckUpdateNeededUser(ByVal Userindex As Integer, _
         '**************************************************************
         'Author: Lucio N. Tourrilhes (DuNga)
         'Last Modify Date: 28/10/2010
-        'Es la función clave del sistema de areas... Es llamada al mover un user
+        'Es la funciï¿½n clave del sistema de areas... Es llamada al mover un user
         '15/07/2009: ZaMa - Now it doesn't send an invisible admin char info
         '28/10/2010: ZaMa - Now it doesn't send a saling char invisible message.
         '**************************************************************
@@ -499,7 +499,7 @@ Public Sub AgregarUser(ByVal Userindex As Integer, _
         '**************************************************************
         'Author: Lucio N. Tourrilhes (DuNga)
         'Last Modify Date: 04/01/2007
-        'Modified by Juan Martín Sotuyo Dodero (Maraxus)
+        'Modified by Juan Martï¿½n Sotuyo Dodero (Maraxus)
         '   - Now the method checks for repetead users instead of trusting parameters.
         '   - If the character is new to the map, update it
         '**************************************************************

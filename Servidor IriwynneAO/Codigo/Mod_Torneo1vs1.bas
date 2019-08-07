@@ -156,7 +156,7 @@ Sub Rondas_Cancela(Optional ByVal AutoCancel As Boolean = False)
 
 Rondas_Cancela_Error:
 
-390 Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure Rondas_Cancela of Módulo m_Torneo1vs1" & Erl & ".")
+390 Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure Rondas_Cancela of Mï¿½dulo m_Torneo1vs1" & Erl & ".")
     Resume Next
 
 End Sub
@@ -260,7 +260,7 @@ Sub Rondas_UsuarioMuere(ByVal Userindex As Integer, Optional Real As Boolean = T
             
             With UserList(.Torneo_Luchadores(LI1))
                 'Aviso al mundo.
-                SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", .Name & " - " & ListaClases(.clase) & " " & ListaRazas(.raza) & " Nivel " & .Stats.ELV & " Ganó " & Format$(Torneo1vs1.Premio, "#,###") & " monedas de oro y " & Torneo1vs1.Cupos & " puntos de Canje por salir primero en el evento.")
+                SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", .Name & " - " & ListaClases(.clase) & " " & ListaRazas(.raza) & " Nivel " & .Stats.ELV & " Ganï¿½ " & Format$(Torneo1vs1.Premio, "#,###") & " monedas de oro y " & Torneo1vs1.Cupos & " puntos de Canje por salir primero en el evento.")
             
             End With
             
@@ -293,7 +293,7 @@ Sub Rondas_UsuarioMuere(ByVal Userindex As Integer, Optional Real As Boolean = T
 
 1200    Else
 
-            'A su compañero se le teleporta dentro, condicional por seguridad
+            'A su compaï¿½ero se le teleporta dentro, condicional por seguridad
 1340        Call WarpUserChar(.Torneo_Luchadores(LI1), EventoMapPos.MapaTorneo, EventoMapPos.EsperaX, EventoMapPos.EsperaY, True)
 
 1350    End If
@@ -413,12 +413,12 @@ Sub Torneos_Inicia(ByVal Userindex As Integer, ByVal rondas As Integer, ByVal Mi
             .Torneo_Luchadores(i) = -1
         Next i
 
-        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo Automático>", "Esta empezando un nuevo Torneo 1vs1 de " & .Cupos & " participantes!! para participar teclea /PARTICIPAR - (No cae inventario)"))
+        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo Automï¿½tico>", "Esta empezando un nuevo Torneo 1vs1 de " & .Cupos & " participantes!! para participar teclea /PARTICIPAR - (No cae inventario)"))
         
         PuntosGanados = .Cupos
            
         If T Then
-            SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo Automático>", "Clases prohibidas: " & IIf(cMago > 0, " MAGO ", "") & IIf(cClerigo > 0, " CLERIGO ", "") & IIf(cBardo > 0, " BARDO ", "") & IIf(cPaladin > 0, " PALADIN ", "") & IIf(cAsesino > 0, " ASESINO ", "") & IIf(cCazador > 0, " CAZADOR ", "") & IIf(cGuerrero > 0, " GUERRERO ", "") & IIf(cDruida > 0, " DRUIDA ", "") & IIf(cLadron > 0, " LADRON ", "") & IIf(cBandido > 0, " BANDIDO ", ""), FontTypeNames.FONTTYPE_TORNEO)
+            SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo Automï¿½tico>", "Clases prohibidas: " & IIf(cMago > 0, " MAGO ", "") & IIf(cClerigo > 0, " CLERIGO ", "") & IIf(cBardo > 0, " BARDO ", "") & IIf(cPaladin > 0, " PALADIN ", "") & IIf(cAsesino > 0, " ASESINO ", "") & IIf(cCazador > 0, " CAZADOR ", "") & IIf(cGuerrero > 0, " GUERRERO ", "") & IIf(cDruida > 0, " DRUIDA ", "") & IIf(cLadron > 0, " LADRON ", "") & IIf(cBandido > 0, " BANDIDO ", ""), FontTypeNames.FONTTYPE_TORNEO)
         End If
 
     End With
@@ -442,19 +442,19 @@ Sub Ingresar1vs1(ByVal Userindex As Integer)
 
         If .pos.Map <> 1 Then Exit Sub
 
-        '@@ No hay ningún torneo en curso
-100     If (Not Torneo1vs1.Activo) Then Call WriteConsoleMsg(Userindex, "No hay ningún torneo en curso.", FontTypeNames.FONTTYPE_INFO): Exit Sub
+        '@@ No hay ningï¿½n torneo en curso
+100     If (Not Torneo1vs1.Activo) Then Call WriteConsoleMsg(Userindex, "No hay ningï¿½n torneo en curso.", FontTypeNames.FONTTYPE_INFO): Exit Sub
 
         '@@ Cupos llenos.
 110     If (Not Torneo1vs1.Ingresaron) Then Call WriteConsoleMsg(Userindex, "Cupos llenos.", FontTypeNames.FONTTYPE_INFO): Exit Sub
         
         If Torneo1vs1.MinLevel > UserList(Userindex).Stats.ELV Then
-            Call WriteConsoleMsg(Userindex, "El mínimo nivel para entrar es de " & Torneo1vs1.MinLevel, FontTypeNames.FONTTYPE_TORNEO)
+            Call WriteConsoleMsg(Userindex, "El mï¿½nimo nivel para entrar es de " & Torneo1vs1.MinLevel, FontTypeNames.FONTTYPE_TORNEO)
             Exit Sub
         End If
         
         If Torneo1vs1.MaxLevel < UserList(Userindex).Stats.ELV Then
-            Call WriteConsoleMsg(Userindex, "El máximo nivel para entrar es de " & Torneo1vs1.MaxLevel, FontTypeNames.FONTTYPE_TORNEO)
+            Call WriteConsoleMsg(Userindex, "El mï¿½ximo nivel para entrar es de " & Torneo1vs1.MaxLevel, FontTypeNames.FONTTYPE_TORNEO)
             Exit Sub
         End If
         
@@ -464,7 +464,7 @@ Sub Ingresar1vs1(ByVal Userindex As Integer)
 On Error GoTo NoHayClases
     If MiClase = ListaClases(DeathMatch.ClasesValidas.Asesino) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Bandido) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Bardo) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Cazador) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Clerigo) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Druida) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Guerrero) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Ladron) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Mago) Or MiClase = ListaClases(DeathMatch.ClasesValidas.Paladin) Then
 
-        Call WriteConsoleMsg(Userindex, "Tu clase no es válida.", FontTypeNames.FONTTYPE_TORNEO)
+        Call WriteConsoleMsg(Userindex, "Tu clase no es vï¿½lida.", FontTypeNames.FONTTYPE_TORNEO)
         Exit Sub
 
     End If
@@ -476,7 +476,7 @@ NoHayClases:
     'Esta en torneo?
 140 For i = LBound(Torneo1vs1.Torneo_Luchadores) To UBound(Torneo1vs1.Torneo_Luchadores)
 150     If (Torneo1vs1.Torneo_Luchadores(i) = Userindex) Then
-160         Call WriteConsoleMsg(Userindex, "Ya estás dentro del torneo", FontTypeNames.FONTTYPE_INFO)
+160         Call WriteConsoleMsg(Userindex, "Ya estï¿½s dentro del torneo", FontTypeNames.FONTTYPE_INFO)
 170         Exit Sub
 180     End If
 190 Next i
@@ -505,7 +505,7 @@ NoHayClases:
 410             Call WriteUpdateGold(Torneo1vs1.Torneo_Luchadores(i))
 420         End If
 
-430         Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "El personaje " & UserList(Userindex).Name & " ingresó al Torneo1vs1."))
+430         Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "El personaje " & UserList(Userindex).Name & " ingresï¿½ al Torneo1vs1."))
 
 440         If (i = UBound(Torneo1vs1.Torneo_Luchadores)) Then
 
@@ -527,7 +527,7 @@ NoHayClases:
 
 Torneos_Entra_Error:
 
-540 Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure Torneos_Entra of Módulo m_Torneo1vs1" & Erl & ".")
+540 Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure Torneos_Entra of Mï¿½dulo m_Torneo1vs1" & Erl & ".")
 
 End Sub
 
@@ -551,13 +551,13 @@ Sub Rondas_Combate(combate As Integer)
 
 90      If (UI1 = -1) Then
 
-100         Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Combate anulado por la desconexión de uno de los dos participantes."))
+100         Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Combate anulado por la desconexiï¿½n de uno de los dos participantes."))
 
 110         If (.rondas = 1) Then
 
 120             If (UI2 <> -1) Then
 
-130                 Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Torneo terminado, ganador del torneo por eliminación " & UserList(UI2).Name & "."))
+130                 Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Torneo terminado, ganador del torneo por eliminaciï¿½n " & UserList(UI2).Name & "."))
 
                     Call ClosestLegalPos(Ullathorpe, N)
 140                 Call WarpUserChar(UI2, N.Map, N.X, N.Y, True)
@@ -581,13 +581,13 @@ Sub Rondas_Combate(combate As Integer)
 
 430             End If
 
-440             Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "No hay ganador del evento por la desconexión de todos sus participantes."))
+440             Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "No hay ganador del evento por la desconexiï¿½n de todos sus participantes."))
 
 450             Exit Sub
 
 460         End If
 
-470         If (UI2 <> -1) Then Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "El usuario " & UserList(UI2).Name & " pasó a la siguiente ronda."))
+470         If (UI2 <> -1) Then Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "El usuario " & UserList(UI2).Name & " pasï¿½ a la siguiente ronda."))
 
 480         If (2 ^ .rondas = 2 * combate) Then
 
@@ -672,7 +672,7 @@ Sub Cuenta()
  
  On Error Resume Next
  
-' @ Cuenta regresiva y auto-cancel acá.
+' @ Cuenta regresiva y auto-cancel acï¿½.
  
 Dim PacketToSend    As String
 Dim CanSendPackage  As Boolean
@@ -685,13 +685,13 @@ With Torneo1vs1
         .Cuenta = .Cuenta - 1
        
         If .Cuenta > 1 Then
-            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "La ronda iniciará en " & .Cuenta & " segundos.")
+            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "La ronda iniciarï¿½ en " & .Cuenta & " segundos.")
         ElseIf .Cuenta = 1 Then
-            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "La ronda iniciará en 1 segundo!")
+            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "La ronda iniciarï¿½ en 1 segundo!")
         ElseIf .Cuenta <= 0 Then
             WritePauseToggle (NameIndex(Torneo1vs1.Peleando(1)))
             WritePauseToggle (NameIndex(Torneo1vs1.Peleando(2)))
-            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "¡PELEEN!")
+            SendData SendTarget.toMap, EventoMapPos.MapaTorneo, PrepareMessageConsoleMsgNew("Torneo 1vs1>", "ï¿½PELEEN!")
         End If
     End If
     
@@ -706,35 +706,35 @@ With Torneo1vs1
        Select Case .AutoCancelTime
               Case 150      'Quedan 2:30.
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 2:30 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 2:30 minutos")
               Case 120
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 2 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 2 minutos")
               Case 90
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 1:30 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 1:30 minutos")
               Case 60
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 1 minuto")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 1 minuto")
               Case 30
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 30 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 30 segundos")
               'Avisa a los 15
               Case 15
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 15 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 15 segundos")
               'Avisa a los 10
               Case 10
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 10 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 10 segundos")
               'Avisa a los 5
               Case 5
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en 5 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en 5 segundos")
               'Avisa a los 3,2,1.
               Case 1, 2, 3
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelará en " & .AutoCancelTime & " segundo/s")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Torneo 1vs1>", "Auto-Cancelarï¿½ en " & .AutoCancelTime & " segundo/s")
               Case 0
                    CanSendPackage = False
                    Call Rondas_Cancela(1)

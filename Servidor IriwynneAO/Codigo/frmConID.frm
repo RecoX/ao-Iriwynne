@@ -110,7 +110,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -132,10 +132,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -159,9 +159,9 @@ Private Sub Command2_Click()
         Next i
 
         If c = MaxUsers Then
-                Label1.Caption = "¡No hay slots vacios!"
+                Label1.Caption = "ï¿½No hay slots vacios!"
         Else
-                Label1.Caption = "¡Hay " & MaxUsers - c & " slots vacios!"
+                Label1.Caption = "ï¿½Hay " & MaxUsers - c & " slots vacios!"
 
         End If
 

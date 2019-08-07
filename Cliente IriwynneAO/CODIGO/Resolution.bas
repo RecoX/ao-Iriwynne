@@ -57,7 +57,7 @@ Option Explicit
     'Autor: Unknown
     'Last Modification: 03/29/08
     'Changes the display resolution if needed.
-    'Last Modified By: Juan Martín Sotuyo Dodero (Maraxus)
+    'Last Modified By: Juan Martï¿½n Sotuyo Dodero (Maraxus)
     ' 03/29/2008: Maraxus - Retrieves current settings storing display depth and frequency for proper restoration.
     '***************************************************
         Dim lRes As Long
@@ -74,7 +74,7 @@ Option Explicit
     oldResHeight = Screen.Height \ Screen.TwipsPerPixelY
    
     If oldResWidth <> 800 Or oldResHeight <> 600 Then
-        If MsgBox("¿Desea jugar en pantalla completa?", vbYesNo, "Cambio de Resolución") = vbYes Then
+        If MsgBox("ï¿½Desea jugar en pantalla completa?", vbYesNo, "Cambio de Resoluciï¿½n") = vbYes Then
             
             bNoResChange = False
             NoRes = False
@@ -113,7 +113,7 @@ Public Sub ResetResolution()
 'Autor: Unknown
 'Last Modification: 03/29/08
 'Changes the display resolution if needed.
-'Last Modified By: Juan Martín Sotuyo Dodero (Maraxus)
+'Last Modified By: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 ' 03/29/2008: Maraxus - Properly restores display depth and frequency.
 '***************************************************
     Dim typDevM As typDevMODE

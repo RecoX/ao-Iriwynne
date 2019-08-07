@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmCharInfo 
    BorderStyle     =   0  'None
-   Caption         =   "Información del personaje"
+   Caption         =   "Informaciï¿½n del personaje"
    ClientHeight    =   6540
    ClientLeft      =   0
    ClientTop       =   -75
@@ -404,9 +404,9 @@ Private Sub LoadButtons()
            grhpath & "Buttons/Boton Cerrar 1.bmp", _
            grhpath & "Buttons/Boton Cerrar 1.bmp", Me)
 
-        Call cBotonPeticion.Initialize(imgPeticion, grhpath & "buttons/Boton Petición.bmp", _
-           grhpath & "buttons/boton Petición 1.bmp", _
-           grhpath & "buttons/boton Petición 1.bmp", Me)
+        Call cBotonPeticion.Initialize(imgPeticion, grhpath & "buttons/Boton Peticiï¿½n.bmp", _
+           grhpath & "buttons/boton Peticiï¿½n 1.bmp", _
+           grhpath & "buttons/boton Peticiï¿½n 1.bmp", Me)
 
         Call cBotonRechazar.Initialize(imgRechazar, grhpath & "buttons/boton Rechazar.bmp", _
            grhpath & "buttons/boton Rechazar 1.bmp", _

@@ -76,7 +76,7 @@ Public Sub loop_reto()
 
 loop_reto_Error:
 
-8   Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure loop_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+8   Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure loop_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -128,7 +128,7 @@ Public Function can_Attack(ByVal attackerIndex As Integer, _
 
 can_Attack_Error:
 
-20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure can_Attack of Módulo Mod_Retos2vs2" & Erl & ".")
+20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure can_Attack of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -164,7 +164,7 @@ Private Sub loop_reto_index(ByVal reto_Index As Integer)
 12          If (.count_Down > 0) Then
 13              m = CStr(.count_Down) & "..."
 14          Else
-15              m = "¡YA!"
+15              m = "ï¿½YA!"
 
 16          End If
 
@@ -193,7 +193,7 @@ Private Sub loop_reto_index(ByVal reto_Index As Integer)
 
 loop_reto_index_Error:
 
-31  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure loop_reto_index of Módulo Mod_Retos2vs2" & Erl & ".")
+31  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure loop_reto_index of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -223,7 +223,7 @@ Public Function get_reto_index() As Integer
 
 get_reto_index_Error:
 
-10  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure get_reto_index of Módulo Mod_Retos2vs2" & Erl & ".")
+10  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure get_reto_index of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -272,7 +272,7 @@ Public Sub set_reto_struct(ByVal user_Index As Integer, _
 
 set_reto_struct_Error:
 
-22  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure set_reto_struct of Módulo Mod_Retos2vs2" & Erl & ".")
+22  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure set_reto_struct of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -290,7 +290,7 @@ Public Sub user_retoLoop(ByVal user_Index As Integer)
 4           .acceptLimit = .acceptLimit - 1
 
 5           If (.acceptLimit <= 0) Then
-6               Call message_reto(.tempStruct, "El reto se ha autocancelado debido a que el tiempo para aceptar ha llegado a su límite.")
+6               Call message_reto(.tempStruct, "El reto se ha autocancelado debido a que el tiempo para aceptar ha llegado a su lï¿½mite.")
 
                 Dim j As Long
                 Dim i As Long
@@ -354,7 +354,7 @@ Public Sub user_retoLoop(ByVal user_Index As Integer)
 
 user_retoLoop_Error:
 
-38  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure user_retoLoop of Módulo Mod_Retos2vs2" & Erl & ".")
+38  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure user_retoLoop of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -385,7 +385,7 @@ Public Sub erase_userData(ByVal user_Index As Integer)
 
 erase_userData_Error:
 
-13  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure erase_userData of Módulo Mod_Retos2vs2" & Erl & ".")
+13  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure erase_userData of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -403,14 +403,14 @@ Public Function can_send_reto(ByVal user_Index As Integer, _
 3   With UserList(user_Index)
 
 4       If (.flags.Muerto <> 0) Then
-5           fError = "¡Estás muerto!"
+5           fError = "ï¿½Estï¿½s muerto!"
 
 6           Exit Function
 
 7       End If
 
 8       If (.Counters.Pena <> 0) Then
-9           fError = "Estás en la cárcel"
+9           fError = "Estï¿½s en la cï¿½rcel"
 
 10          Exit Function
 
@@ -424,14 +424,14 @@ Public Function can_send_reto(ByVal user_Index As Integer, _
 15      End If
 
 16      If (.Pos.Map <> eCiudad.cUllathorpe) Then
-17          fError = .Name & " está fuera de su hogar."
+17          fError = .Name & " estï¿½ fuera de su hogar."
 
 18          Exit Function
 
 19      End If
 
 20      If (.mReto.reto_Index <> 0) Or (.sReto.reto_used = True) Then
-21          fError = .Name & " ya está en reto."
+21          fError = .Name & " ya estï¿½ en reto."
 
 22          Exit Function
 
@@ -471,7 +471,7 @@ Public Function can_send_reto(ByVal user_Index As Integer, _
 
 can_send_reto_Error:
 
-43  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure can_send_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+43  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure can_send_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -489,7 +489,7 @@ Private Function check_User(ByVal user_Index As Integer, _
 2   check_User = False
 
 3   If (user_Index = 0) Then
-4       fError = "Algún usuario está offline."
+4       fError = "Algï¿½n usuario estï¿½ offline."
 
 5       Exit Function
 
@@ -498,33 +498,33 @@ Private Function check_User(ByVal user_Index As Integer, _
 7   With UserList(user_Index)
 
 8       If (.flags.Muerto <> 0) Then
-9           fError = .Name & " ¡Está muerto!"
+9           fError = .Name & " ï¿½Estï¿½ muerto!"
 
 10          Exit Function
 
 11      End If
 
 12      If (.flags.Automatico <> 0) Then
-13          fError = .Name & " ¡Esta en torneo!"
+13          fError = .Name & " ï¿½Esta en torneo!"
 14          Exit Function
 15      End If
 
 16      If (.Counters.Pena <> 0) Then
-17          fError = .Name & " Está en la cárcel"
+17          fError = .Name & " Estï¿½ en la cï¿½rcel"
 
 18          Exit Function
 
 19      End If
 
 20      If (.Pos.Map <> eCiudad.cUllathorpe) Then
-21          fError = .Name & " está fuera de su hogar."
+21          fError = .Name & " estï¿½ fuera de su hogar."
 
 22          Exit Function
 
 23      End If
 
 24      If (.mReto.reto_Index <> 0) Or (.sReto.reto_used = True) Then
-25          fError = .Name & " ya está en reto."
+25          fError = .Name & " ya estï¿½ en reto."
 
 26          Exit Function
 
@@ -552,7 +552,7 @@ Private Function check_User(ByVal user_Index As Integer, _
 
 check_User_Error:
 
-39  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure check_User of Módulo Mod_Retos2vs2" & Erl & ".")
+39  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure check_User of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -603,7 +603,7 @@ Public Sub send_Reto(ByVal user_Index As Integer)
 
 send_Reto_Error:
 
-20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure send_Reto of Módulo Mod_Retos2vs2" & Erl & ".")
+20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure send_Reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -635,7 +635,7 @@ Public Sub disconnect_Reto(ByVal user_Index As Integer)
 
 disconnect_Reto_Error:
 
-9   Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure disconnect_Reto of Módulo Mod_Retos2vs2" & Erl & ".")
+9   Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure disconnect_Reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -682,7 +682,7 @@ Public Sub closeOtherReto(ByVal UserIndex As Integer)
 
 18                      If (.user_Index(j) > 0) Then
 19                          If UCase$(UserList(.user_Index(j)).sReto.nick_sender) = UCase$(UserList(N).Name) Then
-20                              Call Protocol.WriteConsoleMsg(.user_Index(j), "El reto solicitado por " & UserList(N).Name & " ha sido cancelado debido a la desconexión de un participante.", FontTypeNames.FONTTYPE_GUILD)
+20                              Call Protocol.WriteConsoleMsg(.user_Index(j), "El reto solicitado por " & UserList(N).Name & " ha sido cancelado debido a la desconexiï¿½n de un participante.", FontTypeNames.FONTTYPE_GUILD)
 
 21                          End If
 
@@ -701,7 +701,7 @@ Public Sub closeOtherReto(ByVal UserIndex As Integer)
 
 closeOtherReto_Error:
 
-29  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure closeOtherReto of Módulo Mod_Retos2vs2" & Erl & ".")
+29  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure closeOtherReto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -721,7 +721,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByVal requestName As String)
 2   sendIndex = NameIndex(requestName)
 
 3   If (sendIndex = 0) Or (UCase$(requestName) <> UserList(user_Index).sReto.nick_sender) Then
-4       Call Protocol.WriteConsoleMsg(user_Index, requestName & " no te está retando!!", FontTypeNames.FONTTYPE_GUILD)
+4       Call Protocol.WriteConsoleMsg(user_Index, requestName & " no te estï¿½ retando!!", FontTypeNames.FONTTYPE_GUILD)
 
 5       Exit Sub
 
@@ -737,7 +737,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByVal requestName As String)
 11  If (sendIndex = 0) Then Exit Sub
 
 12  If UserList(user_Index).sReto.acceptedOK Then
-13      Call Protocol.WriteConsoleMsg(user_Index, "¡Ya has aceptado!", FontTypeNames.FONTTYPE_GUILD)
+13      Call Protocol.WriteConsoleMsg(user_Index, "ï¿½Ya has aceptado!", FontTypeNames.FONTTYPE_GUILD)
 
 14      Exit Sub
 
@@ -745,7 +745,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByVal requestName As String)
 
 16  UserList(sendIndex).sReto.accept_count = (UserList(sendIndex).sReto.accept_count + 1)
 
-17  Call message_reto(UserList(sendIndex).sReto.tempStruct, UserList(user_Index).Name & " aceptó el reto.")
+17  Call message_reto(UserList(sendIndex).sReto.tempStruct, UserList(user_Index).Name & " aceptï¿½ el reto.")
 
 18  If (UserList(sendIndex).sReto.accept_count = 3) Then
 19      Call init_reto(sendIndex)
@@ -759,7 +759,7 @@ Public Sub accept_Reto(ByVal user_Index As Integer, ByVal requestName As String)
 
 accept_Reto_Error:
 
-24  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure accept_Reto of Módulo Mod_Retos2vs2" & Erl & ".")
+24  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure accept_Reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -777,7 +777,7 @@ Private Sub init_reto(ByVal userSendIndex As Integer)
 2   reto_Index = get_reto_index()
 
 3   If (reto_Index = -1) Then
-4       Call message_reto(UserList(userSendIndex).sReto.tempStruct, "Reto cancelado, todas las arenas están ocupadas.")
+4       Call message_reto(UserList(userSendIndex).sReto.tempStruct, "Reto cancelado, todas las arenas estï¿½n ocupadas.")
 
 5       Exit Sub
 
@@ -794,7 +794,7 @@ Private Sub init_reto(ByVal userSendIndex As Integer)
 
 init_reto_Error:
 
-13  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure init_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+13  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure init_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -902,7 +902,7 @@ Private Sub warp_Teams(ByVal reto_Index As Integer, _
 
 warp_Teams_Error:
 
-58  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure warp_Teams of Módulo Mod_Retos2vs2" & Erl & ".")
+58  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure warp_Teams of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -942,7 +942,7 @@ Private Sub message_reto(ByRef retoStr As retoStruct, ByRef sMessage As String)
 
 message_reto_Error:
 
-15  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure message_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+15  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure message_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -993,7 +993,7 @@ Public Sub user_die_reto(ByVal user_Index As Integer)
 
 user_die_reto_Error:
 
-20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure user_die_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+20  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure user_die_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -1029,7 +1029,7 @@ Public Function find_Team(ByVal user_Index As Integer, _
 
 find_Team_Error:
 
-12  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure find_Team of Módulo Mod_Retos2vs2" & Erl & ".")
+12  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure find_Team of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -1062,7 +1062,7 @@ Private Function find_user(ByVal team_Index As Integer, _
 
 find_user_Error:
 
-10  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure find_user of Módulo Mod_Retos2vs2" & Erl & ".")
+10  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure find_user of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -1090,7 +1090,7 @@ Private Sub team_winner(ByVal reto_Index As Integer, ByVal team_winner As Byte)
 
 team_winner_Error:
 
-11  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure team_winner of Módulo Mod_Retos2vs2" & Erl & ".")
+11  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure team_winner of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -1121,7 +1121,7 @@ Private Sub respawn_reto(ByVal reto_Index As Integer, ByVal team_winner As Integ
 7               If (Index <> 0) Then
 8                   If UserList(Index).ConnID <> -1 Then
 9                       Call Protocol.WriteConsoleMsg(Index, mStr, FontTypeNames.FONTTYPE_GUILD)
-10                      Call Protocol.WriteConsoleMsg(Index, "El siguiente round iniciará en 3 segundos.", FontTypeNames.FONTTYPE_GUILD)
+10                      Call Protocol.WriteConsoleMsg(Index, "El siguiente round iniciarï¿½ en 3 segundos.", FontTypeNames.FONTTYPE_GUILD)
 
 11                  End If
 
@@ -1138,7 +1138,7 @@ Private Sub respawn_reto(ByVal reto_Index As Integer, ByVal team_winner As Integ
 
 respawn_reto_Error:
 
-18  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure respawn_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+18  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure respawn_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -1210,7 +1210,7 @@ Private Sub finish_reto(ByVal reto_Index As Integer, ByVal team_winner As Byte)
 30                  UserList(temp_index).sReto.return_city = 15
 31                  reto_List(reto_Index).haydrop = True
 
-32                  Call Protocol.WriteConsoleMsg(temp_index, "Regresarás a tu hogar en 15 segundos.", FontTypeNames.FONTTYPE_GUILD)
+32                  Call Protocol.WriteConsoleMsg(temp_index, "Regresarï¿½s a tu hogar en 15 segundos.", FontTypeNames.FONTTYPE_GUILD)
 33              Else
 34                  Call WarpUserChar(temp_index, 1, 50 + LoopC, 50, True)
 
@@ -1242,7 +1242,7 @@ Private Sub finish_reto(ByVal reto_Index As Integer, ByVal team_winner As Byte)
 
 finish_reto_Error:
 
-49  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure finish_reto of Módulo Mod_Retos2vs2" & Erl & ".")
+49  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure finish_reto of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -1284,7 +1284,7 @@ Private Sub clear_data(ByVal reto_Index As Integer)
 
 clear_data_Error:
 
-17  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure clear_data of Módulo Mod_Retos2vs2" & Erl & ".")
+17  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure clear_data of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Sub
 
@@ -1367,7 +1367,7 @@ Private Function get_reto_message(ByVal reto_Index As Integer) As String
 
 get_reto_message_Error:
 
-40  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure get_reto_message of Módulo Mod_Retos2vs2" & Erl & ".")
+40  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure get_reto_message of Mï¿½dulo Mod_Retos2vs2" & Erl & ".")
 
 End Function
 
@@ -1451,7 +1451,7 @@ Public Function eventAttack(ByVal attackerIndex As Integer, _
 
     If UserList(attackerIndex).sReto.reto_used = True Then
         If Mod_Retos2vs2.can_Attack(attackerIndex, victimIndex) = False Then
-            Call WriteConsoleMsg(attackerIndex, "No puedes atacar a tu compañero.", FontTypeNames.FONTTYPE_INFO)
+            Call WriteConsoleMsg(attackerIndex, "No puedes atacar a tu compaï¿½ero.", FontTypeNames.FONTTYPE_INFO)
             eventAttack = False
 
             Exit Function

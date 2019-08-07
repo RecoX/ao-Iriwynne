@@ -433,14 +433,14 @@ Private Sub picInvNpc_Click()
                 Select Case NPCInventory(ItemSlot).ObjType
 
                         Case eObjType.otWeapon
-                                Label1(2).Caption = "Máx Golpe:" & NPCInventory(ItemSlot).MaxHit
-                                Label1(3).Caption = "Mín Golpe:" & NPCInventory(ItemSlot).MinHit
+                                Label1(2).Caption = "Mï¿½x Golpe:" & NPCInventory(ItemSlot).MaxHit
+                                Label1(3).Caption = "Mï¿½n Golpe:" & NPCInventory(ItemSlot).MinHit
                                 Label1(2).Visible = True
                                 Label1(3).Visible = True
 
                         Case eObjType.otArmadura, eObjType.otcasco, eObjType.otescudo
-                                Label1(2).Caption = "Máx Defensa:" & NPCInventory(ItemSlot).MaxDef
-                                Label1(3).Caption = "Mín Defensa:" & NPCInventory(ItemSlot).MinDef
+                                Label1(2).Caption = "Mï¿½x Defensa:" & NPCInventory(ItemSlot).MaxDef
+                                Label1(3).Caption = "Mï¿½n Defensa:" & NPCInventory(ItemSlot).MinDef
                                 Label1(2).Visible = True
                                 Label1(3).Visible = True
 
@@ -485,14 +485,14 @@ Private Sub picInvUser_Click()
                 Select Case Inventario.ObjType(ItemSlot)
 
                         Case eObjType.otWeapon
-                                Label1(2).Caption = "Máx Golpe:" & Inventario.MaxHit(ItemSlot)
-                                Label1(3).Caption = "Mín Golpe:" & Inventario.MinHit(ItemSlot)
+                                Label1(2).Caption = "Mï¿½x Golpe:" & Inventario.MaxHit(ItemSlot)
+                                Label1(3).Caption = "Mï¿½n Golpe:" & Inventario.MinHit(ItemSlot)
                                 Label1(2).Visible = True
                                 Label1(3).Visible = True
 
                         Case eObjType.otArmadura, eObjType.otcasco, eObjType.otescudo
-                                Label1(2).Caption = "Máx Defensa:" & Inventario.MaxDef(ItemSlot)
-                                Label1(3).Caption = "Mín Defensa:" & Inventario.MinDef(ItemSlot)
+                                Label1(2).Caption = "Mï¿½x Defensa:" & Inventario.MaxDef(ItemSlot)
+                                Label1(3).Caption = "Mï¿½n Defensa:" & Inventario.MinDef(ItemSlot)
                                 Label1(2).Visible = True
                                 Label1(3).Visible = True
 

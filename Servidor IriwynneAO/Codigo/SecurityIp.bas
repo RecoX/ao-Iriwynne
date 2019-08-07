@@ -1,6 +1,6 @@
 Attribute VB_Name = "SecurityIp"
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -22,22 +22,22 @@ Attribute VB_Name = "SecurityIp"
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 '**************************************************************
 ' General_IpSecurity.Bas - Maneja la seguridad de las IPs
 '
-' Escrito y diseñado por DuNga (ltourrilhes@gmail.com)
+' Escrito y diseï¿½ado por DuNga (ltourrilhes@gmail.com)
 '**************************************************************
 Option Explicit
 
 '*************************************************  *************
 ' General_IpSecurity.Bas - Maneja la seguridad de las IPs
 '
-' Escrito y diseñado por DuNga (ltourrilhes@gmail.com)
+' Escrito y diseï¿½ado por DuNga (ltourrilhes@gmail.com)
 '*************************************************  *************
 
 Private IpTables()                     As Long 'USAMOS 2 LONGS: UNO DE LA IP, SEGUIDO DE UNO DE LA INFO
@@ -115,7 +115,7 @@ Public Function IpSecurityAceptarNuevaConexion(ByVal Ip As Long) As Boolean
         IpTableIndex = FindTableIp(Ip, IP_INTERVALOS)
     
         If IpTableIndex >= 0 Then
-                If IpTables(IpTableIndex + 1) + IntervaloEntreConexiones <= GetTickCount Then   'No está saturando de connects?
+                If IpTables(IpTableIndex + 1) + IntervaloEntreConexiones <= GetTickCount Then   'No estï¿½ saturando de connects?
                         IpTables(IpTableIndex + 1) = GetTickCount
                         IpSecurityAceptarNuevaConexion = True
                         Debug.Print "CONEXION ACEPTADA"
@@ -282,7 +282,7 @@ Private Function FindTableIp(ByVal Ip As Long, ByVal Tabla As e_SecurityIpTabla)
         '*************************************************  *************
         'Author: Lucio N. Tourrilhes (DuNga)
         'Last Modify Date: Unknow
-        'Modified by Juan Martín Sotuyo Dodero (Maraxus) to use Binary Insertion
+        'Modified by Juan Martï¿½n Sotuyo Dodero (Maraxus) to use Binary Insertion
         '*************************************************  *************
         Dim First  As Long
 

@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmGuildFoundation 
    BorderStyle     =   0  'None
-   Caption         =   "Creación de un Clan"
+   Caption         =   "Creaciï¿½n de un Clan"
    ClientHeight    =   3840
    ClientLeft      =   0
    ClientTop       =   -75
@@ -137,7 +137,7 @@ Private Sub imgSiguiente_Click()
 
         End If
     
-        'ClanName = complexNameToSimple(txtClanName.Text, True) 'string común
+        'ClanName = complexNameToSimple(txtClanName.Text, True) 'string comï¿½n
         'ClanName = Trim$(ClanName)
         'secClanName = txtClanName.Text 'string con caracteres especiales
         'Site = txtWeb.Text

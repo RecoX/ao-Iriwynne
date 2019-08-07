@@ -1000,8 +1000,8 @@ Private Type tModClase
         Evasion As Double
         AtaqueArmas As Double
         AtaqueProyectiles As Double
-        DañoArmas As Double
-        DañoProyectiles As Double
+        Daï¿½oArmas As Double
+        Daï¿½oProyectiles As Double
         Escudo As Double
         Magia As Double
         Vida As Double
@@ -1055,11 +1055,11 @@ Private Sub CargarEspecialidades()
     
         vEspecialidades(eClass.Hunter) = "Ocultarse"
         vEspecialidades(eClass.Thief) = "Robar y Ocultarse"
-        vEspecialidades(eClass.Assasin) = "Apuñalar"
+        vEspecialidades(eClass.Assasin) = "Apuï¿½alar"
         vEspecialidades(eClass.Bandit) = "Combate Sin Armas"
         vEspecialidades(eClass.Druid) = "Domar"
         vEspecialidades(eClass.Pirat) = "Navegar"
-        vEspecialidades(eClass.Worker) = "Extracción y Construcción"
+        vEspecialidades(eClass.Worker) = "Extracciï¿½n y Construcciï¿½n"
 
 End Sub
 
@@ -1272,7 +1272,7 @@ End If
                 CharAscii = Asc(mid$(UserPassword, i, 1))
 
                 If Not LegalCharacter(CharAscii) Then
-                        MsgBox ("Password inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
+                        MsgBox ("Password invï¿½lido. El caractï¿½r " & Chr$(CharAscii) & " no estï¿½ permitido.")
                         Exit Sub
 
                 End If
@@ -1778,13 +1778,13 @@ Private Sub UpdateStars()
     
         ' Estrellas de armas
         NumStars = (0.509 + 0.01185 * Val(lblAtributoFinal(eAtributos.Fuerza).Caption)) * ModClase(UserClase).Hit * _
-           ModClase(UserClase).DañoArmas + 0.119 * ModClase(UserClase).AtaqueArmas * _
+           ModClase(UserClase).Daï¿½oArmas + 0.119 * ModClase(UserClase).AtaqueArmas * _
            Val(lblAtributoFinal(eAtributos.Agilidad).Caption)
         Call SetStars(imgArmasStar, NumStars * 2)
     
         ' Estrellas de arcos
         NumStars = (0.4915 + 0.01265 * Val(lblAtributoFinal(eAtributos.Fuerza).Caption)) * _
-           ModClase(UserClase).DañoProyectiles * ModClase(UserClase).Hit + 0.119 * ModClase(UserClase).AtaqueProyectiles * _
+           ModClase(UserClase).Daï¿½oProyectiles * ModClase(UserClase).Hit + 0.119 * ModClase(UserClase).AtaqueProyectiles * _
            Val(lblAtributoFinal(eAtributos.Agilidad).Caption)
         Call SetStars(imgArcoStar, NumStars * 2)
 
@@ -1881,8 +1881,8 @@ Private Sub LoadCharInfo()
                         .Evasion = Val(GetVar(DirInit & "CharInfo.dat", "MODEVASION", SearchVar))
                         .AtaqueArmas = Val(GetVar(DirInit & "CharInfo.dat", "MODATAQUEARMAS", SearchVar))
                         .AtaqueProyectiles = Val(GetVar(DirInit & "CharInfo.dat", "MODATAQUEPROYECTILES", SearchVar))
-                        .DañoArmas = Val(GetVar(DirInit & "CharInfo.dat", "MODDAÑOARMAS", SearchVar))
-                        .DañoProyectiles = Val(GetVar(DirInit & "CharInfo.dat", "MODDAÑOPROYECTILES", SearchVar))
+                        .Daï¿½oArmas = Val(GetVar(DirInit & "CharInfo.dat", "MODDAï¿½OARMAS", SearchVar))
+                        .Daï¿½oProyectiles = Val(GetVar(DirInit & "CharInfo.dat", "MODDAï¿½OPROYECTILES", SearchVar))
                         .Escudo = Val(GetVar(DirInit & "CharInfo.dat", "MODESCUDO", SearchVar))
                         .Hit = Val(GetVar(DirInit & "CharInfo.dat", "HIT", SearchVar))
                         .Magia = Val(GetVar(DirInit & "CharInfo.dat", "MODMAGIA", SearchVar))

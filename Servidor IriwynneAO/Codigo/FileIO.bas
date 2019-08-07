@@ -380,7 +380,7 @@ Public Sub loadAdministrativeUsers()
         'Consejeros  => Consejero
         'RoleMasters => RM
 
-        'Si esta mierda tuviese array asociativos el código sería tan lindo.
+        'Si esta mierda tuviese array asociativos el cï¿½digo serï¿½a tan lindo.
         Dim buf  As Integer
 
         Dim i    As Long
@@ -563,10 +563,10 @@ Public Sub CargarHechizos()
         '#               ATENCION PELIGRO                  #
         '###################################################
         '
-        '  ¡¡¡¡ NO USAR GetVar PARA LEER Hechizos.dat !!!!
+        '  ï¿½ï¿½ï¿½ï¿½ NO USAR GetVar PARA LEER Hechizos.dat !!!!
         '
-        'El que ose desafiar esta LEY, se las tendrá que ver
-        'con migo. Para leer Hechizos.dat se deberá usar
+        'El que ose desafiar esta LEY, se las tendrï¿½ que ver
+        'con migo. Para leer Hechizos.dat se deberï¿½ usar
         'la nueva clase clsLeerInis.
         '
         'Alejo
@@ -860,7 +860,7 @@ Public Sub GrabarMapa(ByVal Map As Long, ByRef MAPFILE As String)
     
                                 If .TileExit.Map Then ByFlags = ByFlags Or 1
                 
-                                ' No hacer backup de los NPCs inválidos (Pretorianos, Mascotas, Invocados y Centinela)
+                                ' No hacer backup de los NPCs invï¿½lidos (Pretorianos, Mascotas, Invocados y Centinela)
                                 If .NpcIndex Then
                                         NpcInvalido = (Npclist(.NpcIndex).NPCtype = eNPCType.Pretoriano) Or (Npclist(.NpcIndex).MaestroUser > 0) Or EsCentinela(.NpcIndex)
                     
@@ -997,9 +997,9 @@ Sub LoadBalance()
                         .AtaqueArmas = val(GetVar(DatPath & "Balance.dat", "MODATAQUEARMAS", ListaClases(i)))
                         .AtaqueProyectiles = val(GetVar(DatPath & "Balance.dat", "MODATAQUEPROYECTILES", ListaClases(i)))
                         .AtaqueWrestling = val(GetVar(DatPath & "Balance.dat", "MODATAQUEWRESTLING", ListaClases(i)))
-                        .DañoArmas = val(GetVar(DatPath & "Balance.dat", "MODDAÑOARMAS", ListaClases(i)))
-                        .DañoProyectiles = val(GetVar(DatPath & "Balance.dat", "MODDAÑOPROYECTILES", ListaClases(i)))
-                        .DañoWrestling = val(GetVar(DatPath & "Balance.dat", "MODDAÑOWRESTLING", ListaClases(i)))
+                        .Daï¿½oArmas = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OARMAS", ListaClases(i)))
+                        .Daï¿½oProyectiles = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OPROYECTILES", ListaClases(i)))
+                        .Daï¿½oWrestling = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OWRESTLING", ListaClases(i)))
                         .Escudo = val(GetVar(DatPath & "Balance.dat", "MODESCUDO", ListaClases(i)))
 
                 End With
@@ -1025,7 +1025,7 @@ Sub LoadBalance()
                 ModVida(i) = val(GetVar(DatPath & "Balance.dat", "MODVIDA", ListaClases(i)))
         Next i
     
-        'Distribución de Vida
+        'Distribuciï¿½n de Vida
         For i = 1 To 5
                 DistribucionEnteraVida(i) = val(GetVar(DatPath & "Balance.dat", "DISTRIBUCION", "E" + CStr(i)))
         Next i
@@ -1077,10 +1077,10 @@ Sub LoadOBJData()
         '#               ATENCION PELIGRO                  #
         '###################################################
         '
-        '¡¡¡¡ NO USAR GetVar PARA LEER DESDE EL OBJ.DAT !!!!
+        'ï¿½ï¿½ï¿½ï¿½ NO USAR GetVar PARA LEER DESDE EL OBJ.DAT !!!!
         '
-        'El que ose desafiar esta LEY, se las tendrá que ver
-        'con migo. Para leer desde el OBJ.DAT se deberá usar
+        'El que ose desafiar esta LEY, se las tendrï¿½ que ver
+        'con migo. Para leer desde el OBJ.DAT se deberï¿½ usar
         'la nueva clase clsLeerInis.
         '
         'Alejo
@@ -1165,7 +1165,7 @@ Sub LoadOBJData()
                 
                                 Case eOBJType.otWeapon
                                         .WeaponAnim = val(Leer.GetValue("OBJ" & Object, "Anim"))
-                                        .Apuñala = val(Leer.GetValue("OBJ" & Object, "Apuñala"))
+                                        .Apuï¿½ala = val(Leer.GetValue("OBJ" & Object, "Apuï¿½ala"))
                                         .Envenena = val(Leer.GetValue("OBJ" & Object, "Envenena"))
                                         .MaxHIT = val(Leer.GetValue("OBJ" & Object, "MaxHIT"))
                                         .MinHIT = val(Leer.GetValue("OBJ" & Object, "MinHIT"))
@@ -2123,7 +2123,7 @@ On Error GoTo errhandler
         End If
     
         '&&&&&&&&&&&&&&&&&&&&& BALANCE &&&&&&&&&&&&&&&&&&&&&&&
-        'Se agregó en LoadBalance y en el Balance.dat
+        'Se agregï¿½ en LoadBalance y en el Balance.dat
         'PorcentajeRecuperoMana = val(GetVar(IniPath & "Server.ini", "BALANCE", "PorcentajeRecuperoMana"))
     
         ''&&&&&&&&&&&&&&&&&&&&& FIN BALANCE &&&&&&&&&&&&&&&&&&&&&&&
@@ -2265,7 +2265,7 @@ Sub SaveUser(ByVal UserIndex As Integer, _
                 Call Manager.ChangeValue("FACCIONES", "MatadosIngreso", CStr(.Faccion.MatadosIngreso))
                 Call Manager.ChangeValue("FACCIONES", "NextRecompensa", CStr(.Faccion.NextRecompensa))
     
-                '¿Fueron modificados los atributos del usuario?
+                'ï¿½Fueron modificados los atributos del usuario?
                 If Not .flags.TomoPocion Then
 
 113                        For LoopC = 1 To UBound(.Stats.UserAtributos)

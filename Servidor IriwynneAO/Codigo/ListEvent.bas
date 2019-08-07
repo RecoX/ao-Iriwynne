@@ -22,7 +22,7 @@ Public Sub Start_List(ByVal UserIndex As Integer, ByVal Amount As Byte)
         If Amount < 1 Then Exit Sub
  
         If Not esGM(UserIndex) Then
-            Call WriteConsoleMsg(UserIndex, "Tienes que ser GM para hacer esta operación.", FontTypeNames.FONTTYPE_INFOBOLD)
+            Call WriteConsoleMsg(UserIndex, "Tienes que ser GM para hacer esta operaciï¿½n.", FontTypeNames.FONTTYPE_INFOBOLD)
             Exit Sub
         End If
  
@@ -47,7 +47,7 @@ Public Sub Access_List(ByVal UserIndex As Integer)
     With UserList(UserIndex)
  
         If .flags.Muerto = 1 Then
-            Call WriteConsoleMsg(UserIndex, "¡¡Estás muerto!!", FontTypeNames.FONTTYPE_INFOBOLD)
+            Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Estï¿½s muerto!!", FontTypeNames.FONTTYPE_INFOBOLD)
             Exit Sub
         End If
  
@@ -57,7 +57,7 @@ Public Sub Access_List(ByVal UserIndex As Integer)
        ' End If
 
         If .flags.List <> 0 Then
-            Call WriteConsoleMsg(UserIndex, "Ya estás en la lista!", FontTypeNames.FONTTYPE_INFOBOLD)
+            Call WriteConsoleMsg(UserIndex, "Ya estï¿½s en la lista!", FontTypeNames.FONTTYPE_INFOBOLD)
             Exit Sub
         End If
  
@@ -66,7 +66,7 @@ Public Sub Access_List(ByVal UserIndex As Integer)
             Exit Sub
         End If
  
-        '@@ Le damos el flag para que esté en lista
+        '@@ Le damos el flag para que estï¿½ en lista
         .flags.List = 1
         '@@ Aumentamos la variable de usuarios en lista
         List.UsersInList = List.UsersInList + 1
@@ -100,7 +100,7 @@ Public Sub Clean_List()
  
     With List
  
-        '@@ Canceló la lista.
+        '@@ Cancelï¿½ la lista.
         'If .UsersInList < .Quotas Then _
         '    Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("Lista cancelada.", FontTypeNames.FONTTYPE_INFOBOLD))
  

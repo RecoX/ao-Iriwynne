@@ -733,9 +733,9 @@ Public Sub RenderList(ByVal Inicio As Integer)
                                 Call RenderItem(picItem(i), .GrhIndex)
                                 picItem(i).ToolTipText = .Name
         
-                                ' Inventario de leños
-                                Call InvMaderasCarpinteria(i).SetItem(1, 0, .Madera, 0, MADERA_GRH, 0, 0, 0, 0, 0, 0, "Leña")
-                                Call InvMaderasCarpinteria(i).SetItem(2, 0, .MaderaElfica, 0, MADERA_ELFICA_GRH, 0, 0, 0, 0, 0, 0, "Leña élfica")
+                                ' Inventario de leï¿½os
+                                Call InvMaderasCarpinteria(i).SetItem(1, 0, .Madera, 0, MADERA_GRH, 0, 0, 0, 0, 0, 0, "Leï¿½a")
+                                Call InvMaderasCarpinteria(i).SetItem(2, 0, .MaderaElfica, 0, MADERA_ELFICA_GRH, 0, 0, 0, 0, 0, 0, "Leï¿½a ï¿½lfica")
 
                         End With
 
@@ -766,9 +766,9 @@ Public Sub RenderUpgradeList(ByVal Inicio As Integer)
                                 Call RenderItem(picUpgrade(i), .UpgradeGrhIndex)
                                 picUpgrade(i).ToolTipText = .UpgradeName
         
-                                ' Inventario de leños
-                                Call InvMaderasCarpinteria(i).SetItem(1, 0, .Madera, 0, MADERA_GRH, 0, 0, 0, 0, 0, 0, "Leña")
-                                Call InvMaderasCarpinteria(i).SetItem(2, 0, .MaderaElfica, 0, MADERA_ELFICA_GRH, 0, 0, 0, 0, 0, 0, "Leña élfica")
+                                ' Inventario de leï¿½os
+                                Call InvMaderasCarpinteria(i).SetItem(1, 0, .Madera, 0, MADERA_GRH, 0, 0, 0, 0, 0, 0, "Leï¿½a")
+                                Call InvMaderasCarpinteria(i).SetItem(2, 0, .MaderaElfica, 0, MADERA_ELFICA_GRH, 0, 0, 0, 0, 0, 0, "Leï¿½a ï¿½lfica")
 
                         End With
 

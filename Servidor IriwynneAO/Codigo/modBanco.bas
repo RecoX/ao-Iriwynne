@@ -131,7 +131,7 @@ Sub UserRetiraItem(ByVal UserIndex As Integer, _
                 Call UserReciveObj(UserIndex, CInt(i), Cantidad)
         
                 If ObjData(objIndex).Log = 1 Then
-                        Call LogItemsEspeciales(UserList(UserIndex).Name & " retiró " & Cantidad & " " & _
+                        Call LogItemsEspeciales(UserList(UserIndex).Name & " retirï¿½ " & Cantidad & " " & _
                            ObjData(objIndex).Name & "[" & objIndex & "]")
 
                 End If
@@ -169,7 +169,7 @@ Sub UserReciveObj(ByVal UserIndex As Integer, _
     
                 obji = .BancoInvent.Object(objIndex).objIndex
     
-                '¿Ya tiene un objeto de este tipo?
+                'ï¿½Ya tiene un objeto de este tipo?
                 Slot = 1
 
                 Do Until .Invent.Object(Slot).objIndex = obji And _
@@ -192,7 +192,7 @@ Sub UserReciveObj(ByVal UserIndex As Integer, _
                                 Slot = Slot + 1
 
                                 If Slot > .CurrentInventorySlots Then
-                                        Call WriteConsoleMsg(UserIndex, "No podés tener mas objetos.", FontTypeNames.FONTTYPE_INFO)
+                                        Call WriteConsoleMsg(UserIndex, "No podï¿½s tener mas objetos.", FontTypeNames.FONTTYPE_INFO)
                                         Exit Sub
 
                                 End If
@@ -210,7 +210,7 @@ Sub UserReciveObj(ByVal UserIndex As Integer, _
         
                         Call QuitarBancoInvItem(UserIndex, CByte(objIndex), Cantidad)
                 Else
-                        Call WriteConsoleMsg(UserIndex, "No podés tener mas objetos.", FontTypeNames.FONTTYPE_INFO)
+                        Call WriteConsoleMsg(UserIndex, "No podï¿½s tener mas objetos.", FontTypeNames.FONTTYPE_INFO)
 
                 End If
 
@@ -282,7 +282,7 @@ Sub UserDepositaItem(ByVal UserIndex As Integer, _
                 Call UserDejaObj(UserIndex, CInt(Item), Cantidad)
         
                 If ObjData(objIndex).Log = 1 Then
-                        Call LogItemsEspeciales(UserList(UserIndex).Name & " depositó " & Cantidad & " " & _
+                        Call LogItemsEspeciales(UserList(UserIndex).Name & " depositï¿½ " & Cantidad & " " & _
                            ObjData(objIndex).Name & "[" & objIndex & "]")
 
                 End If
@@ -319,7 +319,7 @@ Sub UserDejaObj(ByVal UserIndex As Integer, _
         With UserList(UserIndex)
                 obji = .Invent.Object(objIndex).objIndex
         
-                '¿Ya tiene un objeto de este tipo?
+                'ï¿½Ya tiene un objeto de este tipo?
                 Slot = 1
 
                 Do Until .BancoInvent.Object(Slot).objIndex = obji And _

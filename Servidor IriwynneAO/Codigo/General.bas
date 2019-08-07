@@ -274,12 +274,12 @@ Sub Main()
     Call CargarHechizos
 
     ' Objetos de Herreria
-    frmCargando.Label1(2).Caption = "Cargando Objetos de Herrería"
+    frmCargando.Label1(2).Caption = "Cargando Objetos de Herrerï¿½a"
     Call LoadArmasHerreria
     Call LoadArmadurasHerreria
 
     ' Objetos de Capinteria
-    frmCargando.Label1(2).Caption = "Cargando Objetos de Carpintería"
+    frmCargando.Label1(2).Caption = "Cargando Objetos de Carpinterï¿½a"
     Call LoadObjCarpintero
 
     ' Balance.dat
@@ -452,10 +452,10 @@ Private Sub LoadConstants()
     ' Skills
     SkillsNames(eSkill.Magia) = "Magia"
     SkillsNames(eSkill.Robar) = "Robar"
-    SkillsNames(eSkill.Tacticas) = "Evasión en combate"
+    SkillsNames(eSkill.Tacticas) = "Evasiï¿½n en combate"
     SkillsNames(eSkill.Armas) = "Combate con armas"
     SkillsNames(eSkill.Meditar) = "Meditar"
-    SkillsNames(eSkill.Apuñalar) = "Apuñalar"
+    SkillsNames(eSkill.Apuï¿½alar) = "Apuï¿½alar"
     SkillsNames(eSkill.Ocultarse) = "Ocultarse"
     SkillsNames(eSkill.Supervivencia) = "Supervivencia"
     SkillsNames(eSkill.Talar) = "Talar"
@@ -627,7 +627,7 @@ Function ReadField(ByVal Pos As Integer, _
                    ByRef Text As String, _
                    ByVal SepASCII As Byte) As String
 '*****************************************************************
-'Author: Juan Martín Sotuyo Dodero (Maraxus)
+'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 'Last Modify Date: 11/15/2004
 'Gets a field from a delimited string
 '*****************************************************************
@@ -905,7 +905,7 @@ Public Sub LogGM(Nombre As String, texto As String)
 'Author: Unknown
 'Last Modification: -
 '
-'***************************************************ç
+'***************************************************ï¿½
 
     On Error GoTo errhandler
 
@@ -927,7 +927,7 @@ Public Sub logCOSO()
 'Author: Unknown
 'Last Modification: -
 '
-'***************************************************ç
+'***************************************************ï¿½
 
     On Error GoTo errhandler
 
@@ -1282,21 +1282,21 @@ Public Sub EfectoPolo(ByVal UserIndex As Integer)
 
     With UserList(UserIndex)
 
-        If .Invent.ArmourEqpObjIndex = 1086 Then Exit Sub    'Si tiene equipada la túnica invernal no pasa nada.
+        If .Invent.ArmourEqpObjIndex = 1086 Then Exit Sub    'Si tiene equipada la tï¿½nica invernal no pasa nada.
 
-        If .Invent.ArmourEqpObjIndex = 1087 Then Exit Sub    'Si tiene equipada la túnica invernal no pasa nada.
+        If .Invent.ArmourEqpObjIndex = 1087 Then Exit Sub    'Si tiene equipada la tï¿½nica invernal no pasa nada.
 
-        If .Counters.Congelado < IntervaloFrio Then    'Usamos el mismo intervalo que el frío.
+        If .Counters.Congelado < IntervaloFrio Then    'Usamos el mismo intervalo que el frï¿½o.
             .Counters.Congelado = .Counters.Congelado + 1
         Else
-            If .Pos.Map = 127 Or .Pos.Map = 128 Then    'Si está en X mapa entonces:
+            If .Pos.Map = 127 Or .Pos.Map = 128 Then    'Si estï¿½ en X mapa entonces:
                 
-                Call WriteConsoleMsg(UserIndex, "¡¡Ponte tu vestimenta polar o morirás congelado!!", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Ponte tu vestimenta polar o morirï¿½s congelado!!", FontTypeNames.FONTTYPE_INFO)
                 vida = Porcentaje(.Stats.MaxHP, 15)
                 .Stats.MinHp = .Stats.MinHp - vida
 
-                If .Stats.MinHp < 1 Then    'Si la vida llegó a 0 se muere
-                    Call WriteConsoleMsg(UserIndex, "¡¡Has muerto congelado!!", FontTypeNames.FONTTYPE_INFO)
+                If .Stats.MinHp < 1 Then    'Si la vida llegï¿½ a 0 se muere
+                    Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Has muerto congelado!!", FontTypeNames.FONTTYPE_INFO)
                     .Stats.MinHp = 0
                     Call UserDie(UserIndex)
                 End If
@@ -1327,12 +1327,12 @@ Public Sub EfectoFrio(ByVal UserIndex As Integer)
         Else
 
             If MapInfo(.Pos.Map).Terreno = eTerrain.terrain_nieve Then
-                Call WriteConsoleMsg(UserIndex, "¡¡Estás muriendo de frío, abrigate o morirás!!", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Estï¿½s muriendo de frï¿½o, abrigate o morirï¿½s!!", FontTypeNames.FONTTYPE_INFO)
                 modifi = Porcentaje(.Stats.MaxHP, 5)
                 .Stats.MinHp = .Stats.MinHp - modifi
 
                 If .Stats.MinHp < 1 Then
-                    Call WriteConsoleMsg(UserIndex, "¡¡Has muerto de frío!!", FontTypeNames.FONTTYPE_INFO)
+                    Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Has muerto de frï¿½o!!", FontTypeNames.FONTTYPE_INFO)
                     .Stats.MinHp = 0
                     Call UserDie(UserIndex)
 
@@ -1369,11 +1369,11 @@ Public Sub EfectoLava(ByVal UserIndex As Integer)
         Else
 
             If HayLava(.Pos.Map, .Pos.X, .Pos.Y) Then
-                Call WriteConsoleMsg(UserIndex, "¡¡Quitate de la lava, te estás quemando!!", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Quitate de la lava, te estï¿½s quemando!!", FontTypeNames.FONTTYPE_INFO)
                 .Stats.MinHp = .Stats.MinHp - Porcentaje(.Stats.MaxHP, 5)
 
                 If .Stats.MinHp < 1 Then
-                    Call WriteConsoleMsg(UserIndex, "¡¡Has muerto quemado!!", FontTypeNames.FONTTYPE_INFO)
+                    Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½Has muerto quemado!!", FontTypeNames.FONTTYPE_INFO)
                     .Stats.MinHp = 0
                     Call UserDie(UserIndex)
 
@@ -1524,7 +1524,7 @@ Public Sub EfectoInvisibilidad(ByVal UserIndex As Integer)
                 ' Si navega ya esta visible..
                 If Not .flags.Navegando = 1 Then
 
-                    'Si está en un oscuro no lo hacemos visible
+                    'Si estï¿½ en un oscuro no lo hacemos visible
                     If MapData(.Pos.Map, .Pos.X, .Pos.Y).trigger <> eTrigger.zonaOscura Then
                         Call SetInvisible(UserIndex, .Char.CharIndex, False)
 
@@ -1715,7 +1715,7 @@ Public Sub RecStamina(ByVal UserIndex As Integer, _
                 EnviarStats = True
                 .Counters.STACounter = 0
 
-                If .flags.Desnudo Then Exit Sub    'Desnudo no sube energía. (ToxicWaste)
+                If .flags.Desnudo Then Exit Sub    'Desnudo no sube energï¿½a. (ToxicWaste)
 
                 massta = RandomNumber(1, Porcentaje(.Stats.MaxSta, 5))
                 .Stats.MinSta = .Stats.MinSta + massta
@@ -1747,7 +1747,7 @@ Public Sub EfectoVeneno(ByVal UserIndex As Integer)
         If .Counters.Veneno < IntervaloVeneno Then
             .Counters.Veneno = .Counters.Veneno + 1
         Else
-            Call WriteConsoleMsg(UserIndex, "Estás envenenado, si no te curas morirás.", FontTypeNames.FONTTYPE_VENENO)
+            Call WriteConsoleMsg(UserIndex, "Estï¿½s envenenado, si no te curas morirï¿½s.", FontTypeNames.FONTTYPE_VENENO)
             .Counters.Veneno = 0
             N = RandomNumber(1, 5)
             .Stats.MinHp = .Stats.MinHp - N
@@ -1765,9 +1765,9 @@ Public Sub DuracionPociones(ByVal UserIndex As Integer)
 '***************************************************
 'Author: ??????
 'Last Modification: 08/06/11 (CHOTS)
-'Le agregué que avise antes cuando se te está por ir
+'Le agreguï¿½ que avise antes cuando se te estï¿½ por ir
 '
-'Cuando se pierde el efecto de la poción updatea fz y agi (No me gusta que ambos atributos aunque se haya modificado solo uno, pero bueno :p)
+'Cuando se pierde el efecto de la pociï¿½n updatea fz y agi (No me gusta que ambos atributos aunque se haya modificado solo uno, pero bueno :p)
 '***************************************************
 
     Const SEGUNDOS_AVISO As Byte = 5
@@ -2003,13 +2003,13 @@ Sub PasarSegundo()
             If CountdownMap > 0 Then
 
                 If CountdownMap = Configuracion.Mapa1vs1 Or CountdownMap = Configuracion.Mapa2vs2 Then
-                    Call SendData(SendTarget.toMap, CountdownMap, PrepareMessageConsoleMsg("Retos> ¡YA!", FontTypeNames.FONTTYPE_FIGHT))
+                    Call SendData(SendTarget.toMap, CountdownMap, PrepareMessageConsoleMsg("Retos> ï¿½YA!", FontTypeNames.FONTTYPE_FIGHT))
                 Else
-                    Call SendData(SendTarget.toMap, CountdownMap, PrepareMessageConsoleMsg("¡YA!", FontTypeNames.FONTTYPE_FIGHT))
+                    Call SendData(SendTarget.toMap, CountdownMap, PrepareMessageConsoleMsg("ï¿½YA!", FontTypeNames.FONTTYPE_FIGHT))
                 End If
 
             Else
-                Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("¡YA!", FontTypeNames.FONTTYPE_FIGHT))
+                Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("ï¿½YA!", FontTypeNames.FONTTYPE_FIGHT))
             End If
             CountdownTime = 0
             CountdownMap = 0
@@ -2174,7 +2174,7 @@ End Sub
 Public Sub FreeNPCs()
 
 '***************************************************
-'Autor: Juan Martín Sotuyo Dodero (Maraxus)
+'Autor: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 'Last Modification: 05/17/06
 'Releases all NPC Indexes
 '***************************************************
@@ -2189,7 +2189,7 @@ End Sub
 
 Public Sub FreeCharIndexes()
 '***************************************************
-'Autor: Juan Martín Sotuyo Dodero (Maraxus)
+'Autor: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 'Last Modification: 05/17/06
 'Releases all char indexes
 '***************************************************

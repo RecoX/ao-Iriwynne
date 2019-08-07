@@ -14,7 +14,7 @@ Option Explicit
 '  Date: 5 February 2007
 '  Description: Added ScreenCapture Method and removed usless things.
 '
-'  Author: Juan Martín Sotuyo Dodero (Maraxus)
+'  Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
 '  Date: 28 Febraury 2007
 '  Description: Changed ScreenCapture to use the Screenshots directory.
 '               Fixed a bug that caused the DC not to be allways released (added INVALID_HANDLE constant)
@@ -25,7 +25,7 @@ Option Explicit
 '
 '
 ' Copyright.
-' IJL.DLL is a copyright © Intel, which is a registered trade mark of the Intel
+' IJL.DLL is a copyright ï¿½ Intel, which is a registered trade mark of the Intel
 ' Corporation.
 '
 '
@@ -647,9 +647,9 @@ Public Sub ScreenCapture(Optional ByVal Autofragshooter As Boolean = False, _
                 If Not FileExist(dirFile, vbDirectory) Then Call MkDir(dirFile)
         
                 'Nuevos directorios del FragShooter:
-                If FragShooterKilledSomeone Then 'Si mató a alguien.
+                If FragShooterKilledSomeone Then 'Si matï¿½ a alguien.
                         dirFile = dirFile & "\Frags"
-                Else 'Si nos mató alguien.
+                Else 'Si nos matï¿½ alguien.
                         dirFile = dirFile & "\Muertes"
 
                 End If

@@ -20,7 +20,7 @@ Public Function TieneQuest(ByVal UserIndex As Integer, ByVal QuestNumber As Inte
 End Function
 
 Public Function FreeQuestSlot(ByVal UserIndex As Integer) As Byte
-'Devuelve el próximo slot de quest libre.
+'Devuelve el prï¿½ximo slot de quest libre.
     Dim i As Integer
 
     For i = 1 To MAXUSERQUESTS
@@ -44,9 +44,9 @@ Public Sub HandleQuestAccept(ByVal UserIndex As Integer)
 
     If NpcIndex = 0 Then Exit Sub
 
-    'Está el personaje en la distancia correcta?
+    'Estï¿½ el personaje en la distancia correcta?
     If Distancia(UserList(UserIndex).Pos, Npclist(NpcIndex).Pos) > 5 Then
-        Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos.", FontTypeNames.FONTTYPE_INFO)   '"Estás demasiado lejos."
+        Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos.", FontTypeNames.FONTTYPE_INFO)   '"Estï¿½s demasiado lejos."
         Exit Sub
     End If
 
@@ -57,7 +57,7 @@ Public Sub HandleQuestAccept(ByVal UserIndex As Integer)
         .QuestIndex = Npclist(NpcIndex).QuestNumber
 
         If QuestList(.QuestIndex).RequiredNPCs Then ReDim .NPCsKilled(1 To QuestList(.QuestIndex).RequiredNPCs)
-        Call WriteConsoleMsg(UserIndex, "Has aceptado la misión " & Chr(34) & QuestList(.QuestIndex).Nombre & Chr(34) & ".", FontTypeNames.FONTTYPE_INFO)
+        Call WriteConsoleMsg(UserIndex, "Has aceptado la misiï¿½n " & Chr(34) & QuestList(.QuestIndex).Nombre & Chr(34) & ".", FontTypeNames.FONTTYPE_INFO)
 
     End With
 End Sub
@@ -107,7 +107,7 @@ Public Sub FinishQuest(ByVal UserIndex As Integer, ByVal QuestIndex As Integer, 
 
             'Nos fijamos si entra
             If InvSlotsLibres < .RewardOBJs Then
-                Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("No tienes suficiente espacio en el inventario para recibir la recompensa. Vuelve cuando hayas hecho más espacio.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
+                Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("No tienes suficiente espacio en el inventario para recibir la recompensa. Vuelve cuando hayas hecho mï¿½s espacio.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
                 Exit Sub
             End If
         End If
@@ -117,14 +117,14 @@ Public Sub FinishQuest(ByVal UserIndex As Integer, ByVal QuestIndex As Integer, 
             'WriteSendPoints UserIndex
         End If
         
-        'A esta altura ya cumplió los objetivos, entonces se le entregan las recompensas.
-        Call WriteConsoleMsg(UserIndex, "¡Has completado la misión " & Chr(34) & QuestList(QuestIndex).Nombre & Chr(34) & "!", FontTypeNames.FONTTYPE_INFO)
+        'A esta altura ya cumpliï¿½ los objetivos, entonces se le entregan las recompensas.
+        Call WriteConsoleMsg(UserIndex, "ï¿½Has completado la misiï¿½n " & Chr(34) & QuestList(QuestIndex).Nombre & Chr(34) & "!", FontTypeNames.FONTTYPE_INFO)
 
         If .AvisaConsola <> 0 Then
             Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Quests", .AvisaConsolaMsg))
         End If
 
-        'Si la quest pedía objetos, se los saca al personaje.
+        'Si la quest pedï¿½a objetos, se los saca al personaje.
         If .RequiredOBJs Then
             For i = 1 To .RequiredOBJs
                 Call QuitarObjetos(.RequiredOBJ(i).objIndex, .RequiredOBJ(i).Amount, UserIndex)
@@ -252,27 +252,27 @@ Public Sub HandleQuest(ByVal UserIndex As Integer)
 
     If NpcIndex = 0 Then Exit Sub
 
-    'Está el personaje en la distancia correcta?
+    'Estï¿½ el personaje en la distancia correcta?
     If Distancia(UserList(UserIndex).Pos, Npclist(NpcIndex).Pos) > 5 Then
-        Call WriteConsoleMsg(UserIndex, "Estás demasiado lejos.", FontTypeNames.FONTTYPE_INFO) ' eMensajes.Mensaje011)    '"Estás demasiado lejos."
+        Call WriteConsoleMsg(UserIndex, "Estï¿½s demasiado lejos.", FontTypeNames.FONTTYPE_INFO) ' eMensajes.Mensaje011)    '"Estï¿½s demasiado lejos."
         Exit Sub
     End If
 
     'El NPC hace quests?
     If Npclist(NpcIndex).QuestNumber = 0 Then
-        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("No tengo ninguna misión para ti.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
+        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("No tengo ninguna misiï¿½n para ti.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
         Exit Sub
     End If
 
     'El personaje ya hizo la quest?
     If UserDoneQuest(UserIndex, Npclist(NpcIndex).QuestNumber) Then
-        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Ya has hecho una misión para mi.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
+        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Ya has hecho una misiï¿½n para mi.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
         Exit Sub
     End If
 
     'El personaje tiene suficiente nivel?
     If UserList(UserIndex).Stats.ELV < QuestList(Npclist(NpcIndex).QuestNumber).RequiredLevel Then
-        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Debes ser por lo menos nivel " & QuestList(Npclist(NpcIndex).QuestNumber).RequiredLevel & " para emprender esta misión.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
+        Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Debes ser por lo menos nivel " & QuestList(Npclist(NpcIndex).QuestNumber).RequiredLevel & " para emprender esta misiï¿½n.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
         Exit Sub
     End If
 
@@ -281,15 +281,15 @@ Public Sub HandleQuest(ByVal UserIndex As Integer)
     tmpByte = TieneQuest(UserIndex, Npclist(NpcIndex).QuestNumber)
 
     If tmpByte Then
-        'El usuario está haciendo la quest, entonces va a hablar con el NPC para recibir la recompensa.
+        'El usuario estï¿½ haciendo la quest, entonces va a hablar con el NPC para recibir la recompensa.
         Call FinishQuest(UserIndex, Npclist(NpcIndex).QuestNumber, tmpByte)
     Else
-        'El usuario no está haciendo la quest, entonces primero recibe un informe con los detalles de la misión.
+        'El usuario no estï¿½ haciendo la quest, entonces primero recibe un informe con los detalles de la misiï¿½n.
         tmpByte = FreeQuestSlot(UserIndex)
 
         'El personaje tiene algun slot de quest para la nueva quest?
         If tmpByte = 0 Then
-            Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Estás haciendo demasiadas misiones. Vuelve cuando hayas completado alguna.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
+            Call SendData(SendTarget.ToPCArea, UserIndex, PrepareMessageChatOverHead("Estï¿½s haciendo demasiadas misiones. Vuelve cuando hayas completado alguna.", Npclist(NpcIndex).Char.CharIndex, vbWhite))
             Exit Sub
         End If
 

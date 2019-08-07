@@ -33,7 +33,7 @@ Private Declare Function GetActiveWindow Lib "User32" () As Long
 
 Public Function IsAppActive() As Boolean
         '***************************************************
-        'Author: Juan Martín Sotuyo Dodero (maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (maraxus)
         'Last Modify Date: 03/03/2007
         'Checks if this is the active application or not
         '***************************************************

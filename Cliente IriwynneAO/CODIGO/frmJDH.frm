@@ -183,7 +183,7 @@ Option Explicit
 Private Sub lblCrearJuegos_Click()
 
     If Not IsNumeric(txtCupos.Text) Then 'Or Not IsNumeric(txtPremioORO.Text) Or Not IsNumeric(txtInscripcionORO.Text) Then
-        Call MsgBox("El valor tiene que ser valor numérico", vbCritical, "Error")
+        Call MsgBox("El valor tiene que ser valor numï¿½rico", vbCritical, "Error")
         Exit Sub
     End If
 

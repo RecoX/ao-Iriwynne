@@ -44,10 +44,10 @@ Const ARENA_Y       As Byte = 53    'Y de la arena.
 Const BANCO_X       As Byte = 74    'X donde aparece el banquero.
 Const BANCO_Y       As Byte = 53    'Y Donde aparece el banquro.
  
-Const PREMIO_POR_CABEZA As Long = 20000 'Premio en oro , el cálculo es el de acá abajo.
+Const PREMIO_POR_CABEZA As Long = 20000 'Premio en oro , el cï¿½lculo es el de acï¿½ abajo.
 Const TIEMPO_AUTOCANCEL As Byte = 180     '3 Minutos antes del auto-cancel.
 
-'Cálculo : PREMIO_POR_CABEZA * JUGADORES QUE PARTICIPARON
+'Cï¿½lculo : PREMIO_POR_CABEZA * JUGADORES QUE PARTICIPARON
  
 Public DeathMatch   As tDeath
  
@@ -68,7 +68,7 @@ On Error GoTo ErrHandler
 6    Next i
 
 7    Call MuereUser(UserIndex, False)
-8    Call SendData(SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", UserList(UserIndex).Name & " abandonó el deathmatch."))
+8    Call SendData(SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", UserList(UserIndex).Name & " abandonï¿½ el deathmatch."))
 
 Exit Sub
 ErrHandler:
@@ -137,13 +137,13 @@ For LoopX = 1 To UBound(DeathMatch.Usuarios())
     UIndex = DeathMatch.Usuarios(LoopX).UserIndex
     'Hay usuario?
     If UIndex <> -1 Then
-       'Está logeado?
+       'Estï¿½ logeado?
        If UserList(UIndex).ConnID <> -1 Then
-          'Está en death?
+          'Estï¿½ en death?
           If UserList(UIndex).Death Then
           'Reset el flag.
              UserList(UIndex).Death = False
-             'Telep to anterior posición.
+             'Telep to anterior posiciï¿½n.
              Call AnteriorPos(UIndex, UPos)
              WarpUserChar UIndex, UPos.Map, UPos.X, UPos.Y, True
              
@@ -203,7 +203,7 @@ With DeathMatch
      
      'Avisa al mundo.
      SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", "Organizador: " & OrganizatedBy & " " & Cupos & " Cupos! para entrar /DEATH.")
-     SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", "Nivel minimo: " & DeathMatch.MinLevel & ", nivel máximo: " & .MaxLevel)
+     SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", "Nivel minimo: " & DeathMatch.MinLevel & ", nivel mï¿½ximo: " & .MaxLevel)
      
      If T Then
         SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", "Clases prohibidas: " & IIf(cMago > 0, " MAGO ", "") & IIf(cClerigo > 0, " CLERIGO ", "") & IIf(cBardo > 0, " BARDO ", "") & IIf(cPaladin > 0, " PALADIN ", "") & IIf(cAsesino > 0, " ASESINO ", "") & IIf(cCazador > 0, " CAZADOR ", "") & IIf(cGuerrero > 0, " GUERRERO ", "") & IIf(cDruida > 0, " DRUIDA ", "") & IIf(cLadron > 0, " LADRON ", "") & IIf(cBandido > 0, " BANDIDO ", ""))
@@ -211,7 +211,7 @@ With DeathMatch
      
  '    SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgnew("Deathmatch>","Quedan 3 minutos antes del auto-cancelamiento si no se llena el cupo.")
      
-     'Set el tiempo de auto-cancelación.
+     'Set el tiempo de auto-cancelaciï¿½n.
      .AutoCancelTime = TIEMPO_AUTOCANCEL
 End With
 
@@ -252,13 +252,13 @@ With DeathMatch
      WarpUserChar UserIndex, npos.Map, npos.X, npos.Y, True
      
      'Aviso..
-     WriteConsoleMsgNew UserIndex, "Deathmatch>", "Has ingresado al deathmatch, eres el participante nº" & LibreSlot & "."
+     WriteConsoleMsgNew UserIndex, "Deathmatch>", "Has ingresado al deathmatch, eres el participante nï¿½" & LibreSlot & "."
      
      'Lleno el cupo?
      If .Ingresaron >= .Cupos Then
-         'Quito el tiempo de auto-cancelación
+         'Quito el tiempo de auto-cancelaciï¿½n
          .AutoCancelTime = 0
-         'Aviso que llenó el cupo
+         'Aviso que llenï¿½ el cupo
          SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", "El cupo ha sido completado!")
          'Doy inicio
          Iniciar
@@ -270,7 +270,7 @@ End Sub
  
 Sub Cuenta()
  
-' @ Cuenta regresiva y auto-cancel acá.
+' @ Cuenta regresiva y auto-cancel acï¿½.
  
 Dim PacketToSend    As String
 Dim CanSendPackage  As Boolean
@@ -288,7 +288,7 @@ With DeathMatch
              'Telep to anterior pos.
              WarpUserChar .Ganador.UserIndex, .Ganador.LastPosition.Map, .Ganador.LastPosition.X, .Ganador.LastPosition.Y, True
              'Aviso al usuario.
-             WriteConsoleMsgNew .Ganador.UserIndex, "Deathmatch>", "El tiempo ha llegado a su fin, fuiste devuelto a tu posición anterior"
+             WriteConsoleMsgNew .Ganador.UserIndex, "Deathmatch>", "El tiempo ha llegado a su fin, fuiste devuelto a tu posiciï¿½n anterior"
              'Limpiar.
              Limpiar
           End If
@@ -301,11 +301,11 @@ With DeathMatch
         .Cuenta = .Cuenta - 1
        
         If .Cuenta > 1 Then
-            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death iniciará en " & .Cuenta & " segundos.")
+            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death iniciarï¿½ en " & .Cuenta & " segundos.")
         ElseIf .Cuenta = 1 Then
-            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death iniciará en 1 segundo!")
+            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death iniciarï¿½ en 1 segundo!")
         ElseIf .Cuenta <= 0 Then
-            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death inició! PELEEN!")
+            SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", "El death iniciï¿½! PELEEN!")
             MapInfo(ARENA_MAP).Pk = True
              .EventStarted = True
         End If
@@ -322,35 +322,35 @@ With DeathMatch
        Select Case .AutoCancelTime
               Case 150      'Quedan 2:30.
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 2:30 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 2:30 minutos")
               Case 120
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 2 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 2 minutos")
               Case 90
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 1:30 minutos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 1:30 minutos")
               Case 60
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 1 minuto")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 1 minuto")
               Case 30
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 30 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 30 segundos")
               'Avisa a los 15
               Case 15
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 15 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 15 segundos")
               'Avisa a los 10
               Case 10
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 10 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 10 segundos")
               'Avisa a los 5
               Case 5
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en 5 segundos")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en 5 segundos")
               'Avisa a los 3,2,1.
               Case 1, 2, 3
                    CanSendPackage = True
-                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelará en " & .AutoCancelTime & " segundo/s")
+                   PacketToSend = PrepareMessageConsoleMsgNew("Deathmatch>", "Auto-Cancelarï¿½ en " & .AutoCancelTime & " segundo/s")
               Case 0
                    CanSendPackage = False
                    Call Cancelar("Falta de participantes.")
@@ -385,10 +385,10 @@ With DeathMatch
      For LoopX = 1 To UBound(.Usuarios())
          'Hay usuario?
          If .Usuarios(LoopX).UserIndex <> -1 Then
-            'Está logeado?
+            'Estï¿½ logeado?
             If UserList(.Usuarios(LoopX).UserIndex).ConnID <> -1 Then
                 WarpUserChar .Usuarios(LoopX).UserIndex, UserList(.Usuarios(LoopX).UserIndex).Pos.Map, UserList(.Usuarios(LoopX).UserIndex).Pos.X, UserList(.Usuarios(LoopX).UserIndex).Pos.Y, 0, 0
-               WriteConsoleMsgNew .Usuarios(LoopX).UserIndex, "Deathmatch>", "Llenó el cupo! El deathmatch iniciará en " & .Cuenta & " segundos!."
+               WriteConsoleMsgNew .Usuarios(LoopX).UserIndex, "Deathmatch>", "Llenï¿½ el cupo! El deathmatch iniciarï¿½ en " & .Cuenta & " segundos!."
             Else    'No loged, limpio el tipo
                .Usuarios(LoopX).UserIndex = -1
             End If
@@ -411,7 +411,7 @@ On Error GoTo ErrHandler
 Dim MuertoPos       As WorldPos
 Dim QuedanEnDeath   As Byte
  
-'Obtengo la anterior posición del usuario
+'Obtengo la anterior posiciï¿½n del usuario
 Call AnteriorPos(MuertoIndex, MuertoPos)
  
  
@@ -432,7 +432,7 @@ WarpUserChar MuertoIndex, MuertoPos.Map, MuertoPos.X, MuertoPos.Y, True
  
  If sMessage Then
 'Aviso al usuario
-WriteConsoleMsgNew MuertoIndex, "Deathmatch>", "Has caido en el deathMatch, has sido revivido y llevado a tu posición anterior (Mapa : " & MapInfo(MuertoPos.Map).Name & ")"
+WriteConsoleMsgNew MuertoIndex, "Deathmatch>", "Has caido en el deathMatch, has sido revivido y llevado a tu posiciï¿½n anterior (Mapa : " & MapInfo(MuertoPos.Map).Name & ")"
  
 'Aviso al mapa.
 SendData SendTarget.toMap, ARENA_MAP, PrepareMessageConsoleMsgNew("Deathmatch>", UserList(MuertoIndex).Name & " Ha sido derrotado.")
@@ -446,7 +446,7 @@ QuedanEnDeath = QuedanVivos()
  
 'Queda 1?
 If Not QuedanEnDeath <> 1 Then
-   'Ganó ese usuario!
+   'Ganï¿½ ese usuario!
    Terminar
 End If
 
@@ -488,10 +488,10 @@ WriteUpdateGold winnerIndex
  
 With UserList(winnerIndex)
     'Aviso al mundo.
-    SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", .Name & " - " & ListaClases(.clase) & " " & ListaRazas(.raza) & " Nivel " & .Stats.ELV & " Ganó " & Format$(GoldPremio, "#,###") & " monedas de oro y " & UserList(winnerIndex).flags.tmpDeath & " puntos de Canje (Por haber matado a " & UserList(winnerIndex).flags.tmpDeath & " usuarios) por salir primero en el evento.")
+    SendData SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew("Deathmatch>", .Name & " - " & ListaClases(.clase) & " " & ListaRazas(.raza) & " Nivel " & .Stats.ELV & " Ganï¿½ " & Format$(GoldPremio, "#,###") & " monedas de oro y " & UserList(winnerIndex).flags.tmpDeath & " puntos de Canje (Por haber matado a " & UserList(winnerIndex).flags.tmpDeath & " usuarios) por salir primero en el evento.")
 End With
  
-'Ganador a su anterior posición..
+'Ganador a su anterior posiciï¿½n..
 Dim ToPosition  As WorldPos
 Call AnteriorPos(winnerIndex, ToPosition)
  
@@ -511,7 +511,7 @@ End Sub
  
 Sub AnteriorPos(ByVal UserIndex As Integer, ByRef MuertoPosition As WorldPos)
  
-' @ Devuelve la posición anterior del usuario.
+' @ Devuelve la posiciï¿½n anterior del usuario.
  
 Dim LoopX   As Long
  
@@ -522,7 +522,7 @@ For LoopX = 1 To UBound(DeathMatch.Usuarios())
     End If
 Next LoopX
  
-'Posición de ulla u.u
+'Posiciï¿½n de ulla u.u
 MuertoPosition = Ullathorpe
  
 End Sub
@@ -543,40 +543,40 @@ End If
  
 'No hay cupos.
 If Not ProximoSlot(DumpBoolean) <> 0 Then
-   MensajeError = "Hay un deathmatch, pero las inscripciones están cerradas"
+   MensajeError = "Hay un deathmatch, pero las inscripciones estï¿½n cerradas"
    Exit Function
 End If
  
 'Ya inscripto?
 If YaInscripto(UserIndex) Then
-   MensajeError = "Ya estás en el death!"
+   MensajeError = "Ya estï¿½s en el death!"
    Exit Function
 End If
  
-'Está muerto
+'Estï¿½ muerto
 If UserList(UserIndex).flags.Muerto <> 0 Then
    MensajeError = "Muerto no puedes ingresar a un deathmatch, lo siento.."
    Exit Function
 End If
  
-'Está preso
+'Estï¿½ preso
 If UserList(UserIndex).Counters.Pena <> 0 Then
-   MensajeError = "No puedes ingresar si estás preso."
+   MensajeError = "No puedes ingresar si estï¿½s preso."
    Exit Function
 End If
 
 If UserList(UserIndex).Pos.Map <> 1 Then
-   MensajeError = "No puedes ingresar si estás fuera de Ullathorpe."
+   MensajeError = "No puedes ingresar si estï¿½s fuera de Ullathorpe."
    Exit Function
 End If
 
 If DeathMatch.MinLevel > UserList(UserIndex).Stats.ELV Then
-    MensajeError = "El mínimo nivel para entrar es de " & DeathMatch.MinLevel
+    MensajeError = "El mï¿½nimo nivel para entrar es de " & DeathMatch.MinLevel
     Exit Function
 End If
 
 If DeathMatch.MaxLevel < UserList(UserIndex).Stats.ELV Then
-    MensajeError = "El máximo nivel para entrar es de " & DeathMatch.MaxLevel
+    MensajeError = "El mï¿½ximo nivel para entrar es de " & DeathMatch.MaxLevel
     Exit Function
 End If
  
@@ -595,7 +595,7 @@ If MiClase = ListaClases(DeathMatch.ClasesValidas.Asesino) Or _
     MiClase = ListaClases(DeathMatch.ClasesValidas.Mago) Or _
     MiClase = ListaClases(DeathMatch.ClasesValidas.Paladin) Then
     
-        MensajeError = "Tu clase no es válida."
+        MensajeError = "Tu clase no es vï¿½lida."
         Exit Function
 
 End If
@@ -611,7 +611,7 @@ End Function
  
 Function ProximoSlot(ByRef Sumar As Boolean) As Byte
  
-' @ Posición para un usuario.
+' @ Posiciï¿½n para un usuario.
  
 Dim LoopX   As Long
  
@@ -642,9 +642,9 @@ Dim Counter As Byte
 For LoopX = 1 To UBound(DeathMatch.Usuarios())
     'Mientras halla usuario.
     If DeathMatch.Usuarios(LoopX).UserIndex <> -1 Then
-       'Mientras esté logeado
+       'Mientras estï¿½ logeado
        If UserList(DeathMatch.Usuarios(LoopX).UserIndex).ConnID <> -1 Then
-          'Mientras esté en el mapa de death
+          'Mientras estï¿½ en el mapa de death
           If Not UserList(DeathMatch.Usuarios(LoopX).UserIndex).Pos.Map <> ARENA_MAP Then
              'Sumo contador.
              Counter = Counter + 1
@@ -692,7 +692,7 @@ End Function
  
 Function YaInscripto(ByVal UserIndex As Integer) As Boolean
  
-' @ Devuelve si ya está inscripto.
+' @ Devuelve si ya estï¿½ inscripto.
  
 Dim LoopX   As Long
  
@@ -709,7 +709,7 @@ End Function
  
 Function GetBanqueroPos() As WorldPos
  
-' @ Devuelve una posición para el banquero.
+' @ Devuelve una posiciï¿½n para el banquero.
  
 'No hay objeto.
 If Not MapData(ARENA_MAP, BANCO_X, BANCO_Y).ObjInfo.objIndex <> 0 Then
@@ -733,7 +733,7 @@ For LoopX = (BANCO_X - 5) To (BANCO_X + 5)
              If Not .ObjInfo.objIndex <> 0 Then
                 'No hay usuario.
                 If Not .UserIndex <> 0 Then
-                   'Nos quedamos acá.
+                   'Nos quedamos acï¿½.
                    GetBanqueroPos.Map = ARENA_MAP
                    GetBanqueroPos.X = LoopX
                    GetBanqueroPos.Y = LoopY
@@ -744,8 +744,8 @@ For LoopX = (BANCO_X - 5) To (BANCO_X + 5)
     Next LoopY
 Next LoopX
  
-'Poco probable, pero bueno, si no hay una posición libre
-'Devolvemos la posición "ORIGINAL", lo peor que puede pasar
+'Poco probable, pero bueno, si no hay una posiciï¿½n libre
+'Devolvemos la posiciï¿½n "ORIGINAL", lo peor que puede pasar
 'Es pisar un objeto : P
 GetBanqueroPos.Map = ARENA_MAP
 GetBanqueroPos.X = BANCO_X

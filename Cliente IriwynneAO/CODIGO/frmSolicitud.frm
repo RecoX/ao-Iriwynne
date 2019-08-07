@@ -68,10 +68,10 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.11.6
 '
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 'Copyright (C) 2002 Otto Perez
 'Copyright (C) 2002 Aaron Perkins
-'Copyright (C) 2002 Matías Fernando Pequeño
+'Copyright (C) 2002 Matï¿½as Fernando Pequeï¿½o
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -93,10 +93,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -159,7 +159,7 @@ Private Sub ImgCerrar_Click()
 End Sub
 
 Private Sub imgEnviar_Click()
-        Call WriteGuildRequestMembership(CName, Replace(Replace(Text1.Text, ",", ";"), vbCrLf, "º"))
+        Call WriteGuildRequestMembership(CName, Replace(Replace(Text1.Text, ",", ";"), vbCrLf, "ï¿½"))
 
         Unload Me
 

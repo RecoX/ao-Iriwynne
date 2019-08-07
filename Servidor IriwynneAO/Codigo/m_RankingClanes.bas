@@ -96,7 +96,7 @@ Public Sub CheckRankingClan(ByVal GuildIndex As Integer, ByVal Rank As eRanking)
 
         ' @ Si el personaje esta en el ranking actualizamos los valores.
         If PosRanking <> 0 Then
-            ' ¿Si está actualizado pa que?
+            ' ï¿½Si estï¿½ actualizado pa que?
             If Value <> Ranking(Rank).Value(PosRanking) Then
                 Call ActualizarPosRanking(PosRanking, Rank, Value)
 
@@ -141,7 +141,7 @@ Public Sub CheckRankingClan(ByVal GuildIndex As Integer, ByVal Rank As eRanking)
 End Sub
 
 Public Sub ActualizarPosRanking(ByVal Top As Byte, ByVal Rank As eRanking, ByVal Value As Long)
-' @ Actualizamos la pos indicada en caso de que el personaje esté en el ranking
+' @ Actualizamos la pos indicada en caso de que el personaje estï¿½ en el ranking
 
     With Ranking(Rank)
         .Value(Top) = Value
@@ -183,7 +183,7 @@ End Sub
 
 Public Sub CheckRankingUser(ByVal Userindex As Integer, ByVal Rank As eRanking)
 ' @ Desde aca nos hacemos la siguientes preguntas
-' @ El personaje está en el ranking?
+' @ El personaje estï¿½ en el ranking?
 ' @ El personaje puede ingresar al ranking?
 
     Dim LoopX As Integer
@@ -212,11 +212,11 @@ Public Sub CheckRankingUser(ByVal Userindex As Integer, ByVal Rank As eRanking)
 
         ' @ Si el personaje esta en el ranking actualizamos los valores.
         If PosRanking <> 0 Then
-            ' ¿Si está actualizado pa que?
+            ' ï¿½Si estï¿½ actualizado pa que?
             If Value <> Ranking(Rank).Value(PosRanking) Then
                 Call ActualizarPosRanking(PosRanking, Rank, Value)
 
-                ' ¿Es la pos 1? No hace falta ordenarlos
+                ' ï¿½Es la pos 1? No hace falta ordenarlos
                 'If Not PosRanking = 1 Then
                 ' @ Chequeamos los datos para actualizar el ranking
                 For LoopY = 1 To MAX_TOP

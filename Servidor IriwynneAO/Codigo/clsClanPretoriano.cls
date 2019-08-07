@@ -787,9 +787,9 @@ Private Sub KingPerformAction(ByVal NpcIndex As Integer, _
                                         Call NpcLanzaSpellSobreUser(NpcIndex, BestTarget, .Spells(eKingSpells.BlindAttack), True, True)
                     
                                         ' King Message
-                                        Call WriteConsoleMsg(BestTarget, "El rey pretoriano te ha vuelto estúpido.", FontTypeNames.FONTTYPE_FIGHT)
+                                        Call WriteConsoleMsg(BestTarget, "El rey pretoriano te ha vuelto estï¿½pido.", FontTypeNames.FONTTYPE_FIGHT)
                                         Call WriteConsoleMsg(BestTarget, "El rey pretoriano te ha vuelto ciego ", FontTypeNames.FONTTYPE_FIGHT)
-                                        Call WriteConsoleMsg(BestTarget, "A la distancia escuchas las siguientes palabras: ¡Cobarde, no eres digno de luchar conmigo si escapas! ", FontTypeNames.FONTTYPE_VENENO)
+                                        Call WriteConsoleMsg(BestTarget, "A la distancia escuchas las siguientes palabras: ï¿½Cobarde, no eres digno de luchar conmigo si escapas! ", FontTypeNames.FONTTYPE_VENENO)
 
                                 End If
             
@@ -1432,7 +1432,7 @@ Private Sub SpellCasterDestroyWand(ByVal NpcIndex As Integer, ByVal SpellIndex A
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessagePlayWave(SONIDO_DRAGON_VIVO, .Pos.X, .Pos.Y))
 
                         Case 4
-                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("vôrtax", .Char.CharIndex, vbGreen))
+                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("vï¿½rtax", .Char.CharIndex, vbGreen))
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessagePlayWave(SONIDO_DRAGON_VIVO, .Pos.X, .Pos.Y))
 
                         Case 3
@@ -1440,11 +1440,11 @@ Private Sub SpellCasterDestroyWand(ByVal NpcIndex As Integer, ByVal SpellIndex A
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessagePlayWave(SONIDO_DRAGON_VIVO, .Pos.X, .Pos.Y))
 
                         Case 2
-                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("yäkà E'nta", .Char.CharIndex, vbGreen))
+                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("yï¿½kï¿½ E'nta", .Char.CharIndex, vbGreen))
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessagePlayWave(SONIDO_DRAGON_VIVO, .Pos.X, .Pos.Y))
 
                         Case 1
-                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("¡¡Koràtá!!", .Char.CharIndex, vbGreen))
+                                Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessageChatOverHead("ï¿½ï¿½Korï¿½tï¿½!!", .Char.CharIndex, vbGreen))
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, PrepareMessagePlayWave(SONIDO_DRAGON_VIVO, .Pos.X, .Pos.Y))
 
                         Case 0
@@ -1948,7 +1948,7 @@ Private Sub ShooterMove(ByVal NpcIndex As Integer, ByVal BestTarget As Integer)
         'Author: ZaMa
         'Last Modification: 24/06/2010
         'Vamos a setear el hold on del cazador en el medio entre el rey
-        'y el atacante. De esta manera se lo podra atacar aun asi está lejos
+        'y el atacante. De esta manera se lo podra atacar aun asi estï¿½ lejos
         'pero sin alejarse del rango de los an hoax vorps de los
         'clerigos o rey. A menos q este paralizado, claro
         '***************************************************
@@ -2204,7 +2204,7 @@ Private Sub ThiefPerfomAction(ByVal NpcIndex As Integer, _
                                                 ' Can paralize
 7                                                If RandomNumber(1, 100) < 10 Then
 8                                                        Call NpcLanzaSpellSobreUser(NpcIndex, BestTarget, .Spells(eThiefSpells.Paralisis), False, True)
-9                                                        Call WriteConsoleMsg(BestTarget, "¡¡" & .Name & " te ha paralizado con su golpe!!", FontTypeNames.FONTTYPE_VENENO)
+9                                                        Call WriteConsoleMsg(BestTarget, "ï¿½ï¿½" & .Name & " te ha paralizado con su golpe!!", FontTypeNames.FONTTYPE_VENENO)
                         
                                                         ' Can unequip weapon
 10                                                ElseIf RandomNumber(1, 100) < 22 Then
@@ -2226,7 +2226,7 @@ Private Sub ThiefPerfomAction(ByVal NpcIndex As Integer, _
 16                                                        If WeaponEqpSlot <> 0 Then
                                 
 17                                                                If SnatchItem(NpcIndex, BestTarget, WeaponEqpSlot) Then
-20                                                                        Call WriteConsoleMsg(BestTarget, "¡¡" & .Name & " te ha arrebatado tu arma!!", FontTypeNames.FONTTYPE_VENENO)
+20                                                                        Call WriteConsoleMsg(BestTarget, "ï¿½ï¿½" & .Name & " te ha arrebatado tu arma!!", FontTypeNames.FONTTYPE_VENENO)
 18
 19                                                                End If
                                 
@@ -2236,7 +2236,7 @@ Private Sub ThiefPerfomAction(ByVal NpcIndex As Integer, _
 24                                                                If MunicionEqpSlot <> 0 Then
 25
 26                                                                        If SnatchItem(NpcIndex, BestTarget, MunicionEqpSlot) Then
-27                                                                                Call WriteConsoleMsg(BestTarget, "¡¡" & .Name & " te ha arrebatado tus municiones!!", FontTypeNames.FONTTYPE_VENENO)
+27                                                                                Call WriteConsoleMsg(BestTarget, "ï¿½ï¿½" & .Name & " te ha arrebatado tus municiones!!", FontTypeNames.FONTTYPE_VENENO)
 28
 29                                                                        End If
 30
@@ -2252,7 +2252,7 @@ Private Sub ThiefPerfomAction(ByVal NpcIndex As Integer, _
 40                                                        Slot = RandomNumber(1, UserList(BestTarget).CurrentInventorySlots)
 41
 42                                                        If ThiefStealITem(NpcIndex, BestTarget, Slot) Then
-43                                                                Call WriteConsoleMsg(BestTarget, "¡¡" & .Name & " te está robando!!", FontTypeNames.FONTTYPE_VENENO)
+43                                                                Call WriteConsoleMsg(BestTarget, "ï¿½ï¿½" & .Name & " te estï¿½ robando!!", FontTypeNames.FONTTYPE_VENENO)
 44
 45                                                        End If
 46
@@ -2522,12 +2522,12 @@ Private Sub GreedyWalkTo(ByVal NpcIndex As Integer, _
         '***************************************************
         'Author: Unknown
         '  Este procedimiento es llamado cada vez que un NPC deba ir
-        '  a otro lugar en el mismo TargetMap. Utiliza una técnica
-        '  de programación greedy no determinística.
+        '  a otro lugar en el mismo TargetMap. Utiliza una tï¿½cnica
+        '  de programaciï¿½n greedy no determinï¿½stica.
         '  Cada paso azaroso que me acerque al destino, es un buen paso.
-        '  Si no hay mejor paso válido, entonces hay que volver atrás y reintentar.
+        '  Si no hay mejor paso vï¿½lido, entonces hay que volver atrï¿½s y reintentar.
         '  Si no puedo moverme, me considero piketeado
-        '  La funcion es larga, pero es O(1) - orden algorítmico temporal constante
+        '  La funcion es larga, pero es O(1) - orden algorï¿½tmico temporal constante
         'Last Modification: 26/09/2010
         'Rapsodius - Changed Mod by And for speed
         '26/09/2010: ZaMa - Now make movements as normal npcs, which allows to kick caspers and invisible admins.
@@ -2781,7 +2781,7 @@ Private Sub MoveFailed(ByVal NpcIndex As Integer)
                 If .CanAttack = 1 Then
                         If (RandomNumber(1, 100) > 95) Then
                                 Call SendData(SendTarget.ToNPCArea, NpcIndex, _
-                                   PrepareMessageChatOverHead("Maldito bastardo, ¡Ven aquí!", .Char.CharIndex, vbYellow))
+                                   PrepareMessageChatOverHead("Maldito bastardo, ï¿½Ven aquï¿½!", .Char.CharIndex, vbYellow))
                                 .CanAttack = 0
 
                         End If
@@ -2916,7 +2916,7 @@ Private Function UserAtacable(ByVal UserIndex As Integer, _
 
                 End If
                 
-                '//Si no puede atacar al castillo, significa que es el dueño del mismo.
+                '//Si no puede atacar al castillo, significa que es el dueï¿½o del mismo.
                 If PuedeAtacarCastillo(UserIndex) = False Then
                     UserAtacable = False
                     Exit Function

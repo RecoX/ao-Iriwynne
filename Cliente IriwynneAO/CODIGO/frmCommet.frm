@@ -132,9 +132,9 @@ Private Sub imgEnviar_Click()
 
         If Text1 = "" Then
                 If T = PAZ Or T = ALIANZA Then
-                        MsgBox "Debes redactar un mensaje solicitando la paz o alianza al líder de " & Nombre
+                        MsgBox "Debes redactar un mensaje solicitando la paz o alianza al lï¿½der de " & Nombre
                 Else
-                        MsgBox "Debes indicar el motivo por el cual rechazas la membresía de " & Nombre
+                        MsgBox "Debes indicar el motivo por el cual rechazas la membresï¿½a de " & Nombre
 
                 End If
         
@@ -143,10 +143,10 @@ Private Sub imgEnviar_Click()
         End If
     
         If T = PAZ Then
-                Call WriteGuildOfferPeace(Nombre, Replace(Text1, vbCrLf, "º"))
+                Call WriteGuildOfferPeace(Nombre, Replace(Text1, vbCrLf, "ï¿½"))
         
         ElseIf T = ALIANZA Then
-                Call WriteGuildOfferAlliance(Nombre, Replace(Text1, vbCrLf, "º"))
+                Call WriteGuildOfferAlliance(Nombre, Replace(Text1, vbCrLf, "ï¿½"))
         
         ElseIf T = RECHAZOPJ Then
                 Call WriteGuildRejectNewMember(Nombre, Replace(Replace(Text1.Text, ",", " "), vbCrLf, " "))

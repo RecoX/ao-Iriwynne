@@ -136,7 +136,7 @@ Public Sub BanHD_add(ByVal HD As String)
 End Sub
 
 Public Function BanHD_find(ByVal HD As String) As Long
-' GSZ-AO - Busca si un SerialHD está baneado
+' GSZ-AO - Busca si un SerialHD estï¿½ baneado
 
     Dim Dale As Boolean
     Dim LoopC As Long
@@ -298,7 +298,7 @@ Sub WorldSave()
     
         Call SaveForums
     
-        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("Servidor> WorldSave ha concluído.", FontTypeNames.FONTTYPE_SERVER))
+        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsg("Servidor> WorldSave ha concluï¿½do.", FontTypeNames.FONTTYPE_SERVER))
 
 End Sub
 
@@ -324,7 +324,7 @@ Public Sub PurgarPenas()
                                         UserList(i).Counters.Pena = 0
                                         ' @@ Miqueas : 07/11/15
                                         Call WarpUserChar(i, Configuracion.Libertad.Map, Configuracion.Libertad.X, Configuracion.Libertad.Y, True)
-                                        Call WriteConsoleMsg(i, "¡Has sido liberado!", FontTypeNames.FONTTYPE_INFO)
+                                        Call WriteConsoleMsg(i, "ï¿½Has sido liberado!", FontTypeNames.FONTTYPE_INFO)
                     
                                         Call FlushBuffer(i)
 
@@ -353,9 +353,9 @@ Public Sub Encarcelar(ByVal Userindex As Integer, _
         Call WarpUserChar(Userindex, Configuracion.Prision.Map, Configuracion.Prision.X, Configuracion.Prision.Y, True)
     
         If LenB(GmName) = 0 Then
-                Call WriteConsoleMsg(Userindex, "Has sido encarcelado, deberás permanecer en la cárcel " & Minutos & " minutos.", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(Userindex, "Has sido encarcelado, deberï¿½s permanecer en la cï¿½rcel " & Minutos & " minutos.", FontTypeNames.FONTTYPE_INFO)
         Else
-                Call WriteConsoleMsg(Userindex, GmName & " te ha encarcelado, deberás permanecer en la cárcel " & Minutos & " minutos.", FontTypeNames.FONTTYPE_INFO)
+                Call WriteConsoleMsg(Userindex, GmName & " te ha encarcelado, deberï¿½s permanecer en la cï¿½rcel " & Minutos & " minutos.", FontTypeNames.FONTTYPE_INFO)
 
         End If
 
@@ -596,7 +596,7 @@ Public Function UserDarPrivilegioLevel(ByVal Name As String) As PlayerType
         '***************************************************
         'Author: Unknown
         'Last Modification: 03/02/07
-        'Last Modified By: Juan Martín Sotuyo Dodero (Maraxus)
+        'Last Modified By: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         '***************************************************
 
         If EsAdmin(Name) Then
@@ -618,7 +618,7 @@ Public Sub BanCharacter(ByVal bannerUserIndex As Integer, _
                         ByVal UserName As String, _
                         ByVal Reason As String)
         '***************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modification: 03/02/07
         '22/05/2010: Ya no se peude banear admins de mayor rango si estan online.
         '***************************************************
@@ -643,13 +643,13 @@ Public Sub BanCharacter(ByVal bannerUserIndex As Integer, _
         With UserList(bannerUserIndex)
 
                 If tUser <= 0 Then
-                        Call WriteConsoleMsg(bannerUserIndex, "El usuario no está online.", FontTypeNames.FONTTYPE_TALK)
+                        Call WriteConsoleMsg(bannerUserIndex, "El usuario no estï¿½ online.", FontTypeNames.FONTTYPE_TALK)
             
                         If FileExist(CharPath & UserName & ".chr", vbNormal) Then
                                 userPriv = UserDarPrivilegioLevel(UserName)
                 
                                 If (userPriv And Rank) > (.flags.Privilegios And Rank) Then
-                                        Call WriteConsoleMsg(bannerUserIndex, "No puedes banear a al alguien de mayor jerarquía.", FontTypeNames.FONTTYPE_INFO)
+                                        Call WriteConsoleMsg(bannerUserIndex, "No puedes banear a al alguien de mayor jerarquï¿½a.", FontTypeNames.FONTTYPE_INFO)
                                 Else
 
                                         If GetVar(CharPath & UserName & ".chr", "FLAGS", "Ban") <> "0" Then
@@ -686,7 +686,7 @@ Public Sub BanCharacter(ByVal bannerUserIndex As Integer, _
                 Else
 
                         If (UserList(tUser).flags.Privilegios And Rank) > (.flags.Privilegios And Rank) Then
-                                Call WriteConsoleMsg(bannerUserIndex, "No puedes banear a al alguien de mayor jerarquía.", FontTypeNames.FONTTYPE_INFO)
+                                Call WriteConsoleMsg(bannerUserIndex, "No puedes banear a al alguien de mayor jerarquï¿½a.", FontTypeNames.FONTTYPE_INFO)
                         Else
             
                                 Call LogBan(tUser, bannerUserIndex, Reason)

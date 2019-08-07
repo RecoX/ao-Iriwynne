@@ -292,9 +292,9 @@ Public Function IntervaloPermiteUsar(ByVal UserIndex As Integer, _
         
                         .Counters.failedUsageAttempts = .Counters.failedUsageAttempts + 1
         
-                        'Tolerancia arbitraria - 20 es MUY alta, la está chiteando zarpado
+                        'Tolerancia arbitraria - 20 es MUY alta, la estï¿½ chiteando zarpado
                         If .Counters.failedUsageAttempts = Tolerancia_FailIntervalo Then
-                              '  Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("ANTICHEAT > posible modificación de intervalos por parte de " & .Name & " Hora: " & time$, FontTypeNames.FONTTYPE_EJECUCION))
+                              '  Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("ANTICHEAT > posible modificaciï¿½n de intervalos por parte de " & .Name & " Hora: " & time$, FontTypeNames.FONTTYPE_EJECUCION))
                                 .Counters.failedUsageAttempts = 0
                                 'Call CloseSocket(UserIndex)
 
@@ -330,9 +330,9 @@ Public Function IntervaloPermiteUsarClick(ByVal UserIndex As Integer, _
     
                         .Counters.failedUsageAttempts = .Counters.failedUsageAttempts + 1
     
-                        'Tolerancia arbitraria - 20 es MUY alta, la está chiteando zarpado
+                        'Tolerancia arbitraria - 20 es MUY alta, la estï¿½ chiteando zarpado
                         If .Counters.failedUsageAttempts = Tolerancia_FailIntervalo Then
-                               ' Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("ANTICHEAT > posible modificación de intervalos por parte de " & .Name & " Hora: " & time$, FontTypeNames.FONTTYPE_EJECUCION))
+                               ' Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("ANTICHEAT > posible modificaciï¿½n de intervalos por parte de " & .Name & " Hora: " & time$, FontTypeNames.FONTTYPE_EJECUCION))
                                 .Counters.failedUsageAttempts = 0
                                 'Call CloseSocket(UserIndex)
 

@@ -42,7 +42,7 @@ End Function
 
 Public Function RandomNumber(ByVal LowerBound As Long, ByVal UpperBound As Long) As Long
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Generates a random number in the range given - recoded to use longs and work properly with ranges
         '**************************************************************

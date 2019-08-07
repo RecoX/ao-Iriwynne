@@ -17,7 +17,7 @@ Attribute VB_Exposed = False
 'For removale it uses LRU, attempting to just keep in memory those surfaces
 'that are actually usefull.
 '
-' Developed by Maraxus (Juan Martín Sotuyo Dodero - juansotuyo@hotmail.com)
+' Developed by Maraxus (Juan Martï¿½n Sotuyo Dodero - juansotuyo@hotmail.com)
 ' Last Modify Date: 3/06/2006
 '**************************************************************
 
@@ -88,7 +88,7 @@ Private Declare Sub CopyMemory _
 
 Private Sub Class_Initialize()
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         '
         '**************************************************************
@@ -104,7 +104,7 @@ End Sub
 Private Sub Class_Terminate()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Clean up
         '**************************************************************
@@ -126,7 +126,7 @@ Private Sub clsSurfaceManager_Initialize(ByRef DD As DirectDraw7, _
                                          ByVal graphicPath As String, _
                                          Optional ByVal maxMemoryUsageInMb As Long = -1)
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Initializes the manager
         '**************************************************************
@@ -150,7 +150,7 @@ End Sub
 Private Property Get clsSurfaceManager_Surface(ByVal fileIndex As Long) As DirectDrawSurface7
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Retrieves the requested texture
         '**************************************************************
@@ -178,7 +178,7 @@ End Property
 Private Function BinarySearch(ByVal fileIndex As Long) As Long
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Returns the index of the surface in the list, or the negation
         'of the position were it should be if not found (for binary insertion)
@@ -217,7 +217,7 @@ End Function
 Private Function LoadSurface(ByVal fileIndex As Long, ByVal listIndex As Long) As Long
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Loads the surface named fileIndex + ".bmp" and inserts it to the
         'surface list in the listIndex position
@@ -303,14 +303,14 @@ ErrHandler:
                         Resume Next
 
                 Else
-                        MsgBox "No hay memoria disponible! El programa abortará. Cierra algunos programas e intenta de nuevo"
+                        MsgBox "No hay memoria disponible! El programa abortarï¿½. Cierra algunos programas e intenta de nuevo"
                         End
 
                 End If
 
         Else
-                MsgBox "Un error inesperado ocurrió al intentar cargar el gráfico " & filePath & ". " & vbCrLf & _
-                   "El código de error es " & CStr(Err.number) & " - " & Err.Description & vbCrLf & "Copia este mensaje y notifica a los administradores.", _
+                MsgBox "Un error inesperado ocurriï¿½ al intentar cargar el grï¿½fico " & filePath & ". " & vbCrLf & _
+                   "El cï¿½digo de error es " & CStr(Err.number) & " - " & Err.Description & vbCrLf & "Copia este mensaje y notifica a los administradores.", _
                    vbOKOnly Or vbCritical Or vbExclamation, "Error"
                 End
 
@@ -323,7 +323,7 @@ Private Sub surfaceDimensions(ByVal Archivo As String, _
                               ByRef Width As Long)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Loads the headers of a bmp file to retrieve it's dimensions at rt
         '**************************************************************
@@ -347,7 +347,7 @@ End Sub
 Private Sub InsertSurface(ByRef Surface As SURFACE_ENTRY_DYN, ByVal listIndex As Long)
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Inserts the given surface in the requested position of the surface list
         '**************************************************************
@@ -397,9 +397,9 @@ Private Sub InsertSurface(ByRef Surface As SURFACE_ENTRY_DYN, ByVal listIndex As
         Exit Sub
 
 ErrHandler:
-        MsgBox "Un error irreparable ocurrió al insertar un nuevo gráfico en la lista." & vbCrLf _
-           & "El cliente se cerrará" & vbCrLf _
-           & "Intente usar el cliente no dinámico"
+        MsgBox "Un error irreparable ocurriï¿½ al insertar un nuevo grï¿½fico en la lista." & vbCrLf _
+           & "El cliente se cerrarï¿½" & vbCrLf _
+           & "Intente usar el cliente no dinï¿½mico"
         End
 
 End Sub
@@ -407,7 +407,7 @@ End Sub
 Private Function RemoveLRU() As Integer
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero
+        'Author: Juan Martï¿½n Sotuyo Dodero
         'Last Modify Date: 3/06/2006
         'Removes the Least Recently Used surface to make some room for new ones
         '**************************************************************

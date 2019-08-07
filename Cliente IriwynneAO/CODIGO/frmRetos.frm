@@ -150,7 +150,7 @@ Private Function CheckDatos() As Boolean
         ElseIf dRetos(1).Value = True Then
 
                 If Not Len(bName(0).Text) <> 0 Then
-                        Call ShowConsoleMsg("Introduce el nombre de tu Compañero.")
+                        Call ShowConsoleMsg("Introduce el nombre de tu Compaï¿½ero.")
                         CheckDatos = False
 
                         Exit Function
@@ -166,7 +166,7 @@ Private Function CheckDatos() As Boolean
                 End If
 
                 If Not Len(bName(2).Text) <> 0 Then
-                        Call ShowConsoleMsg("Introduce el nombre del compañero de tu Enemigo.")
+                        Call ShowConsoleMsg("Introduce el nombre del compaï¿½ero de tu Enemigo.")
                         CheckDatos = False
 
                         Exit Function

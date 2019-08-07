@@ -5,20 +5,20 @@ Const DAMAGE_TIME   As Integer = 50
 Const DAMAGE_FONT_S As Byte = 14
  
 Enum EDType
-     edPuñal = 1                'Apuñalo.
-     edNormal = 2               'Hechizo o golpe común.
+     edPuï¿½al = 1                'Apuï¿½alo.
+     edNormal = 2               'Hechizo o golpe comï¿½n.
 End Enum
  
 Private DNormalFont    As New StdFont
  
 Type DList
-     DamageVal      As Integer  'Cantidad de daño.
+     DamageVal      As Integer  'Cantidad de daï¿½o.
      ColorRGB       As Long     'Color.
      DamageType     As EDType   'Tipo, se usa para saber si es apu o no.
      DamageFont     As New StdFont  'Efecto del apu.
      TimeRendered   As Integer  'Tiempo transcurrido.
      Downloading    As Byte     'Contador para la posicion Y.
-     Activated      As Boolean  'Si está activado..
+     Activated      As Boolean  'Si estï¿½ activado..
 End Type
  
 Sub Initialize()
@@ -39,7 +39,7 @@ End Sub
  
 Sub Create(ByVal X As Byte, ByVal Y As Byte, ByVal ColorRGB As Long, ByVal DamageValue As Integer, ByVal edMode As Byte)
  
-' @ Agrega un nuevo daño.
+' @ Agrega un nuevo daï¿½o.
  
 With MapData(X, Y).Damage
      
@@ -50,7 +50,7 @@ With MapData(X, Y).Damage
      .TimeRendered = 0
      .Downloading = 0
      
-     If .DamageType = EDType.edPuñal Then
+     If .DamageType = EDType.edPuï¿½al Then
         With .DamageFont
              .size = Val(DAMAGE_FONT_S)
              .Name = "Tahoma"
@@ -68,7 +68,7 @@ End Sub
  
 Sub Draw(ByVal X As Byte, ByVal Y As Byte, ByVal PixelX As Integer, ByVal PixelY As Integer)
  
-' @ Dibuja un daño
+' @ Dibuja un daï¿½o
  
 With MapData(X, Y).Damage
      
@@ -85,12 +85,12 @@ With MapData(X, Y).Damage
            .ColorRGB = ModifyColour(.TimeRendered, .DamageType)
            
            'Efectito para el apu :P
-           If .DamageType = EDType.edPuñal Then
+           If .DamageType = EDType.edPuï¿½al Then
               .DamageFont.size = NewSize(.TimeRendered)
            End If
                
            'Dibujo ; D
-            If .DamageType <> EDType.edNormal And .DamageType <> EDType.edPuñal Then
+            If .DamageType <> EDType.edNormal And .DamageType <> EDType.edPuï¿½al Then
            RenderTextCentered PixelX, PixelY - .Downloading, "+" & .DamageVal, .ColorRGB, .DamageFont
             
             Else
@@ -126,9 +126,9 @@ Function ModifyColour(ByVal TimeNowRendered As Byte, ByVal DamageType As Byte) A
  
 Select Case DamageType
                    
-       Case EDType.edPuñal
+       Case EDType.edPuï¿½al
             ModifyColour = RGB(200, 200, 100)
-           'ModifyColour = GetPuñalNewColour()
+           'ModifyColour = GetPuï¿½alNewColour()
                    
        Case EDType.edNormal
             ModifyColour = RGB(255 - (TimeNowRendered * 3), 0, 0)

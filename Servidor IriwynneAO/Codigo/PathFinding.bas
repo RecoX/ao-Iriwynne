@@ -1,6 +1,6 @@
 Attribute VB_Name = "PathFinding"
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -22,10 +22,10 @@ Attribute VB_Name = "PathFinding"
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 '#######################################################
 'PathFinding Module
@@ -149,7 +149,7 @@ Private Sub ProcessAdjacents(ByVal MapIndex As Integer, _
 
                         With T(j, vcolu)
 
-                                'Nos aseguramos que no hay un camino más corto
+                                'Nos aseguramos que no hay un camino mï¿½s corto
                                 If .DistV = MAXINT Then
                                         'Actualizamos la tabla de calculos intermedios
                                         .DistV = T(vfila, vcolu).DistV + 1
@@ -176,7 +176,7 @@ Private Sub ProcessAdjacents(ByVal MapIndex As Integer, _
 
                         With T(j, vcolu)
 
-                                'Nos aseguramos que no hay un camino más corto
+                                'Nos aseguramos que no hay un camino mï¿½s corto
                                 If .DistV = MAXINT Then
                                         'Actualizamos la tabla de calculos intermedios
                                         .DistV = T(vfila, vcolu).DistV + 1
@@ -203,7 +203,7 @@ Private Sub ProcessAdjacents(ByVal MapIndex As Integer, _
 
                         With T(vfila, j)
 
-                                'Nos aseguramos que no hay un camino más corto
+                                'Nos aseguramos que no hay un camino mï¿½s corto
                                 If .DistV = MAXINT Then
                                         'Actualizamos la tabla de calculos intermedios
                                         .DistV = T(vfila, vcolu).DistV + 1
@@ -230,7 +230,7 @@ Private Sub ProcessAdjacents(ByVal MapIndex As Integer, _
 
                         With T(vfila, j)
 
-                                'Nos aseguramos que no hay un camino más corto
+                                'Nos aseguramos que no hay un camino mï¿½s corto
                                 If .DistV = MAXINT Then
                                         'Actualizamos la tabla de calculos intermedios
                                         .DistV = T(vfila, vcolu).DistV + 1

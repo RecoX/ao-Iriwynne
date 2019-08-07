@@ -13,7 +13,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
 
-'Diseñado y programado por ^[GS]^
+'Diseï¿½ado y programado por ^[GS]^
 'Original para GSZAO
 
 Private Const MAX_ITEMS         As Integer = 8000
@@ -58,7 +58,7 @@ Public Function AddItem(ByVal Map As Integer, _
                                 If X = p_items(i).X Then
                                         If Y = p_items(i).Y Then
                                         
-                                                AddItem = True ' ya está!
+                                                AddItem = True ' ya estï¿½!
 
                                                 Exit For
 
@@ -68,7 +68,7 @@ Public Function AddItem(ByVal Map As Integer, _
 
                         ElseIf p_items(i).Map = 0 Then
 
-                                If i_free <> 0 Then  ' posición libre!
+                                If i_free <> 0 Then  ' posiciï¿½n libre!
                                         i_free = i
 
                                 End If
@@ -80,7 +80,7 @@ Public Function AddItem(ByVal Map As Integer, _
                 If Not AddItem Then
                 
                         If i_free <> 0 Then
-                                i = i_free ' usar posición libre!
+                                i = i_free ' usar posiciï¿½n libre!
                         Else
                                 p_cant = p_cant + 1 ' nuevo item!
                                 i = p_cant

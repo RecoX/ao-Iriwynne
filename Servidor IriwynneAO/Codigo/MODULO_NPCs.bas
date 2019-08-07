@@ -1,6 +1,6 @@
 Attribute VB_Name = "NPCs"
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -22,24 +22,24 @@ Attribute VB_Name = "NPCs"
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
 '                        Modulo NPC
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
 'Contiene todas las rutinas necesarias para cotrolar los
 'NPCs meno la rutina de AI que se encuentra en el modulo
 'AI_NPCs para su mejor comprension.
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
-'?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
+'?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
 
 Option Explicit
 
@@ -85,7 +85,7 @@ Public Sub MuereNpc(ByVal NpcIndex As Integer, ByVal UserIndex As Integer)
 'Llamado cuando la vida de un NPC llega a cero.
 'Last Modify Date: 13/07/2010
 '22/06/06: (Nacho) Chequeamos si es pretoriano
-'24/01/2007: Pablo (ToxicWaste): Agrego para actualización de tag si cambia de status.
+'24/01/2007: Pablo (ToxicWaste): Agrego para actualizaciï¿½n de tag si cambia de status.
 '22/05/2010: ZaMa - Los caos ya no suben nobleza ni plebe al atacar npcs.
 '23/05/2010: ZaMa - El usuario pierde la pertenencia del npc.
 '13/07/2010: ZaMa - Optimizaciones de logica en la seleccion de pretoriano, y el posible cambio de alencion del usuario.
@@ -174,7 +174,7 @@ Public Sub MuereNpc(ByVal NpcIndex As Integer, ByVal UserIndex As Integer)
             End If
 
             '[/KEVIN]
-            Call WriteConsoleMsg(UserIndex, "¡Has matado a la criatura!", FontTypeNames.FONTTYPE_NARANJA)
+            Call WriteConsoleMsg(UserIndex, "ï¿½Has matado a la criatura!", FontTypeNames.FONTTYPE_NARANJA)
 
             If .Stats.NPCsMuertos < 32000 Then _
                .Stats.NPCsMuertos = .Stats.NPCsMuertos + 1
@@ -426,7 +426,7 @@ Private Sub ResetNpcMainInfo(ByVal NpcIndex As Integer)
         '***************************************************
         'Author: Unknown
         'Last Modification: -
-        '22/05/2010: ZaMa - Ahora se resetea el dueño del npc también.
+        '22/05/2010: ZaMa - Ahora se resetea el dueï¿½o del npc tambiï¿½n.
         '***************************************************
 
         With Npclist(NpcIndex)
@@ -657,7 +657,7 @@ Public Function CrearNPC(NroNPC As Integer, _
 
                         If newpos.X <> 0 And newpos.Y <> 0 Then
                                 altpos.X = newpos.X
-                                altpos.Y = newpos.Y     'posicion alternativa (para evitar el anti respawn, pero intentando qeu si tenía que ser en el agua, sea en el agua.)
+                                altpos.Y = newpos.Y     'posicion alternativa (para evitar el anti respawn, pero intentando qeu si tenï¿½a que ser en el agua, sea en el agua.)
                         Else
                                 Call ClosestLegalPos(Pos, newpos, PuedeAgua)
 
@@ -898,7 +898,7 @@ Public Function MoveNPCChar(ByVal NpcIndex As Integer, ByVal nHeading As Byte) A
                                         If Not (.flags.AdminInvisible = 1) Then
                                                 Call SendData(SendTarget.ToPCAreaButIndex, UserIndex, PrepareMessageCharacterMove(.Char.CharIndex, .Pos.X, .Pos.Y))
                     
-                                                'Los valores de visible o invisible están invertidos porque estos flags son del NpcIndex, por lo tanto si el npc entra, el casper sale y viceversa :P
+                                                'Los valores de visible o invisible estï¿½n invertidos porque estos flags son del NpcIndex, por lo tanto si el npc entra, el casper sale y viceversa :P
                                                 If isZonaOscura Then
                                                         If Not isZonaOscuraNewPos Then
                                                                 Call SendData(SendTarget.ToUsersAndRmsAndCounselorsAreaButGMs, UserIndex, PrepareMessageSetInvisible(.Char.CharIndex, True))
@@ -921,7 +921,7 @@ Public Function MoveNPCChar(ByVal NpcIndex As Integer, ByVal nHeading As Byte) A
                                         'Forzamos al usuario a moverse
                                         Call WriteForceCharMove(UserIndex, nHeading)
                     
-                                        'Actualizamos las áreas de ser necesario
+                                        'Actualizamos las ï¿½reas de ser necesario
                                         Call ModAreas.CheckUpdateNeededUser(UserIndex, nHeading)
 
                                 End With
@@ -1023,7 +1023,7 @@ Sub NpcEnvenenarUser(ByVal UserIndex As Integer)
 
                 If N < 30 Then
                         .flags.Envenenado = 1
-                        Call WriteConsoleMsg(UserIndex, "¡¡La criatura te ha envenenado!!", FontTypeNames.FONTTYPE_FIGHT)
+                        Call WriteConsoleMsg(UserIndex, "ï¿½ï¿½La criatura te ha envenenado!!", FontTypeNames.FONTTYPE_FIGHT)
 
                 End If
 
@@ -1040,7 +1040,7 @@ Function SpawnNpc(ByVal NpcIndex As Integer, _
         'Autor: Unknown (orginal version)
         'Last Modification: 06/15/2008
         '23/01/2007 -> Pablo (ToxicWaste): Creates an NPC of the type Npcindex
-        '06/15/2008 -> Optimizé el codigo. (NicoNZ)
+        '06/15/2008 -> Optimizï¿½ el codigo. (NicoNZ)
         '***************************************************
         Dim newpos         As WorldPos
 
@@ -1177,10 +1177,10 @@ Public Function OpenNPC(ByVal NpcNumber As Integer, _
         '#               ATENCION PELIGRO                  #
         '###################################################
         '
-        '    ¡¡¡¡ NO USAR GetVar PARA LEER LOS NPCS !!!!
+        '    ï¿½ï¿½ï¿½ï¿½ NO USAR GetVar PARA LEER LOS NPCS !!!!
         '
-        'El que ose desafiar esta LEY, se las tendrá que ver
-        'conmigo. Para leer los NPCS se deberá usar la
+        'El que ose desafiar esta LEY, se las tendrï¿½ que ver
+        'conmigo. Para leer los NPCS se deberï¿½ usar la
         'nueva clase clsIniManager.
         '
         'Alejo
@@ -1395,7 +1395,7 @@ Public Sub ValidarPermanenciaNpc(ByVal NpcIndex As Integer)
         '***************************************************
         'Author: Unknown
         'Last Modification: -
-        'Chequea si el npc continua perteneciendo a algún usuario
+        'Chequea si el npc continua perteneciendo a algï¿½n usuario
         '***************************************************
 
         With Npclist(NpcIndex)

@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmNewPassword 
    BorderStyle     =   0  'None
-   Caption         =   "Cambiar Contraseña"
+   Caption         =   "Cambiar Contraseï¿½a"
    ClientHeight    =   3555
    ClientLeft      =   0
    ClientTop       =   -75
@@ -132,9 +132,9 @@ Private Sub LoadButtons()
     
         Set LastButtonPressed = New clsGraphicalButton
     
-        Call cBotonAceptar.Initialize(imgAceptar, grhpath & "boton Cambiar contraseña.jpg", _
-           grhpath & "boton Cambiar contraseña 1.jpg", _
-           grhpath & "boton Cambiar contraseña 1.jpg", Me)
+        Call cBotonAceptar.Initialize(imgAceptar, grhpath & "boton Cambiar contraseï¿½a.jpg", _
+           grhpath & "boton Cambiar contraseï¿½a 1.jpg", _
+           grhpath & "boton Cambiar contraseï¿½a 1.jpg", Me)
            
         Set cBotonSalir = New clsGraphicalButton
     
@@ -158,7 +158,7 @@ End Sub
 Private Sub imgAceptar_Click()
 
         If Text2.Text <> Text3.Text Then
-                Call MsgBox("Las contraseñas no coinciden", vbCritical Or vbOKOnly Or vbApplicationModal Or vbDefaultButton1, "Cambiar Contraseña")
+                Call MsgBox("Las contraseï¿½as no coinciden", vbCritical Or vbOKOnly Or vbApplicationModal Or vbDefaultButton1, "Cambiar Contraseï¿½a")
                 Exit Sub
 
         End If

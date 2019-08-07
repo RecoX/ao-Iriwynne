@@ -1,4 +1,4 @@
-frmMain = 78, 78, 1114, 690, Z, 88, 116, 609, 572, C
+frmMain = 78, 78, 1114, 690, , 88, 116, 609, 572, C
 modGeneral = 78, 78, 1114, 690, 
 modDeclaraciones = 66, 87, 587, 543, 
 modDirectDraw = 22, 29, 543, 485, 
@@ -20,7 +20,7 @@ lvButtons_H = 0, 0, 1036, 612, , 132, 174, 653, 630, C
 modIndices = 44, 62, 565, 514, 
 modLvTimer = 0, 0, 0, 0, C
 clsIniReader = 0, 0, 0, 0, C
-clsSurfaceManDyn = 0, 0, 0, 0, C
+clsSurfaceManDyn = 26, 26, 1389, 638, Z
 clsSurfaceManager = 0, 0, 0, 0, C
 clsSurfaceManStatic = 0, 0, 0, 0, C
 frmAbout = 0, 0, 0, 0, C, 154, 203, 675, 659, C

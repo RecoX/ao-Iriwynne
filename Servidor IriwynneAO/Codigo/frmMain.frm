@@ -70,7 +70,7 @@ Begin VB.Form frmMain
    End
    Begin VB.CommandButton cmdConfiguracion 
       BackColor       =   &H00FFC0C0&
-      Caption         =   "Configuración General"
+      Caption         =   "Configuraciï¿½n General"
       Height          =   375
       Left            =   120
       Style           =   1  'Graphical
@@ -86,7 +86,7 @@ Begin VB.Form frmMain
    End
    Begin VB.CommandButton cmdDump 
       BackColor       =   &H00FFC0C0&
-      Caption         =   "Crear Log Crítico de Usuarios"
+      Caption         =   "Crear Log Crï¿½tico de Usuarios"
       Height          =   375
       Left            =   120
       Style           =   1  'Graphical
@@ -226,7 +226,7 @@ Begin VB.Form frmMain
       AutoSize        =   -1  'True
       BackColor       =   &H00C0C0C0&
       BackStyle       =   0  'Transparent
-      Caption         =   "Número de usuarios jugando:"
+      Caption         =   "Nï¿½mero de usuarios jugando:"
       BeginProperty Font 
          Name            =   "Tahoma"
          Size            =   8.25
@@ -270,7 +270,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -292,10 +292,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -457,9 +457,9 @@ Private Sub AutoSave_Timer()
         MinsPjesSave = MinsPjesSave + 1
         MinutosLatsClean = MinutosLatsClean + 1
 
-        '¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+        'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
 1        Call ModAreas.AreasOptimizacion
-        '¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿
+        'ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½?ï¿½
 
         'Actualizamos el centinela
 2        Call modCentinela.PasarMinutoCentinela
@@ -580,8 +580,8 @@ End Sub
 
 Private Sub cmdCerrarServer_Click()
 
-        If MsgBox("¡¡Atencion!! Si cierra el servidor puede provocar la perdida de datos. " & _
-           "¿Desea hacerlo de todas maneras?", vbYesNo) = vbYes Then
+        If MsgBox("ï¿½ï¿½Atencion!! Si cierra el servidor puede provocar la perdida de datos. " & _
+           "ï¿½Desea hacerlo de todas maneras?", vbYesNo) = vbYes Then
         
                 Dim f
 
@@ -589,7 +589,7 @@ Private Sub cmdCerrarServer_Click()
 
                         Unload f
                 Next
-
+            End
         End If
 
 End Sub
@@ -761,7 +761,7 @@ Private Sub GameTimer_Timer()
 
                         'Conexion activa?
                         If .ConnID <> -1 Then
-                                '¿User valido?
+                                'ï¿½User valido?
                 
                                 If .ConnIDValida And .flags.UserLogged Then
                     
@@ -809,7 +809,7 @@ Private Sub GameTimer_Timer()
                                                 Call HambreYSed(iUserIndex, bEnviarAyS)
                         
                                                 If .flags.Hambre = 0 And .flags.Sed = 0 Then
-                                                        If Lloviendo And .pos.Map = 127 Or Lloviendo And .pos.Map = 128 And 1 = 2 Then
+                                                        If Lloviendo And .Pos.Map = 127 Or Lloviendo And .Pos.Map = 128 And 1 = 2 Then
                                                                 If Not Intemperie(iUserIndex) Then
                                                                         If Not .flags.Descansar Then
                                                                                 'No esta descansando
@@ -1037,7 +1037,7 @@ Private Sub TIMER_AI_Timer()
 
 4               If .flags.NPCActive Then    'Nos aseguramos que sea INTELIGENTE!
 
-                    ' Chequea si contiua teniendo dueño
+                    ' Chequea si contiua teniendo dueï¿½o
 5                   If .Owner > 0 Then Call ValidarPermanenciaNpc(NpcIndex)
 
 6                   If .flags.Paralizado = 1 Then
@@ -1045,7 +1045,7 @@ Private Sub TIMER_AI_Timer()
 8                   Else
 
                         ' Preto? Tienen ai especial
-9                       If .NPCtype = eNPCType.Pretoriano And Not .Name = "Ladrón Pretoriano" Then
+9                       If .NPCtype = eNPCType.Pretoriano And Not .Name = "Ladrï¿½n Pretoriano" Then
 10                          Call ClanPretoriano(.ClanIndex).PerformPretorianAI(NpcIndex)
 11                      Else
 
@@ -1055,7 +1055,7 @@ Private Sub TIMER_AI_Timer()
 
 14                          End If
 
-15                          Mapa = .pos.Map
+15                          Mapa = .Pos.Map
 
 16                          If Mapa > 0 Then
 17                              If MapInfo(Mapa).NumUsers > 0 Then
@@ -1084,7 +1084,7 @@ Private Sub TIMER_AI_Timer()
 
 ErrorHandler:
     Call LogError("Error en TIMER_AI_Timer " & Npclist(NpcIndex).Name & " mapa:" & _
-                  Npclist(NpcIndex).pos.Map & " - Linea: " & Erl)
+                  Npclist(NpcIndex).Pos.Map & " - Linea: " & Erl)
     Call MuereNpc(NpcIndex, 0)
 
 End Sub
@@ -1160,11 +1160,11 @@ Private Sub tPiqueteC_Timer()
                         ' @@ Miqueas - 07/11/15: Gms excluidos del piquete
                         If .flags.UserLogged Then
                         
-                                If InMapBounds(.pos.Map, .pos.X, .pos.Y) Then ' @@ Parche - 17/11/2015
-                                        If MapData(.pos.Map, .pos.X, .pos.Y).trigger = eTrigger.ANTIPIQUETE And .flags.Privilegios = User Then
+                                If InMapBounds(.Pos.Map, .Pos.X, .Pos.Y) Then ' @@ Parche - 17/11/2015
+                                        If MapData(.Pos.Map, .Pos.X, .Pos.Y).trigger = eTrigger.ANTIPIQUETE And .flags.Privilegios = User Then
                                                 If .flags.Muerto = 0 Then
                                                         .Counters.PiqueteC = .Counters.PiqueteC + 1
-                                                        Call WriteConsoleMsg(i, "¡¡¡Estás obstruyendo la vía pública, muévete o serás encarcelado!!!", FontTypeNames.FONTTYPE_INFO)
+                                                        Call WriteConsoleMsg(i, "ï¿½ï¿½ï¿½Estï¿½s obstruyendo la vï¿½a pï¿½blica, muï¿½vete o serï¿½s encarcelado!!!", FontTypeNames.FONTTYPE_INFO)
                         
                                                         If .Counters.PiqueteC > 23 Then
                                                                 .Counters.PiqueteC = 0

@@ -21,7 +21,7 @@ Public Sub PonerInvisible(ByVal UserIndex As Integer, ByVal estado As Boolean)
 
                 Dim EstadoActual As Boolean
 
-                ' Está invisible ?
+                ' Estï¿½ invisible ?
                 EstadoActual = (UserList(UserIndex).flags.invisible = 1)
 
                 'If EstadoActual <> Modo Then

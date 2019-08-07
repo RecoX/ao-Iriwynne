@@ -226,7 +226,7 @@ Public Function WndProc(ByVal hWnd As Long, _
                         Case FD_CLOSE
                                 Call apiclosesocket(s)
                 
-                                If UserList(n).ConnID <> -1 Then 'Si se cerró bien el socket en esta instancia ConnID tendría que ser -1
+                                If UserList(n).ConnID <> -1 Then 'Si se cerrï¿½ bien el socket en esta instancia ConnID tendrï¿½a que ser -1
                                         UserList(n).ConnID = -1
                                         UserList(n).ConnIDValida = False
                                         Call EventoSockClose(n)
@@ -242,7 +242,7 @@ Public Function WndProc(ByVal hWnd As Long, _
 
 End Function
 
-'Retorna 0 cuando se envió o se metio en la cola,
+'Retorna 0 cuando se enviï¿½ o se metio en la cola,
 'retorna <> 0 cuando no se pudo enviar o no se pudo meter en la cola
 Public Function WsApiEnviar(ByVal Slot As Integer, ByRef str As String) As Long
 
@@ -376,7 +376,7 @@ Public Sub EventoSockAccept(ByVal SockID As Long)
         '        ' We couldn't decide if to accept or reject the connection
         '        'Force reject so we can get it out of the queue
         '        ret = WSAAccept(SockID, sa, Tam, AddressOf CondicionSocket, 1)
-        '        Call LogCriticEvent("Error en WSAAccept() API 11002: No se pudo decidir si aceptar o rechazar la conexión.")
+        '        Call LogCriticEvent("Error en WSAAccept() API 11002: No se pudo decidir si aceptar o rechazar la conexiï¿½n.")
         '    Else
         '        i = Err.LastDllError
         '        Call LogCriticEvent("Error en WSAAccept() API " & i & ": " & GetWSAErrorString(i))
@@ -415,17 +415,17 @@ Public Sub EventoSockAccept(ByVal SockID As Long)
 
         End If
     
-        'Seteamos el tamaño del buffer de entrada
+        'Seteamos el tamaï¿½o del buffer de entrada
         If setsockopt(NuevoSock, SOL_SOCKET, SO_RCVBUFFER, SIZE_RCVBUF, 4) <> 0 Then
                 i = Err.LastDllError
-                Call LogCriticEvent("Error al setear el tamaño del buffer de entrada " & i & ": " & GetWSAErrorString(i))
+                Call LogCriticEvent("Error al setear el tamaï¿½o del buffer de entrada " & i & ": " & GetWSAErrorString(i))
 
         End If
 
-        'Seteamos el tamaño del buffer de salida
+        'Seteamos el tamaï¿½o del buffer de salida
         If setsockopt(NuevoSock, SOL_SOCKET, SO_SNDBUFFER, SIZE_SNDBUF, 4) <> 0 Then
                 i = Err.LastDllError
-                Call LogCriticEvent("Error al setear el tamaño del buffer de salida " & i & ": " & GetWSAErrorString(i))
+                Call LogCriticEvent("Error al setear el tamaï¿½o del buffer de salida " & i & ": " & GetWSAErrorString(i))
 
         End If
     
@@ -516,8 +516,8 @@ End Sub
 
 Public Sub EventoSockClose(ByVal Slot As Integer)
 
-        'Es el mismo user al que está revisando el centinela??
-        'Si estamos acá es porque se cerró la conexión, no es un /salir, y no queremos banearlo....
+        'Es el mismo user al que estï¿½ revisando el centinela??
+        'Si estamos acï¿½ es porque se cerrï¿½ la conexiï¿½n, no es un /salir, y no queremos banearlo....
         Dim CentinelaIndex As Byte
 
         CentinelaIndex = UserList(Slot).flags.CentinelaIndex
@@ -620,6 +620,6 @@ Public Function CondicionSocket(ByRef lpCallerId As WSABUF, _
 
         End If
 
-        CondicionSocket = CF_ACCEPT 'En realdiad es al pedo, porque CondicionSocket se inicializa a 0, pero así es más claro....
+        CondicionSocket = CF_ACCEPT 'En realdiad es al pedo, porque CondicionSocket se inicializa a 0, pero asï¿½ es mï¿½s claro....
 
 End Function

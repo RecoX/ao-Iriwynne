@@ -490,7 +490,7 @@ Option Explicit
 
 Private Sub cmd_start_Click()
  
-    If MsgBox("Si le das a 'SÍ', se borrará la otra lista", vbYesNo) = vbYes Then
+    If MsgBox("Si le das a 'Sï¿½', se borrarï¿½ la otra lista", vbYesNo) = vbYes Then
    
         List.AmountList = Val(txt_value.Text)
         
@@ -586,7 +586,7 @@ Private Sub Image1_Click()
 
 
     If Val(cMin.List(cMin.listIndex)) > Val(cMax.List(cMin.listIndex)) Then
-        MsgBox "No podes elegir un número minimo mayor al numero máximo.", vbOKOnly
+        MsgBox "No podes elegir un nï¿½mero minimo mayor al numero mï¿½ximo.", vbOKOnly
     End If
 
 

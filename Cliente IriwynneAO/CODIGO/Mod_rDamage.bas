@@ -7,8 +7,8 @@ Const DAMAGE_FONT_S As Byte = 20
  
 Enum EDType
 
-        edPuñal = 1                'Apuñalo.
-        edNormal = 2               'Hechizo o golpe común.
+        edPuï¿½al = 1                'Apuï¿½alo.
+        edNormal = 2               'Hechizo o golpe comï¿½n.
 
 End Enum
  
@@ -16,13 +16,13 @@ Private DNormalFont As New StdFont
  
 Type DList
 
-        DamageVal      As Integer     'Cantidad de daño.
+        DamageVal      As Integer     'Cantidad de daï¿½o.
         ColorRGB       As Long       'Color.
         DamageType     As EDType     'Tipo, se usa para saber si es apu o no.
         DamageFont     As New StdFont      'Efecto del apu.
         TimeRendered   As Integer    'Tiempo transcurrido.
         Downloading    As Byte       'Contador para la posicion Y.
-        Activated      As Boolean    'Si está activado..
+        Activated      As Boolean    'Si estï¿½ activado..
         lastUpdated    As Long
 
 End Type
@@ -48,7 +48,7 @@ Sub Create(ByVal X As Byte, _
            ByVal DamageValue As Integer, _
            ByVal edMode As Byte)
  
-        ' @ Agrega un nuevo daño.
+        ' @ Agrega un nuevo daï¿½o.
         If InMapBounds(X, Y) Then ' @@ Miqueas : Por si las dudas, nunca sabemos cuando va a explotar todo
 
                 With MapData(X, Y).Damage
@@ -60,7 +60,7 @@ Sub Create(ByVal X As Byte, _
                         .TimeRendered = 0
                         .Downloading = 0
      
-                        If .DamageType = EDType.edPuñal Then
+                        If .DamageType = EDType.edPuï¿½al Then
 
                                 With .DamageFont
                                         .size = DAMAGE_FONT_S
@@ -91,7 +91,7 @@ Sub Draw(ByVal X As Byte, _
          ByVal PixelX As Integer, _
          ByVal PixelY As Integer)
  
-        ' @ Dibuja un daño
+        ' @ Dibuja un daï¿½o
  
         With MapData(X, Y).Damage
      
@@ -124,7 +124,7 @@ Sub Draw(ByVal X As Byte, _
                         .ColorRGB = ModifyColour(.TimeRendered, .DamageType)
            
                         'Efectito para el apu :P
-                        'If .DamageType = EDType.edPuñal Then
+                        'If .DamageType = EDType.edPuï¿½al Then
                         '        .DamageFont.size = NewSize(.TimeRendered)
                         'End If
                         
@@ -189,7 +189,7 @@ Function ModifyColour(ByVal TimeNowRendered As Byte, ByVal DamageType As Byte) A
  
         Select Case DamageType
                    
-                Case EDType.edPuñal
+                Case EDType.edPuï¿½al
                         ModifyColour = RGB(200, 200, 11)
                    
                 Case EDType.edNormal

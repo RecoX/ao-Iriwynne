@@ -129,7 +129,7 @@ Private Sub Image1_Click()
 If EnProceso Then Exit Sub
 Call addConsole("Conectando...", 255, 255, 0, True, True) '>> Informacion
 'EnProceso = True
-'Analizar 'Iniciamos la función Analizar =).
+'Analizar 'Iniciamos la funciï¿½n Analizar =).
 
 Call Main
 
@@ -171,13 +171,13 @@ Function Analizar()
     On Error GoTo noanda
     
     Call addConsole("Accediendo al AutoUpdater.", 255, 255, 255, True, False)
-    'LINK1            'Variable que contiene el numero de actualización correcto del servidor
+    'LINK1            'Variable que contiene el numero de actualizaciï¿½n correcto del servidor
     ix = Inet1.OpenURL("http://iriwynneupdater.ucoz.es/VEREXE.txt")
     Call addConsole("Listo.", 1, 255, 1, True, False)
     
     If ix < tx Then
         Call GuardarInt(App.path & "/INIT/Update.ini", "0")
-        Call addConsole("Se resetearon las actualizaciones, se repetirá el proceso!", 255, 1, 1, True, False)
+        Call addConsole("Se resetearon las actualizaciones, se repetirï¿½ el proceso!", 255, 1, 1, True, False)
         ix = 0
         tx = 0
         Analizar
@@ -189,7 +189,7 @@ Function Analizar()
     
 noanda:
     MiError = Err.number & " " & Err.Description & " - " & Err.Source
-    Call addConsole("El autoupdater tiró error : " & MiError, 255, 255, 255, True, False)
+    Call addConsole("El autoupdater tirï¿½ error : " & MiError, 255, 255, 255, True, False)
     Err.Clear
     ix = tx
 GoTo 99
@@ -198,7 +198,7 @@ GoTo 99
   On Error GoTo avisar
 
     Label1.Caption = ix
-    'Variable que contiene el numero de actualización del cliente
+    'Variable que contiene el numero de actualizaciï¿½n del cliente
     'Variable con la diferencia de actualizaciones servidor-cliente
     DifX = ix - tx
 
@@ -211,7 +211,7 @@ GoTo 99
 
     EnProceso = False
 
-    Call addConsole("El cliente ya está listo para jugar", 255, 255, 255, True, True)  '>> Informacion
+    Call addConsole("El cliente ya estï¿½ listo para jugar", 255, 255, 255, True, True)  '>> Informacion
 
 
     
@@ -245,7 +245,7 @@ End Function
             Close #1
            
             'Informacion
-            Call addConsole("   Instalando actualización.", 0, 100, 255, False, False)    '>> Informacion
+            Call addConsole("   Instalando actualizaciï¿½n.", 0, 100, 255, False, False)    '>> Informacion
            
             sRGY.Picture = sY.Picture
            

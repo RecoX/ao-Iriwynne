@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form frmQuestInfo 
    BackColor       =   &H00000000&
    BorderStyle     =   0  'None
-   Caption         =   "Información de la misión"
+   Caption         =   "Informaciï¿½n de la misiï¿½n"
    ClientHeight    =   2895
    ClientLeft      =   0
    ClientTop       =   -45

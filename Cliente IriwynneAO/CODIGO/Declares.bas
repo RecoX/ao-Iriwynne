@@ -69,7 +69,7 @@ Public Canjes(1 To 100)                           As Canjeo
 
 Public ColoresPJ(0 To 50)                         As Long
 
-'Objetos públicos
+'Objetos pï¿½blicos
 Public DialogosClanes                             As clsGuildDlg
 
 Public Dialogos                                   As clsDialogs
@@ -286,14 +286,14 @@ Public Const FOgata                  As Integer = 1521
 Public Enum eClass
 
         Mage = 1    'Mago
-        Cleric      'Clérigo
+        Cleric      'Clï¿½rigo
         Warrior     'Guerrero
         Assasin     'Asesino
-        Thief       'Ladrón
+        Thief       'Ladrï¿½n
         Bard        'Bardo
         Druid       'Druida
         Bandit      'Bandido
-        Paladin     'Paladín
+        Paladin     'Paladï¿½n
         Hunter      'Cazador
         Worker      'Trabajador
         Pirat       'Pirata
@@ -327,7 +327,7 @@ Public Enum eSkill
         Tacticas = 3
         Armas = 4
         Meditar = 5
-        Apuñalar = 6
+        Apuï¿½alar = 6
         Ocultarse = 7
         Supervivencia = 8
         Talar = 9
@@ -389,7 +389,7 @@ Public Enum eObjType
         otForos = 10
         otPociones = 11
         otBebidas = 13
-        otLeña = 14
+        otLeï¿½a = 14
         otFogata = 15
         otescudo = 16
         otcasco = 17
@@ -430,52 +430,52 @@ End Enum
 ' MENSAJE_*  --> Mensajes de texto que se muestran en el cuadro de texto
 '
 
-Public Const MENSAJE_CRIATURA_FALLA_GOLPE              As String = "¡¡¡La criatura falló el golpe!!!"
+Public Const MENSAJE_CRIATURA_FALLA_GOLPE              As String = "ï¿½ï¿½ï¿½La criatura fallï¿½ el golpe!!!"
 
-Public Const MENSAJE_CRIATURA_MATADO                   As String = "¡¡¡La criatura te ha matado!!!"
+Public Const MENSAJE_CRIATURA_MATADO                   As String = "ï¿½ï¿½ï¿½La criatura te ha matado!!!"
 
-Public Const MENSAJE_RECHAZO_ATAQUE_ESCUDO             As String = "¡¡¡Has rechazado el ataque con el escudo!!!"
+Public Const MENSAJE_RECHAZO_ATAQUE_ESCUDO             As String = "ï¿½ï¿½ï¿½Has rechazado el ataque con el escudo!!!"
 
-Public Const MENSAJE_USUARIO_RECHAZO_ATAQUE_ESCUDO     As String = "¡¡¡El usuario rechazó el ataque con su escudo!!!"
+Public Const MENSAJE_USUARIO_RECHAZO_ATAQUE_ESCUDO     As String = "ï¿½ï¿½ï¿½El usuario rechazï¿½ el ataque con su escudo!!!"
 
-Public Const MENSAJE_FALLADO_GOLPE                     As String = "¡¡¡Has fallado el golpe!!!"
+Public Const MENSAJE_FALLADO_GOLPE                     As String = "ï¿½ï¿½ï¿½Has fallado el golpe!!!"
 
 Public Const MENSAJE_SEGURO_ACTIVADO                   As String = ">>SEGURO ACTIVADO<<"
 
 Public Const MENSAJE_SEGURO_DESACTIVADO                As String = ">>SEGURO DESACTIVADO<<"
 
-Public Const MENSAJE_PIERDE_NOBLEZA                    As String = "¡¡Has perdido puntaje de nobleza y ganado puntaje de criminalidad!! Si sigues ayudando a criminales te convertirás en uno de ellos y serás perseguido por las tropas de las ciudades."
+Public Const MENSAJE_PIERDE_NOBLEZA                    As String = "ï¿½ï¿½Has perdido puntaje de nobleza y ganado puntaje de criminalidad!! Si sigues ayudando a criminales te convertirï¿½s en uno de ellos y serï¿½s perseguido por las tropas de las ciudades."
 
-Public Const MENSAJE_USAR_MEDITANDO                    As String = "¡Estás meditando! Debes dejar de meditar para usar objetos."
+Public Const MENSAJE_USAR_MEDITANDO                    As String = "ï¿½Estï¿½s meditando! Debes dejar de meditar para usar objetos."
 
 Public Const MENSAJE_SEGURO_RESU_ON                    As String = "SEGURO DE RESURRECCION ACTIVADO"
 
 Public Const MENSAJE_SEGURO_RESU_OFF                   As String = "SEGURO DE RESURRECCION DESACTIVADO"
 
-Public Const MENSAJE_GOLPE_CABEZA                      As String = "¡¡La criatura te ha pegado en la cabeza por "
+Public Const MENSAJE_GOLPE_CABEZA                      As String = "ï¿½ï¿½La criatura te ha pegado en la cabeza por "
 
-Public Const MENSAJE_GOLPE_BRAZO_IZQ                   As String = "¡¡La criatura te ha pegado el brazo izquierdo por "
+Public Const MENSAJE_GOLPE_BRAZO_IZQ                   As String = "ï¿½ï¿½La criatura te ha pegado el brazo izquierdo por "
 
-Public Const MENSAJE_GOLPE_BRAZO_DER                   As String = "¡¡La criatura te ha pegado el brazo derecho por "
+Public Const MENSAJE_GOLPE_BRAZO_DER                   As String = "ï¿½ï¿½La criatura te ha pegado el brazo derecho por "
 
-Public Const MENSAJE_GOLPE_PIERNA_IZQ                  As String = "¡¡La criatura te ha pegado la pierna izquierda por "
+Public Const MENSAJE_GOLPE_PIERNA_IZQ                  As String = "ï¿½ï¿½La criatura te ha pegado la pierna izquierda por "
 
-Public Const MENSAJE_GOLPE_PIERNA_DER                  As String = "¡¡La criatura te ha pegado la pierna derecha por "
+Public Const MENSAJE_GOLPE_PIERNA_DER                  As String = "ï¿½ï¿½La criatura te ha pegado la pierna derecha por "
 
-Public Const MENSAJE_GOLPE_TORSO                       As String = "¡¡La criatura te ha pegado en el torso por "
+Public Const MENSAJE_GOLPE_TORSO                       As String = "ï¿½ï¿½La criatura te ha pegado en el torso por "
 
 ' MENSAJE_[12]: Aparecen antes y despues del valor de los mensajes anteriores (MENSAJE_GOLPE_*)
-Public Const MENSAJE_1                                 As String = "¡¡"
+Public Const MENSAJE_1                                 As String = "ï¿½ï¿½"
 
 Public Const MENSAJE_2                                 As String = "!!"
 
-Public Const MENSAJE_11                                As String = "¡"
+Public Const MENSAJE_11                                As String = "ï¿½"
 
 Public Const MENSAJE_22                                As String = "!"
 
-Public Const MENSAJE_GOLPE_CRIATURA_1                  As String = "¡¡Le has pegado a la criatura por "
+Public Const MENSAJE_GOLPE_CRIATURA_1                  As String = "ï¿½ï¿½Le has pegado a la criatura por "
 
-Public Const MENSAJE_ATAQUE_FALLO                      As String = " te atacó y falló!!"
+Public Const MENSAJE_ATAQUE_FALLO                      As String = " te atacï¿½ y fallï¿½!!"
 
 Public Const MENSAJE_RECIVE_IMPACTO_CABEZA             As String = " te ha pegado en la cabeza por "
 
@@ -489,7 +489,7 @@ Public Const MENSAJE_RECIVE_IMPACTO_PIERNA_DER         As String = " te ha pegad
 
 Public Const MENSAJE_RECIVE_IMPACTO_TORSO              As String = " te ha pegado en el torso por "
 
-Public Const MENSAJE_PRODUCE_IMPACTO_1                 As String = "¡¡Le has pegado a "
+Public Const MENSAJE_PRODUCE_IMPACTO_1                 As String = "ï¿½ï¿½Le has pegado a "
 
 Public Const MENSAJE_PRODUCE_IMPACTO_CABEZA            As String = " en la cabeza por "
 
@@ -507,9 +507,9 @@ Public Const MENSAJE_TRABAJO_MAGIA                     As String = "Haz click so
 
 Public Const MENSAJE_TRABAJO_PESCA                     As String = "Haz click sobre el sitio donde quieres pescar..."
 
-Public Const MENSAJE_TRABAJO_ROBAR                     As String = "Haz click sobre la víctima..."
+Public Const MENSAJE_TRABAJO_ROBAR                     As String = "Haz click sobre la vï¿½ctima..."
 
-Public Const MENSAJE_TRABAJO_TALAR                     As String = "Haz click sobre el árbol..."
+Public Const MENSAJE_TRABAJO_TALAR                     As String = "Haz click sobre el ï¿½rbol..."
 
 Public Const MENSAJE_TRABAJO_MINERIA                   As String = "Haz click sobre el yacimiento..."
 
@@ -860,7 +860,7 @@ End Enum
 ' @param ZONASEGURA no se puede robar o pelear desde este trigger
 ' @param ANTIPIQUETE
 ' @param ZONAPELEA al pelear en este trigger no se caen las cosas y no cambia el estado de ciuda o crimi
-' @param ZONAOSCURA lo que haya en este trigger no será visible
+' @param ZONAOSCURA lo que haya en este trigger no serï¿½ visible
 ' @param CASA todo lo que tenga este trigger forma parte de una casa
 '
 Public Enum eTrigger
@@ -1078,5 +1078,5 @@ End Enum
 
 Public Const MP3_INITIAL_INDEX     As Integer = 1000
 
-'Modificador de defensa para armaduras de segunda jerarquía.
+'Modificador de defensa para armaduras de segunda jerarquï¿½a.
 Public Const MOD_DEF_SEG_JERARQUIA As Single = 1.25

@@ -92,7 +92,7 @@ Public Function MiExperiencia(ByVal UserIndex As Integer) As Long
         'Last Modification By: Budi
         ' - 09/29/07 Experience is round to the biggest number less than that number
         ' - 09/29/07 Now experience is a real-number
-        ' - 11/27/09 Arreglé el Out of Range.
+        ' - 11/27/09 Arreglï¿½ el Out of Range.
         '***************************************************
         'Me dice cuanta experiencia tengo colectada ya en la party
         Dim i As Integer
@@ -175,7 +175,7 @@ End Sub
 
 Public Sub MandarMensajeAConsola(ByVal texto As String, ByVal Sender As String)
         'feo feo, muy feo acceder a senddata desde aca, pero BUEEEEEEEEEEE...
-        'CHOTS: Más que "FEO" diría "DESAGRADABLEMENTE FEO"
+        'CHOTS: Mï¿½s que "FEO" dirï¿½a "DESAGRADABLEMENTE FEO"
 
         Dim i As Integer
 
@@ -255,7 +255,7 @@ Public Function SaleMiembro(ByVal UserIndex As Integer) As Boolean
         If i = 1 Then
                 'sale el founder, la party se disuelve
                 SaleMiembro = True
-                Call MandarMensajeAConsola("El líder disuelve la party.", "Servidor")
+                Call MandarMensajeAConsola("El lï¿½der disuelve la party.", "Servidor")
         
                 For j = PARTY_MAXMEMBERS To 1 Step -1
             
@@ -370,7 +370,7 @@ Public Function HacerLeader(ByVal UserIndex As Integer) As Boolean
         If UserIndexIndex = 0 Then
                 'catastrofe! esto no deberia pasar nunca! pero como es AO.... :p
                 Call LogError("INCONSISTENCIA DE PARTIES")
-                Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("¡¡¡Inconsistencia de parties en HACERLEADER (UII = 0), AVISE A UN PROGRAMADOR ESTO ES UNA CATASTROFE!!!!", FontTypeNames.FONTTYPE_GUILD))
+                Call SendData(SendTarget.ToAdmins, 0, PrepareMessageConsoleMsg("ï¿½ï¿½ï¿½Inconsistencia de parties en HACERLEADER (UII = 0), AVISE A UN PROGRAMADOR ESTO ES UNA CATASTROFE!!!!", FontTypeNames.FONTTYPE_GUILD))
                 HacerLeader = False
                 Exit Function
 
@@ -399,7 +399,7 @@ Public Sub ObtenerMiembrosOnline(ByRef MemberList() As Integer)
         ' - 09/29/07 Experience is round to the biggest number less than that number
         ' - 09/29/07 Now experience is a real-number (Tavo)
         ' - 08/18/08 Now TotalExperience is fixed (MarKoxX)
-        ' - 11/27/09 Rehice la función, ahora devuelve el array con los UI online (Budi)
+        ' - 11/27/09 Rehice la funciï¿½n, ahora devuelve el array con los UI online (Budi)
         '***************************************************
 
         Dim i As Integer
@@ -465,28 +465,28 @@ Public Function PuedeEntrar(ByVal UserIndex As Integer, ByRef razon As String) A
                                 'aspirante armada en party crimi
                                 If UI > 0 Then
                                         If esArmada And criminal(UI) Then
-                                                razon = "Los miembros del ejército real no entran a una party con criminales."
+                                                razon = "Los miembros del ejï¿½rcito real no entran a una party con criminales."
                                                 rv = False
 
                                         End If
 
                                         'aspirante caos en party ciuda
                                         If esCaos And Not criminal(UI) Then
-                                                razon = "Los miembros de la legión oscura no entran a una party con ciudadanos."
+                                                razon = "Los miembros de la legiï¿½n oscura no entran a una party con ciudadanos."
                                                 rv = False
 
                                         End If
 
                                         'aspirante crimi en party armada
                                         If UserList(UI).Faccion.ArmadaReal = 1 And criminal(UserIndex) Then
-                                                razon = "Los criminales no entran a parties con miembros del ejército real."
+                                                razon = "Los criminales no entran a parties con miembros del ejï¿½rcito real."
                                                 rv = False
 
                                         End If
 
                                         'aspirante ciuda en party caos
                                         If UserList(UI).Faccion.FuerzasCaos = 1 And Not criminal(UserIndex) Then
-                                                razon = "Los ciudadanos no entran a parties con miembros de la legión oscura."
+                                                razon = "Los ciudadanos no entran a parties con miembros de la legiï¿½n oscura."
                                                 rv = False
 
                                         End If
@@ -503,7 +503,7 @@ Public Function PuedeEntrar(ByVal UserIndex As Integer, ByRef razon As String) A
                 End If
 
         Else
-                '¿Con o sin nombre?
+                'ï¿½Con o sin nombre?
                 razon = "El usuario " & UserList(UserIndex).Name & " se encuentra muy lejos."
 
         End If

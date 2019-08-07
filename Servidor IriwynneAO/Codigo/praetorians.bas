@@ -43,7 +43,7 @@ Public Const SONIDO_DRAGON_VIVO As Integer = 30
 
 '''ALCOBAS REALES
 '''OJO LOS BICHOS TAN HARDCODEADOS, NO CAMBIAR EL MAPA DONDE
-'''ESTÁN UBICADOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+'''ESTï¿½N UBICADOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 '''MUCHO MENOS LA COORDENADA Y DE LAS ALCOBAS YA QUE DEBE SER LA MISMA!!!
 '''(HAY FUNCIONES Q CUENTAN CON QUE ES LA MISMA!)
 'Public Const ALCOBA1_X As Integer = 35
@@ -281,10 +281,10 @@ End Sub
 '        End If
 '    End If
 '
-'    ''ya limpié el lugar para el rey (wp)
+'    ''ya limpiï¿½ el lugar para el rey (wp)
 '    ''Los otros no necesitan este caso ya que respawnan lejos
 '
-'    'Busco la posicion legal mas cercana aca, aun que creo que tendría que ir en el crearnpc. (NicoNZ)
+'    'Busco la posicion legal mas cercana aca, aun que creo que tendrï¿½a que ir en el crearnpc. (NicoNZ)
 '
 '    ' REY
 '    Call ClosestLegalPos(wp, wp2, False, True)
@@ -409,7 +409,7 @@ End Sub
 '                    If e_p > 0 And e_p < 6 And (Not (NPCAlInd = npcind)) Then
 '                        hayPretorianos = True
 '
-'                        'Me curo mientras haya pretorianos (no es lo ideal, debería no dar experiencia tampoco, pero por ahora es lo que hay)
+'                        'Me curo mientras haya pretorianos (no es lo ideal, deberï¿½a no dar experiencia tampoco, pero por ahora es lo que hay)
 '                        Npclist(npcind).Stats.MinHp = Npclist(npcind).Stats.MaxHp
 '                    End If
 '
@@ -689,14 +689,14 @@ End Sub
 '                        End If  ''endif paralizado
 '                    End If  ''end if not muerto
 '                End If  ''listo el analisis del tile
-'            End If  ''saltea el analisis si no puede atacar, en realidad no es lo "mejor" pero evita cuentas inútiles
+'            End If  ''saltea el analisis si no puede atacar, en realidad no es lo "mejor" pero evita cuentas inï¿½tiles
 '        Next Y
 '    Next X
 '
 '    ''aqui (si llego) tiene el mejor target
 '    Select Case quehacer
 '    Case 0
-'        ''nada que hacer. Buscar mas alla del campo de visión algun aliado, a menos
+'        ''nada que hacer. Buscar mas alla del campo de visiï¿½n algun aliado, a menos
 '        ''que este paralizado pq no puedo ir
 '        If Npclist(npcind).flags.Paralizado = 1 Then Exit Sub
 '
@@ -704,7 +704,7 @@ End Sub
 '
 '        If NPCPosX < 50 Then centroX = ALCOBA1_X Else centroX = ALCOBA2_X
 '        centroY = ALCOBA1_Y
-'        ''aca establecí el lugar de las alcobas
+'        ''aca establecï¿½ el lugar de las alcobas
 '
 '        ''Este doble for busca amigos paralizados lejos para ir a rescatarlos
 '        ''Entra aca solo si en el area cercana al rey no hay algo mejor que

@@ -126,7 +126,7 @@ Public Sub AddObs(ByVal UserIndex As Integer, _
         '**************************************************************
         'Author: Amraphen
         'Last Modify Date: 29/11/2010
-        'Agrega una observación.
+        'Agrega una observaciï¿½n.
         '**************************************************************
         With Records(RecordIndex)
                 .NumObs = .NumObs + 1

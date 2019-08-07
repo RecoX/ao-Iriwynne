@@ -398,14 +398,14 @@ Private Sub PicBancoInv_Click()
                         Select Case .ObjType
 
                                 Case 2, 32
-                                        Label1(1).Caption = "Máx Golpe:" & .MaxHit
-                                        Label1(2).Caption = "Mín Golpe:" & .MinHit
+                                        Label1(1).Caption = "Mï¿½x Golpe:" & .MaxHit
+                                        Label1(2).Caption = "Mï¿½n Golpe:" & .MinHit
                                         Label1(1).Visible = True
                                         Label1(2).Visible = True
                     
                                 Case 3, 16, 17
-                                        Label1(1).Caption = "Máx Defensa:" & .MaxDef
-                                        Label1(2).Caption = "Mín Defensa:" & .MinDef
+                                        Label1(1).Caption = "Mï¿½x Defensa:" & .MaxDef
+                                        Label1(2).Caption = "Mï¿½n Defensa:" & .MinDef
                                         Label1(1).Visible = True
                                         Label1(2).Visible = True
                     
@@ -444,14 +444,14 @@ Private Sub PicInv_Click()
                         Select Case .ObjType(InvBanco(1).SelectedItem)
 
                                 Case eObjType.otWeapon, eObjType.otFlechas
-                                        Label1(1).Caption = "Máx Golpe:" & .MaxHit(InvBanco(1).SelectedItem)
-                                        Label1(2).Caption = "Mín Golpe:" & .MinHit(InvBanco(1).SelectedItem)
+                                        Label1(1).Caption = "Mï¿½x Golpe:" & .MaxHit(InvBanco(1).SelectedItem)
+                                        Label1(2).Caption = "Mï¿½n Golpe:" & .MinHit(InvBanco(1).SelectedItem)
                                         Label1(1).Visible = True
                                         Label1(2).Visible = True
                     
                                 Case eObjType.otcasco, eObjType.otArmadura, eObjType.otescudo ' 3, 16, 17
-                                        Label1(1).Caption = "Máx Defensa:" & .MaxDef(InvBanco(1).SelectedItem)
-                                        Label1(2).Caption = "Mín Defensa:" & .MinDef(InvBanco(1).SelectedItem)
+                                        Label1(1).Caption = "Mï¿½x Defensa:" & .MaxDef(InvBanco(1).SelectedItem)
+                                        Label1(2).Caption = "Mï¿½n Defensa:" & .MinDef(InvBanco(1).SelectedItem)
                                         Label1(1).Visible = True
                                         Label1(2).Visible = True
                     

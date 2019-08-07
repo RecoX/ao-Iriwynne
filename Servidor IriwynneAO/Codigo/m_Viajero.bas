@@ -41,7 +41,7 @@ Public Function MeterNPCViajero()
 
 MeterNPCViajero_Error:
 
-30  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure MeterNPCViajero of Módulo m_viajero" & Erl & ".")
+30  Call LogError("Error " & Err.Number & " (" & Err.description & ") in procedure MeterNPCViajero of Mï¿½dulo m_viajero" & Erl & ".")
 
 End Function
 

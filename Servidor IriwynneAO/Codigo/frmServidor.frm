@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmServidor 
    BackColor       =   &H00FFC0C0&
-   Caption         =   "Configuración del Servidor"
+   Caption         =   "Configuraciï¿½n del Servidor"
    ClientHeight    =   7005
    ClientLeft      =   60
    ClientTop       =   345
@@ -34,7 +34,7 @@ Begin VB.Form frmServidor
    End
    Begin VB.Frame Frame3 
       BackColor       =   &H00FFC0C0&
-      Caption         =   "Administración"
+      Caption         =   "Administraciï¿½n"
       Height          =   2415
       Left            =   120
       TabIndex        =   16
@@ -102,7 +102,7 @@ Begin VB.Form frmServidor
       End
       Begin VB.CommandButton frmAdministracion 
          BackColor       =   &H00FFC0C0&
-         Caption         =   "Administración"
+         Caption         =   "Administraciï¿½n"
          Height          =   375
          Left            =   2280
          Style           =   1  'Graphical
@@ -132,7 +132,7 @@ Begin VB.Form frmServidor
       End
       Begin VB.CommandButton cmdVerTrafico 
          BackColor       =   &H00FFC0C0&
-         Caption         =   "Tráfico"
+         Caption         =   "Trï¿½fico"
          Height          =   375
          Left            =   2280
          Style           =   1  'Graphical
@@ -386,9 +386,9 @@ End Sub
 
 Private Sub cmdApagarServer_Click()
     
- On Error GoTo errhandler
+ On Error GoTo errhandleR
  
-        If MsgBox("¿Está seguro que desea hacer WorldSave, guardar pjs y cerrar?", vbYesNo, _
+        If MsgBox("ï¿½Estï¿½ seguro que desea hacer WorldSave, guardar pjs y cerrar?", vbYesNo, _
            "Apagar Magicamente") = vbNo Then Exit Sub
     
         Me.MousePointer = 11
@@ -406,10 +406,11 @@ Private Sub cmdApagarServer_Click()
     
         'Chauuu
 5        Unload frmMain
+         End
 
 Exit Sub
 
-errhandler:
+errhandleR:
 
     MsgBox "ERROR EN LINEA " & Erl
     
@@ -553,8 +554,8 @@ End Sub
 
 Private Sub cmdReiniciar_Click()
 
-        If MsgBox("¡¡Atencion!! Si reinicia el servidor puede provocar la pérdida de datos de los usarios. " & _
-           "¿Desea reiniciar el servidor de todas maneras?", vbYesNo) = vbNo Then Exit Sub
+        If MsgBox("ï¿½ï¿½Atencion!! Si reinicia el servidor puede provocar la pï¿½rdida de datos de los usarios. " & _
+           "ï¿½Desea reiniciar el servidor de todas maneras?", vbYesNo) = vbNo Then Exit Sub
     
         Me.Visible = False
         Call General.Restart
@@ -573,7 +574,7 @@ End Sub
 
 Private Sub cmdResetSockets_Click()
 
-        If MsgBox("¿Está seguro que desea reiniciar los sockets? Se cerrarán todas las conexiones activas.", vbYesNo, "Reiniciar Sockets") = vbYes Then
+        If MsgBox("ï¿½Estï¿½ seguro que desea reiniciar los sockets? Se cerrarï¿½n todas las conexiones activas.", vbYesNo, "Reiniciar Sockets") = vbYes Then
                 Call WSApiReiniciarSockets
 
         End If
@@ -597,7 +598,7 @@ Private Sub cmdUnbanAll_Click()
     
         Dim sENtrada As String
     
-        sENtrada = InputBox("Escribe ""estoy DE acuerdo"" entre comillas y con distinción de mayúsculas minúsculas para desbanear a todos los personajes.", "UnBan", "hola")
+        sENtrada = InputBox("Escribe ""estoy DE acuerdo"" entre comillas y con distinciï¿½n de mayï¿½sculas minï¿½sculas para desbanear a todos los personajes.", "UnBan", "hola")
 
         If sENtrada = "estoy DE acuerdo" Then
     
@@ -629,7 +630,7 @@ Private Sub cmdUnbanAllIps_Click()
     
         Dim sENtrada As String
     
-        sENtrada = InputBox("Escribe ""estoy DE acuerdo"" sin comillas y con distinción de mayúsculas minúsculas para desbanear a todos los personajes", "UnBan", "hola")
+        sENtrada = InputBox("Escribe ""estoy DE acuerdo"" sin comillas y con distinciï¿½n de mayï¿½sculas minï¿½sculas para desbanear a todos los personajes", "UnBan", "hola")
 
         If sENtrada = "estoy DE acuerdo" Then
         
@@ -652,7 +653,7 @@ End Sub
 
 Private Sub cmdWorldBackup_Click()
 
-        On Error GoTo errhandler
+        On Error GoTo errhandleR
 
         Me.MousePointer = 11
         FrmStat.Show
@@ -662,7 +663,7 @@ Private Sub cmdWorldBackup_Click()
     
         Exit Sub
 
-errhandler:
+errhandleR:
         Call LogError("Error en WORLDSAVE")
 
 End Sub

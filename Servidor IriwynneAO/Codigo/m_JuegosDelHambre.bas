@@ -34,8 +34,8 @@ Private Const ARENA_Y As Byte = 50   'Y de la arena.
 
 'Private Const TIEMPO_AUTOCANCEL As Byte = 120     '2 Minutos antes del auto-cancel.
 
-Private Const Cofre_Abierto As Byte = 10    'Número de cofre abierto.
-Public Cofre_Cerrado As Integer    'Número de cofre cerrado.
+Private Const Cofre_Abierto As Byte = 10    'Nï¿½mero de cofre abierto.
+Public Cofre_Cerrado As Integer    'Nï¿½mero de cofre cerrado.
 
 Private Const TAG_EVENT As String = "Juegos del Hambre>"
 
@@ -179,12 +179,12 @@ Sub CancelarJDH(Optional ByVal AutoCancel As Boolean = False)
         'Hay usuario?
         If uIndex <> -1 Then
 
-            'Está logeado?
+            'Estï¿½ logeado?
             If UserList(uIndex).ConnID <> -1 Then
-                'Está en jdh?
+                'Estï¿½ en jdh?
                 If UserList(uIndex).EnJDH Then
 
-                    'Telep to anterior posición.
+                    'Telep to anterior posiciï¿½n.
                     Call AnteriorPos(uIndex, UPos)
 
                     'Desparalizamos los pts
@@ -205,7 +205,7 @@ Sub CancelarJDH(Optional ByVal AutoCancel As Boolean = False)
                         UserList(uIndex).Stats.GLD = UserList(uIndex).Stats.GLD + JDH.Inscripcion
                         Call WriteUpdateGold(uIndex)
 
-                        Call WriteConsoleMsgNew(uIndex, TAG_EVENT, "El evento ha sido " & IIf(AutoCancel = True, "auto", "") & "cancelado, se te ha devuelto el costo de la inscripción.")
+                        Call WriteConsoleMsgNew(uIndex, TAG_EVENT, "El evento ha sido " & IIf(AutoCancel = True, "auto", "") & "cancelado, se te ha devuelto el costo de la inscripciï¿½n.")
 
                     End If
 
@@ -256,7 +256,7 @@ On Error GoTo errhandleR
 16        Next LoopX
 
             'Avisa al mundo.
-17          Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "Cantidad de cupos: " & .Cupos & ". Inscripción" & IIf(.Inscripcion > 0, " de: " & .Inscripcion & " Monedas de oro, ", " Gratis, ") & IIf(.Premio > 0, "Premio de: " & .Premio & " Monedas de oro.", " No hay premio.")))
+17          Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "Cantidad de cupos: " & .Cupos & ". Inscripciï¿½n" & IIf(.Inscripcion > 0, " de: " & .Inscripcion & " Monedas de oro, ", " Gratis, ") & IIf(.Premio > 0, "Premio de: " & .Premio & " Monedas de oro.", " No hay premio.")))
             Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "Para participar escribe /JDH, recuerda que debes tener el inventario vacio! Mucha suerte!"))
 
 18        Call ReCargar_Cofres
@@ -300,7 +300,7 @@ Sub ActivarNuevoJDH2(ByVal Cupos As Byte)
         Next LoopX
 
         'Avisa al mundo.
-        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, .Cupos & " Cupos, Inscripción" & IIf(.Inscripcion > 0, " de: " & .Inscripcion & " Monedas de oro, ", " Gratis, ") & IIf(.Premio > 0, "Premio de: " & .Premio & " Monedas de oro.", " No hay premio.") & vbNewLine & "Manden /JDH si desean participar."))
+        Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, .Cupos & " Cupos, Inscripciï¿½n" & IIf(.Inscripcion > 0, " de: " & .Inscripcion & " Monedas de oro, ", " Gratis, ") & IIf(.Premio > 0, "Premio de: " & .Premio & " Monedas de oro.", " No hay premio.") & vbNewLine & "Manden /JDH si desean participar."))
 
         Call ReCargar_Cofres
 
@@ -361,7 +361,7 @@ Sub IngresarJDH(ByVal UserIndex As Integer)
         ' @@ Lleno el cupo?
         If .Ingresaron >= .Cupos Then
 
-            ' @@ Aviso que llenó el cupo
+            ' @@ Aviso que llenï¿½ el cupo
             Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "El cupo ha sido completado!"))
 
             ' @@ Doy inicio
@@ -379,7 +379,7 @@ Sub NoCancelAndInitialize()
 
         .Cupos = .Ingresaron
 
-        ' @@ Aviso que llenó el cupo
+        ' @@ Aviso que llenï¿½ el cupo
         Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "El cupo ha sido completado!"))
 
         ' @@ Doy inicio
@@ -433,7 +433,7 @@ Sub Iniciar()
         For LoopX = 1 To UBound(.UsUaRiOs())
             'Hay usuario?
             If .UsUaRiOs(LoopX).UserIndex <> -1 Then
-                'Está logeado?
+                'Estï¿½ logeado?
                 If UserList(.UsUaRiOs(LoopX).UserIndex).ConnID <> -1 Then
                     Call WriteConsoleMsgNew(.UsUaRiOs(LoopX).UserIndex, TAG_EVENT, .Cuenta, , FontTypeNames.FONTTYPE_GUILD)
                 Else    'No loged, limpio el tipo
@@ -453,7 +453,7 @@ Sub MuereUserJDH(ByVal MuertoIndex As Integer, Optional ByVal sMessage As Boolea
     Dim MuertoPos As WorldPos
     Dim QuedanEnJDH As Byte
 
-    'Obtengo la anterior posición del usuario
+    'Obtengo la anterior posiciï¿½n del usuario
     MuertoPos = Ullathorpe
 
     'Revivir usuario
@@ -475,7 +475,7 @@ Sub MuereUserJDH(ByVal MuertoIndex As Integer, Optional ByVal sMessage As Boolea
 
     'Aviso al usuario
     If sMessage Then
-        Call WriteConsoleMsgNew(MuertoIndex, TAG_EVENT, "Has caido en los Juegos del hambre, has sido revivido y llevado a tu posición anterior.")
+        Call WriteConsoleMsgNew(MuertoIndex, TAG_EVENT, "Has caido en los Juegos del hambre, has sido revivido y llevado a tu posiciï¿½n anterior.")
 
         'Aviso al mapa.
         Call SendData(SendTarget.toMap, JDH.Mapa, PrepareMessageConsoleMsgNew(TAG_EVENT, UserList(MuertoIndex).Name & " ha sido derrotado."))
@@ -489,7 +489,7 @@ Sub MuereUserJDH(ByVal MuertoIndex As Integer, Optional ByVal sMessage As Boolea
 
     'Queda 1?
     If Not QuedanEnJDH <> 1 Then
-        'Ganó ese usuario!
+        'Ganï¿½ ese usuario!
         Terminar
     End If
 
@@ -524,14 +524,14 @@ Sub Terminar()
 
     UserList(WinnerIndex).flags.PuntosShop = UserList(WinnerIndex).flags.PuntosShop + Canjes
 
-    Call LogDesarrollo(UserList(WinnerIndex).Name & " ganó los Juegos del Hambre de " & JDH.Cupos & " cupos y gano " & 8 & " puntos de canje.")
+    Call LogDesarrollo(UserList(WinnerIndex).Name & " ganï¿½ los Juegos del Hambre de " & JDH.Cupos & " cupos y gano " & 8 & " puntos de canje.")
 
     'Sacamos el .flags
     UserList(WinnerIndex).EnJDH = False
 
     Call SendData(SendTarget.ToAll, 0, PrepareMessageConsoleMsgNew(TAG_EVENT, "Ganador del evento: " & UserList(WinnerIndex).Name & " se lleva una cantidad de " & JDH.Premio & " monedas de oro y 8 Canjes" & " Felicitaciones!"))
 
-    'Ganador a su anterior posición..
+    'Ganador a su anterior posiciï¿½n..
     Dim ToPosition As WorldPos
     ToPosition = Ullathorpe
 
@@ -555,13 +555,13 @@ Sub DesconectaUserJDH(ByVal UserIndex As Integer)
     Next i
 
     Call MuereUserJDH(UserIndex, False)
-    Call SendData(SendTarget.toMap, JDH.Mapa, PrepareMessageConsoleMsgNew(TAG_EVENT, UserList(UserIndex).Name & " abandonó los Juegos del Hambre."))
+    Call SendData(SendTarget.toMap, JDH.Mapa, PrepareMessageConsoleMsgNew(TAG_EVENT, UserList(UserIndex).Name & " abandonï¿½ los Juegos del Hambre."))
 
 End Sub
 
 Sub AnteriorPos(ByVal UserIndex As Integer, ByRef MuertoPosition As WorldPos)
 
-' @ Devuelve la posición anterior del usuario.
+' @ Devuelve la posiciï¿½n anterior del usuario.
 
     Dim LoopX As Long
 
@@ -572,7 +572,7 @@ Sub AnteriorPos(ByVal UserIndex As Integer, ByRef MuertoPosition As WorldPos)
         End If
     Next LoopX
 
-    'Posición de ulla u.u
+    'Posiciï¿½n de ulla u.u
     MuertoPosition = Ullathorpe
 
 End Sub
@@ -585,7 +585,7 @@ Function AprobarIngresoJDH(ByVal ID As Integer, ByRef MensajeError As String) As
 
     ' @@ No hay death.
     If Not JDH.Activo Then
-        MensajeError = "El evento no está en curso."
+        MensajeError = "El evento no estï¿½ en curso."
         Exit Function
     End If
 
@@ -603,7 +603,7 @@ Function AprobarIngresoJDH(ByVal ID As Integer, ByRef MensajeError As String) As
 
     'Ya inscripto?
     If YaInscripto(ID) Then
-        MensajeError = "Ya estás en los Juegos del Hambre."
+        MensajeError = "Ya estï¿½s en los Juegos del Hambre."
         Exit Function
     End If
         
@@ -619,7 +619,7 @@ End Function
 
 Function ProximoSlot(ByRef Sumar As Boolean) As Byte
 
-' @ Posición para un usuario.
+' @ Posiciï¿½n para un usuario.
 
     Dim LoopX As Long
 
@@ -661,10 +661,10 @@ Function QuedanVivos() As Byte
             ' @@ Mientras halla usuario.
             If .UserIndex > 0 Then
 
-                ' @@ Mientras esté logeado
+                ' @@ Mientras estï¿½ logeado
                 If (UserList(.UserIndex).ConnID <> -1) Then
 
-                    ' @@ Mientras esté en jdh
+                    ' @@ Mientras estï¿½ en jdh
                     If UserList(.UserIndex).EnJDH Then
 
                         ' @@ Sumo contador.
@@ -720,7 +720,7 @@ End Function
 
 Function YaInscripto(ByVal UserIndex As Integer) As Boolean
 
-' @ Devuelve si ya está inscripto.
+' @ Devuelve si ya estï¿½ inscripto.
 
     Dim LoopX As Long
 

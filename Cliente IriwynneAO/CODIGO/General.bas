@@ -526,8 +526,8 @@ Sub AddtoRichTextBox(ByRef RichTextBox As RichTextBox, _
         'Text box MUST be multiline and have a 3D
         'apperance!
         'Pablo (ToxicWaste) 01/26/2007 : Now the list refeshes properly.
-        'Juan Martín Sotuyo Dodero (Maraxus) 03/29/2007 : Replaced ToxicWaste's code for extra performance.
-        '08/02/12 (D'Artagnan) - División de consolas
+        'Juan Martï¿½n Sotuyo Dodero (Maraxus) 03/29/2007 : Replaced ToxicWaste's code for extra performance.
+        '08/02/12 (D'Artagnan) - Divisiï¿½n de consolas
         '******************************************r
 
         With RichTextBox
@@ -598,7 +598,7 @@ Function AsciiValidos(ByVal cad As String) As Boolean
         For i = 1 To Len(cad)
                 car = Asc(mid$(cad, i, 1))
         
-                If ((car < 97 Or car > 122) Or car = Asc("º")) And (car <> 255) And (car <> 32) Then
+                If ((car < 97 Or car > 122) Or car = Asc("ï¿½")) And (car <> 255) And (car <> 32) Then
 
                         Exit Function
 
@@ -627,7 +627,7 @@ Function CheckUserData() As Boolean
                 CharAscii = Asc(mid$(UserPassword, loopc, 1))
 
                 If Not LegalCharacter(CharAscii) Then
-                        MsgBox ("Password inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
+                        MsgBox ("Password invï¿½lido. El caractï¿½r " & Chr$(CharAscii) & " no estï¿½ permitido.")
                         Exit Function
 
                 End If
@@ -650,7 +650,7 @@ Function CheckUserData() As Boolean
                 CharAscii = Asc(mid$(UserName, loopc, 1))
 
                 If Not LegalCharacter(CharAscii) Then
-                        MsgBox ("Nombre inválido. El caractér " & Chr$(CharAscii) & " no está permitido.")
+                        MsgBox ("Nombre invï¿½lido. El caractï¿½r " & Chr$(CharAscii) & " no estï¿½ permitido.")
                         Exit Function
 
                 End If
@@ -773,7 +773,7 @@ Sub SetConnected()
         
         If MiError <> vbNullString Then 'hay error
             Call WriteBugReport("CLIENT> " & MiError)
-            MsgBox "Estás ejecutando un cliente desactualizado debido a un error en el AutoUpdater.", vbOKOnly
+            MsgBox "Estï¿½s ejecutando un cliente desactualizado debido a un error en el AutoUpdater.", vbOKOnly
         End If
         
 End Sub
@@ -786,7 +786,7 @@ Sub MoveTo(ByVal Direccion As E_Heading)
         'Last Modified By: Lucas Tavolaro Ortiz (Tavo)
         ' 06/03/2006: AlejoLp - Elimine las funciones Move[NSWE] y las converti a esta
         ' 12/08/2007: Tavo    - Si el usuario esta paralizado no se puede mover.
-        ' 06/28/2008: NicoNZ - Saqué lo que impedía que si el usuario estaba paralizado se ejecute el sub.
+        ' 06/28/2008: NicoNZ - Saquï¿½ lo que impedï¿½a que si el usuario estaba paralizado se ejecute el sub.
         '***************************************************
         Dim LegalOk As Boolean
     
@@ -863,7 +863,7 @@ Private Sub CheckKeys()
         'If game is paused, abort movement.
         If pausa Then Exit Sub
     
-        'TODO: Debería informarle por consola?
+        'TODO: Deberï¿½a informarle por consola?
         If Traveling Then Exit Sub
 
         'Control movement interval (this enforces the 1 step loss when meditating / resting client-side)
@@ -948,12 +948,12 @@ Private Sub CheckKeys()
 
 End Sub
 
-'TODO : Si bien nunca estuvo allí, el mapa es algo independiente o a lo sumo dependiente del engine, no va acá!!!
+'TODO : Si bien nunca estuvo allï¿½, el mapa es algo independiente o a lo sumo dependiente del engine, no va acï¿½!!!
 Sub SwitchMap(ByVal Map As Integer)
 
         '**************************************************************
         'Formato de mapas optimizado para reducir el espacio que ocupan.
-        'Diseñado y creado por Juan Martín Sotuyo Dodero (Maraxus) (juansotuyo@hotmail.com)
+        'Diseï¿½ado y creado por Juan Martï¿½n Sotuyo Dodero (Maraxus) (juansotuyo@hotmail.com)
         '**************************************************************
         Dim Y       As Long
 
@@ -1049,7 +1049,7 @@ Function ReadField(ByVal Pos As Integer, _
 
         '*****************************************************************
         'Gets a field from a delimited string
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 11/15/2004
         '*****************************************************************
         Dim i          As Long
@@ -1080,7 +1080,7 @@ Function FieldCount(ByRef Text As String, ByVal SepASCII As Byte) As Long
 
         '*****************************************************************
         'Gets the number of fields in a delimited string
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 07/29/2007
         '*****************************************************************
         Dim Count     As Long
@@ -1189,7 +1189,7 @@ Dim Cursor As Long
         
         frmConnect.Visible = True
     
-        'Inicialización de variables globales
+        'Inicializaciï¿½n de variables globales
         prgRun = True
         pausa = False
     
@@ -1245,7 +1245,7 @@ Next Xr
 
         Do While prgRun
 
-                'Sólo dibujamos si la ventana no está minimizada
+                'Sï¿½lo dibujamos si la ventana no estï¿½ minimizada
                 If frmMain.WindowState <> 1 And frmMain.Visible Then
                         Call ShowNextFrame(frmMain.Top, frmMain.Left)
             
@@ -1336,8 +1336,8 @@ Private Sub LoadInitialConfig()
         Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "Hecho", 255, 0, 0, True, False, False)
     
         '##############
-        ' MOTOR GRÁFICO
-        Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "Iniciando motor gráfico... ", 255, 255, 255, True, False, True)
+        ' MOTOR GRï¿½FICO
+        Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "Iniciando motor grï¿½fico... ", 255, 255, 255, True, False, True)
     
         If Not InitTileEngine(frmMain.hWnd, 152, 10, 32, 32, 13, 17, 9, 8, 8, 0.018) Then
             Call CloseClient
@@ -1369,13 +1369,13 @@ Private Sub LoadInitialConfig()
         Audio.SoundActivated = Not ClientSetup.bNoSound
         Audio.SoundEffectsActivated = Not ClientSetup.bNoSoundEffects
         
-        'Inicializamos el inventario gráfico
+        'Inicializamos el inventario grï¿½fico
         Call Inventario.Initialize(DirectDraw, frmMain.PicInv, MAX_INVENTORY_SLOTS)
         Call Audio.MusicMP3Play(App.path & "\MP3\" & MP3_Inicio & ".mp3")
     
         Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "Hecho", 255, 0, 0, True, False, False)
     
-        Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "¡Bienvenido a Iriwynne AO!", 255, 255, 255, True, False, True)
+        Call AddtoRichTextBox(Frmlauncher.RichTextBox1, "ï¿½Bienvenido a Iriwynne AO!", 255, 255, 255, True, False, True)
 
         'Give the user enough time to read the welcome text
         Call Sleep(500)
@@ -1451,9 +1451,9 @@ End Function
 
 '[CODE 002]:MatuX
 '
-'  Función para chequear el email
+'  Funciï¿½n para chequear el email
 '
-'  Corregida por Maraxus para que reconozca como válidas casillas con puntos antes de la arroba y evitar un chequeo innecesario
+'  Corregida por Maraxus para que reconozca como vï¿½lidas casillas con puntos antes de la arroba y evitar un chequeo innecesario
 Public Function CheckMailString(ByVal sString As String) As Boolean
 
         On Error GoTo errHnd
@@ -1469,11 +1469,11 @@ Public Function CheckMailString(ByVal sString As String) As Boolean
 
         If (lPos <> 0) Then
 
-                '2do test: Busca un simbolo . después de @ + 1
+                '2do test: Busca un simbolo . despuï¿½s de @ + 1
                 If Not (InStr(lPos, sString, ".", vbBinaryCompare) > lPos + 1) Then _
                    Exit Function
         
-                '3er test: Recorre todos los caracteres y los valída
+                '3er test: Recorre todos los caracteres y los valï¿½da
                 For lX = 0 To Len(sString) - 1
 
                         If Not (lX = (lPos - 1)) Then   'No chequeamos la '@'
@@ -1495,7 +1495,7 @@ errHnd:
 
 End Function
 
-'  Corregida por Maraxus para que reconozca como válidas casillas con puntos antes de la arroba
+'  Corregida por Maraxus para que reconozca como vï¿½lidas casillas con puntos antes de la arroba
 Private Function CMSValidateChar_(ByVal iAsc As Integer) As Boolean
         CMSValidateChar_ = (iAsc >= 48 And iAsc <= 57) Or _
            (iAsc >= 65 And iAsc <= 90) Or _
@@ -1504,7 +1504,7 @@ Private Function CMSValidateChar_(ByVal iAsc As Integer) As Boolean
 
 End Function
 
-'TODO : como todo lo relativo a mapas, no tiene nada que hacer acá....
+'TODO : como todo lo relativo a mapas, no tiene nada que hacer acï¿½....
 Function HayAgua(ByVal X As Integer, ByVal Y As Integer) As Boolean
         HayAgua = ((MapData(X, Y).Graphic(1).GrhIndex >= 1505 And MapData(X, Y).Graphic(1).GrhIndex <= 1520) Or _
            (MapData(X, Y).Graphic(1).GrhIndex >= 5665 And MapData(X, Y).Graphic(1).GrhIndex <= 5680) Or _
@@ -1516,7 +1516,7 @@ End Function
 Private Sub LoadClientSetup()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 11/19/09
         '11/19/09: Pato - Is optional show the frmGuildNews form
         '**************************************************************
@@ -1570,7 +1570,7 @@ End Sub
 Private Sub InicializarNombres()
 
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 11/27/2005
         'Inicializa los nombres de razas, ciudades, clases, skills, atributos, etc.
         '**************************************************************
@@ -1579,7 +1579,7 @@ Private Sub InicializarNombres()
         Ciudades(eCiudad.cNix) = "Nix"
         Ciudades(eCiudad.cBanderbill) = "Banderbill"
         Ciudades(eCiudad.cLindos) = "Lindos"
-        Ciudades(eCiudad.cArghal) = "Arghâl"
+        Ciudades(eCiudad.cArghal) = "Arghï¿½l"
     
         ListaRazas(eRaza.Humano) = "Humano"
         ListaRazas(eRaza.Elfo) = "Elfo"
@@ -1602,13 +1602,13 @@ Private Sub InicializarNombres()
     
         SkillsNames(eSkill.Magia) = "Magia"
         SkillsNames(eSkill.Robar) = "Robar"
-        SkillsNames(eSkill.Tacticas) = "Evasión en combate"
+        SkillsNames(eSkill.Tacticas) = "Evasiï¿½n en combate"
         SkillsNames(eSkill.Armas) = "Combate cuerpo a cuerpo"
         SkillsNames(eSkill.Meditar) = "Meditar"
-        SkillsNames(eSkill.Apuñalar) = "Apuñalar"
+        SkillsNames(eSkill.Apuï¿½alar) = "Apuï¿½alar"
         SkillsNames(eSkill.Ocultarse) = "Ocultarse"
         SkillsNames(eSkill.Supervivencia) = "Supervivencia"
-        SkillsNames(eSkill.Talar) = "Talar árboles"
+        SkillsNames(eSkill.Talar) = "Talar ï¿½rboles"
         SkillsNames(eSkill.Comerciar) = "Comercio"
         SkillsNames(eSkill.Defensa) = "Defensa con escudos"
         SkillsNames(eSkill.Pesca) = "Pesca"
@@ -1634,7 +1634,7 @@ End Sub
 
 Public Sub CleanDialogs()
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 11/27/2005
         'Removes all text from the console and dialogs
         '**************************************************************
@@ -1649,7 +1649,7 @@ End Sub
 
 Public Sub CloseClient()
         '**************************************************************
-        'Author: Juan Martín Sotuyo Dodero (Maraxus)
+        'Author: Juan Martï¿½n Sotuyo Dodero (Maraxus)
         'Last Modify Date: 8/14/2007
         'Frees all used resources, cleans up and leaves
         '**************************************************************
@@ -1668,7 +1668,7 @@ Public Sub CloseClient()
     
         Call SaveClientSetup
     
-        'Destruimos los objetos públicos creados
+        'Destruimos los objetos pï¿½blicos creados
         Set CustomMessages = Nothing
         Set CustomKeys = Nothing
         Set SurfaceDB = Nothing

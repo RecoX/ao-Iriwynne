@@ -1273,10 +1273,10 @@ Public Sub ControlSM(ByVal Index As Byte, ByVal Mostrar As Boolean)
 
                         If Mostrar Then
                                 Call AddtoRichTextBox(frmMain.RecTxt, MENSAJE_SEGURO_RESU_ON, 0, 255, 0, True, False, True)
-                                picSM(Index).ToolTipText = "Seguro de resucitación activado."
+                                picSM(Index).ToolTipText = "Seguro de resucitaciï¿½n activado."
                         Else
                                 Call AddtoRichTextBox(frmMain.RecTxt, MENSAJE_SEGURO_RESU_OFF, 255, 0, 0, True, False, True)
-                                picSM(Index).ToolTipText = "Seguro de resucitación desactivado."
+                                picSM(Index).ToolTipText = "Seguro de resucitaciï¿½n desactivado."
 
                         End If
         
@@ -1320,7 +1320,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
         'Autor: Unknown
         'Last Modification: 18/11/2010
         '18/11/2009: ZaMa - Ahora se pueden poner comandos en los mensajes personalizados (execpto guildchat y privados)
-        '18/11/2010: Amraphen - Agregué el handle correspondiente para las nuevas configuraciones de teclas (CTRL+0..9).
+        '18/11/2010: Amraphen - Agreguï¿½ el handle correspondiente para las nuevas configuraciones de teclas (CTRL+0..9).
         '***************************************************
       
         If (Not SendTxt.Visible) And (Not SendCMSTXT.Visible) Then
@@ -1358,7 +1358,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                                         If UserEstado = 1 Then
 
                                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                                 End With
 
@@ -1372,7 +1372,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                                         If UserEstado = 1 Then
 
                                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                                 End With
 
@@ -1386,7 +1386,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                                         If UserEstado = 1 Then
 
                                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                                 End With
 
@@ -1479,7 +1479,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                         If UserEstado = 1 Then
 
                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                 End With
 
@@ -1488,7 +1488,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                         End If
                 
                         If Not PuedeMacrear Then
-                                AddtoRichTextBox frmMain.RecTxt, "No tan rápido..!", 255, 255, 255, False, False, True
+                                AddtoRichTextBox frmMain.RecTxt, "No tan rï¿½pido..!", 255, 255, 255, False, False, True
                         Else
                                 Call WriteMeditate
                                 PuedeMacrear = False
@@ -1500,7 +1500,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                         If UserEstado = 1 Then
 
                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                 End With
 
@@ -1520,7 +1520,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                         If UserEstado = 1 Then
 
                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                 End With
 
@@ -1556,7 +1556,7 @@ Private Sub Form_KeyUp(KeyCode As Integer, Shift As Integer)
                         If TrainingMacro.Enabled Then Call DesactivarMacroHechizos
                         If macrotrabajo.Enabled Then Call DesactivarMacroTrabajo
                           
-                        If frmCustomKeys.Visible Then Exit Sub 'Chequeo si está visible la ventana de configuración de teclas.
+                        If frmCustomKeys.Visible Then Exit Sub 'Chequeo si estï¿½ visible la ventana de configuraciï¿½n de teclas.
             
                         Call WriteAttack
             
@@ -1772,7 +1772,7 @@ Private Sub macrotrabajo_Timer()
         End If
     
         'Macros are disabled if not using Argentum!
-        'If Not Application.IsAppActive() Then  'Implemento lo propuesto por GD, se puede usar macro aun que se esté en otra ventana
+        'If Not Application.IsAppActive() Then  'Implemento lo propuesto por GD, se puede usar macro aun que se estï¿½ en otra ventana
         '    Call DesactivarMacroTrabajo
         '    Exit Sub
         'End If
@@ -1834,12 +1834,12 @@ Private Sub mnuUsar_Click()
 End Sub
 
 Private Sub PicMH_Click()
-        Call AddtoRichTextBox(frmMain.RecTxt, "Auto lanzar hechizos. Utiliza esta habilidad para entrenar únicamente. Para activarlo/desactivarlo utiliza F7.", 255, 255, 255, False, False, True)
+        Call AddtoRichTextBox(frmMain.RecTxt, "Auto lanzar hechizos. Utiliza esta habilidad para entrenar ï¿½nicamente. Para activarlo/desactivarlo utiliza F7.", 255, 255, 255, False, False, True)
 
 End Sub
 
 Private Sub Coord_Click()
-        Call AddtoRichTextBox(frmMain.RecTxt, "Estas coordenadas son tu ubicación en el mapa. Utiliza la letra L para corregirla si esta no se corresponde con la del servidor por efecto del Lag.", 255, 255, 255, False, False, True)
+        Call AddtoRichTextBox(frmMain.RecTxt, "Estas coordenadas son tu ubicaciï¿½n en el mapa. Utiliza la letra L para corregirla si esta no se corresponde con la del servidor por efecto del Lag.", 255, 255, 255, False, False, True)
 
 End Sub
 
@@ -1934,7 +1934,7 @@ Private Sub picSM_DblClick(Index As Integer)
                         If UserEstado = 1 Then
 
                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                 End With
 
@@ -1954,7 +1954,7 @@ Private Sub picSM_DblClick(Index As Integer)
                         If UserEstado = 1 Then
 
                                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                                 End With
 
@@ -2049,7 +2049,7 @@ Private Sub SendTxt_KeyDown(KeyCode As Integer, Shift As Integer)
                         CustomMessages.Message(NroMsg) = SendTxt.Text
             
                         With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                Call ShowConsoleMsg("¡¡""" & SendTxt.Text & """ fue guardado como mensaje personalizado " & NroMsg + 1 & "!!", .red, .green, .blue, .Bold, .Italic)
+                                Call ShowConsoleMsg("ï¿½ï¿½""" & SendTxt.Text & """ fue guardado como mensaje personalizado " & NroMsg + 1 & "!!", .red, .green, .blue, .Bold, .Italic)
 
                         End With
             
@@ -2065,7 +2065,7 @@ ErrHandler:
         If Err.number = CustomMessages.InvalidMessageErrCode Then
 
                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                        Call ShowConsoleMsg("El Mensaje es inválido. Modifiquelo por favor.", .red, .green, .blue, .Bold, .Italic)
+                        Call ShowConsoleMsg("El Mensaje es invï¿½lido. Modifiquelo por favor.", .red, .green, .blue, .Bold, .Italic)
 
                 End With
 
@@ -2112,7 +2112,7 @@ Private Sub TirarItem()
         If UserEstado = 1 Then
 
                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                 End With
 
@@ -2143,7 +2143,7 @@ Private Sub AgarrarItem()
         If UserEstado = 1 Then
 
                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                 End With
 
@@ -2172,7 +2172,7 @@ Private Sub EquiparItem()
         If UserEstado = 1 Then
 
                 With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                        Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                        Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                 End With
 
@@ -2271,7 +2271,7 @@ Private Sub cmdLanzar_Click()
                 If UserEstado = 1 Then
 
                         With FontTypes(FontTypeNames.FONTTYPE_INFO)
-                                Call ShowConsoleMsg("¡¡Estás muerto!!", .red, .green, .blue, .Bold, .Italic)
+                                Call ShowConsoleMsg("ï¿½ï¿½Estï¿½s muerto!!", .red, .green, .blue, .Bold, .Italic)
 
                         End With
 
@@ -2344,7 +2344,7 @@ Private Sub Form_Click()
                                                 UsingSkill = 0
 
                                                 With FontTypes(FontTypeNames.FONTTYPE_TALK)
-                                                        Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar proyectiles tan rápido.", .red, .green, .blue, .Bold, .Italic)
+                                                        Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar proyectiles tan rï¿½pido.", .red, .green, .blue, .Bold, .Italic)
 
                                                 End With
 
@@ -2359,7 +2359,7 @@ Private Sub Form_Click()
                                                         UsingSkill = 0
 
                                                         With FontTypes(FontTypeNames.FONTTYPE_TALK)
-                                                                Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar proyectiles tan rápido.", .red, .green, .blue, .Bold, .Italic)
+                                                                Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar proyectiles tan rï¿½pido.", .red, .green, .blue, .Bold, .Italic)
 
                                                         End With
 
@@ -2377,7 +2377,7 @@ Private Sub Form_Click()
                                                                 UsingSkill = 0
 
                                                                 With FontTypes(FontTypeNames.FONTTYPE_TALK)
-                                                                        Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rápido.", .red, .green, .blue, .Bold, .Italic)
+                                                                        Call AddtoRichTextBox(frmMain.RecTxt, "No puedes lanzar hechizos tan rï¿½pido.", .red, .green, .blue, .Bold, .Italic)
 
                                                                 End With
 
@@ -2523,7 +2523,7 @@ Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y A
                                 'There is invalid position?.
                                 If .Blocked <> 0 Then
 
-                                        Call ShowConsoleMsg("Posición inválida")
+                                        Call ShowConsoleMsg("Posiciï¿½n invï¿½lida")
 
                                         Call StopDragInv
 
@@ -2538,7 +2538,7 @@ Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y A
 
                                 If IS_VALID_POS Then
 
-                                        Call ShowConsoleMsg("La posición donde desea tirar el ítem es ilegal.")
+                                        Call ShowConsoleMsg("La posiciï¿½n donde desea tirar el ï¿½tem es ilegal.")
 
                                         Call StopDragInv
 
@@ -2550,7 +2550,7 @@ Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y A
                                 If Not .CharIndex <> 0 Then
                                         If .ObjGrh.GrhIndex <> 0 Then
 
-                                                Call ShowConsoleMsg("Hay un objeto en esa posición!")
+                                                Call ShowConsoleMsg("Hay un objeto en esa posiciï¿½n!")
 
                                                 Call StopDragInv
 
@@ -2721,7 +2721,7 @@ Private Sub SendTxt_Change()
         '**************************************************************
         'Author: Unknown
         'Last Modify Date: 3/06/2006
-        '3/06/2006: Maraxus - impedí se inserten caractéres no imprimibles
+        '3/06/2006: Maraxus - impedï¿½ se inserten caractï¿½res no imprimibles
         '**************************************************************
         If Len(SendTxt.Text) > 160 Then
                 stxtbuffer = "Soy un cheater, avisenle a un gm"
